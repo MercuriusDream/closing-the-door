@@ -1,11 +1,13 @@
-﻿﻿import requests
-import os
+﻿import requests
 import datetime
 import time
 from urllib.parse import unquote
 import PySimpleGUI as sg
 from haversine import haversine
 import json
+import playsound
+import os
+import threading
 
 sg.theme('SystemDefault1')
 
@@ -64,8 +66,6 @@ MaxEqkStrLen = 60
 MaxEqkInfoLen = 120
 AreaNames = ["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"]
 
-print("hello, world!")
-
 eqinfo = [
             [sg.Text(eqregion, font=eqregiont, key='eqregionk', text_color=fontcolor, background_color=colcolor1)],
             [sg.Text(eqtime, font=eqtimet, key='eqtimek', text_color=fontcolor, background_color=colcolor1)]        
@@ -90,6 +90,10 @@ layout = [
 window = sg.Window('Closing the Door', layout, resizable=True, background_color='grey23')
 
 StationUpdate = True
+
+def soundplay(music):
+    t = threading.Thread(target=playsound.playsound, args=('./audio/'+music+'.wav',))
+    t.start()
 
 def geteqregion(phase, url):
     if phase == 2:
@@ -187,10 +191,9 @@ def handle_eqk(body, info_bytes, phase):
 
     # 지진 핸들링
 
-    if eqid == eqk_id: # 현재 지진의 수정보
+    if eqid == eqk_id: # 현재 지진의 데이터 수정
         eqpos = (orig_lat, orig_lon)
         eqsec = format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.timestamp(datetime.now()) + eqk_time, ".0f")
-        eqregion = geteqregion(phase, url2)
         eqdepth = eqk_dep
         eqsize = eqk_mag
         eqtime = datetime.datetime.fromtimestamp(eqk_time).strftime('%Y/%m/%d %H:%M:%S')
@@ -206,8 +209,7 @@ def handle_eqk(body, info_bytes, phase):
         window['eqsink'].update(eqsin)
         window['eqrectimek'].update(eqrectime)
 
-    elif recenteqid == eqk_id: # 최근 지진의 수정보
-        recenteqregion = geteqregion(phase, url2)
+    elif recenteqid == eqk_id: # 최근 지진의 데이터 수정
         recenteqdepth = eqk_dep
         recenteqsize = datetime.datetime.fromtimestamp(eqk_time).strftime('%Y/%m/%d %H:%M:%S')
         recenteqtime = eqtime
@@ -223,6 +225,10 @@ def handle_eqk(body, info_bytes, phase):
         window['recenteqrectimek'].update(recenteqrectime)
 
     else: # 새로운 지진 업데이트
+        if phase == 2:
+            soundplay('eew')
+        else:
+            soundplay('earthquakeinfo')
         recenteqregion = eqregion
         recenteqdepth = eqdepth
         recenteqsize = eqsize
@@ -256,7 +262,6 @@ def handle_eqk(body, info_bytes, phase):
         window['recenteqrectimek'].update(recenteqrectime)
         changecolorelement2(recenteqsin)
 
-    
     print("위도:", orig_lat)
     print("경도:", orig_lon)
     print("규모:", eqk_mag)
@@ -267,17 +272,13 @@ def handle_eqk(body, info_bytes, phase):
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
     
-    if eqsec > 0 and eqsec != 0:       
+    if eqsec > 0 and eqsec != 0: # 카운트다운
         window['eqseck'].update(eqsec)
+        if eqsec < 11:
+            soundplay('countdown')
     elif eqsec != 0: 
         window['eqseck'].update('0')
-        window[''].update()
-    window['eqregionk'].update(eqregion)
-    window['eqdepthk'].update(eqdepth)
-    window['eqsizek'].update(eqsize)
-    window['eqtimek'].update(eqtime)
-    window['eqsink'].update(eqsin)
-    window['eqrectimek'].update(eqrectime)
+        soundplay('reach')
 
 def handle_stn(stn_body, bin_body):
     stn_lat = [30 + int(stn_body[i:i+10], 2) / 100 for i in range(0, len(stn_body), 20)]
@@ -313,6 +314,7 @@ def parse_mmi(data):
 
 def main():
     while True:
+        soundplay('earthquakeinfo')
         timern = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
         prev_bin_time = ''
         tide = 1000
