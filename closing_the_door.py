@@ -314,7 +314,6 @@ def parse_mmi(data):
 
 def main():
     while True:
-        soundplay('earthquakeinfo')
         timern = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
         prev_bin_time = ''
         tide = 1000
