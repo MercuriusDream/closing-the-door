@@ -50,7 +50,7 @@ eqtime = '0000/00/00 00:00:00'
 eqsin = '⨉'
 eqsec = 00
 eqid = ''
-curpos = (35.17, 129.06)
+curpos = (35.17, 129.06) # 예시 좌표(부산 시민공원), 사용시 변경 필요
 eqrectime = '0000/00/00 00:00:00 업데이트'
 
 recenteqregion = '현재 지진 정보가 없습니다.'
@@ -61,6 +61,7 @@ recenteqsin = '⨉'
 recenteqrectime = '0000/00/00 00:00:00 업데이트'
 recenteqid = ''
 
+lastrec = '0초 전'
 HeadLength = 4
 MaxEqkStrLen = 60
 MaxEqkInfoLen = 120
@@ -193,7 +194,7 @@ def handle_eqk(body, info_bytes, phase):
 
     if eqid == eqk_id: # 현재 지진의 데이터 수정
         eqpos = (orig_lat, orig_lon)
-        eqsec = format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.timestamp(datetime.now()) + eqk_time, ".0f")
+        
         eqdepth = eqk_dep
         eqsize = eqk_mag
         eqtime = datetime.datetime.fromtimestamp(eqk_time).strftime('%Y/%m/%d %H:%M:%S')
@@ -237,7 +238,7 @@ def handle_eqk(body, info_bytes, phase):
         recenteqrectime = eqrectime
 
         eqpos = (orig_lat, orig_lon)
-        eqsec = format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.timestamp(datetime.now()) + eqk_time, ".0f")
+        eqsec = format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")
         eqregion = geteqregion(phase, url2)
         eqdepth = eqk_dep
         eqsize = eqk_mag
@@ -272,6 +273,7 @@ def handle_eqk(body, info_bytes, phase):
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
     
+    eqsec = "{:.0f}".format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time)
     if eqsec > 0 and eqsec != 0: # 카운트다운
         window['eqseck'].update(eqsec)
         if eqsec < 11:
@@ -314,6 +316,7 @@ def parse_mmi(data):
 
 def main():
     while True:
+        Timout = False
         timern = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
         prev_bin_time = ''
         tide = 1000
@@ -334,69 +337,75 @@ def main():
 
                 url = f"https://www.weather.go.kr/pews/data/{bin_time}"
 
-                response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"})
-                bytes_data = response.content
+                try:
+                    response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}, timeout='1')
+                except ConnectTimeout:
+                    Timeout = True
+                    
+                if Timeout != True:
+                    
+                    bytes_data = response.content
 
-                # 시간 동기화
-                if datetime.datetime.utcnow() >= next_sync_time:
-                    next_sync_time = datetime.datetime.utcnow() + datetime.timedelta(seconds=10.0)
+                    # 시간 동기화
+                    if datetime.datetime.utcnow() >= next_sync_time:
+                        next_sync_time = datetime.datetime.utcnow() + datetime.timedelta(seconds=10.0)
 
-                    st_str = response.headers.get("ST")
-                    if st_str and st_str.strip() and st_str.isdigit():
-                        server_time = float(st_str)
-                        tide = int(time.time() * 1000) - server_time * 1000 + 1000
-                        print("동기화:", tide)
+                        st_str = response.headers.get("ST")
+                        if st_str and st_str.strip() and st_str.isdigit():
+                            server_time = float(st_str)
+                            tide = int(time.time() * 1000) - server_time * 1000 + 1000
+                            print("동기화:", tide)
 
-                if bytes_data and len(bytes_data) > MaxEqkStrLen:
-                    header = ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[:HeadLength]])
-                    body = byte_to_bin_str(bytes_data[0]) + ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[HeadLength:]])
+                    if bytes_data and len(bytes_data) > MaxEqkStrLen:
+                        header = ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[:HeadLength]])
+                        body = byte_to_bin_str(bytes_data[0]) + ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[HeadLength:]])
 
-                    global StationUpdate
-                    StationUpdate = StationUpdate or (header[0] == '1')
+                        global StationUpdate
+                        StationUpdate = StationUpdate or (header[0] == '1')
 
-                    phase = 0
-                    if header[1] == '0':
-                        phase = 1
-                    elif header[1] == '1' and header[2] == '0':
-                        phase = 2
-                    elif header[2] == '1':
-                        phase = 3
-                    else:
-                        phase = 4
+                        phase = 0
+                        if header[1] == '0':
+                            phase = 1
+                        elif header[1] == '1' and header[2] == '0':
+                            phase = 2
+                        elif header[2] == '1':
+                            phase = 3
+                        else:
+                            phase = 4
 
-                    if phase > 1:
-                        if not os.path.exists("bin"):
-                            os.makedirs("bin")
-
-                        with open(f"bin/{bin_time}.b", "wb") as file:
-                            file.write(bytes_data)
-
-                        info_bytes = bytes_data[-MaxEqkStrLen:]
-                        handle_eqk(body, info_bytes, phase)
-
-                    if StationUpdate:
-                        stn_bytes = requests.get(url + ".s", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}).content
-
-                        if not os.path.exists("bin"):
-                            os.makedirs("bin")
-
-                        with open(f"bin/{bin_time}.s", "wb") as file:
-                            file.write(stn_bytes)
-
-                        stn_body = ''.join([byte_to_bin_str(byte_val) for byte_val in stn_bytes])
-                        handle_stn(stn_body, body)
-                    else:
-                        mmi_data = parse_mmi(body)
-
-                        if max(mmi_data) >= 2:
-                            print("관측소 현재 최대, 최소 진도:", max(mmi_data), min(mmi_data))
-                            mmi_data = [v for v in mmi_data if v > 1]
-                            if mmi_data:
-                                print("진도 목록:", ", ".join(map(str, mmi_data)))
+                        if phase > 1:
                             if not os.path.exists("bin"):
                                 os.makedirs("bin")
+
                             with open(f"bin/{bin_time}.b", "wb") as file:
                                 file.write(bytes_data)
+
+                            info_bytes = bytes_data[-MaxEqkStrLen:]
+                            handle_eqk(body, info_bytes, phase)
+
+                        if StationUpdate:
+                            stn_bytes = requests.get(url + ".s", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}).content
+
+                            if not os.path.exists("bin"):
+                                os.makedirs("bin")
+
+                            with open(f"bin/{bin_time}.s", "wb") as file:
+                                file.write(stn_bytes)
+
+                            stn_body = ''.join([byte_to_bin_str(byte_val) for byte_val in stn_bytes])
+                            handle_stn(stn_body, body)
+                        else:
+                            mmi_data = parse_mmi(body)
+
+                            if max(mmi_data) >= 2:
+                                print("관측소 현재 최대, 최소 진도:", max(mmi_data), min(mmi_data))
+                                mmi_data = [v for v in mmi_data if v > 1]
+                                if mmi_data:
+                                    print("진도 목록:", ", ".join(map(str, mmi_data)))
+                                if not os.path.exists("bin"):
+                                    os.makedirs("bin")
+                                with open(f"bin/{bin_time}.b", "wb") as file:
+                                    file.write(bytes_data)
             except Exception as e:
                 print(e)
                 with open("log.txt", "a") as log_file:
