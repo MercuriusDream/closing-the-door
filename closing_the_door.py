@@ -61,7 +61,6 @@ recenteqsin = '⨉'
 recenteqrectime = '0000/00/00 00:00:00 업데이트'
 recenteqid = ''
 
-lastrec = '0초 전'
 HeadLength = 4
 MaxEqkStrLen = 60
 MaxEqkInfoLen = 120
@@ -83,7 +82,7 @@ col2 = [  [sg.Text(recenteqsin, font=recenteqsint, key='recenteqsink', text_colo
             [sg.Text('M', font=recenteqexplaint, text_color=fontcolor, background_color=colcolor2, key='m2k'), sg.Text(recenteqsize, font=recenteqdepthsizet, text_color=fontcolor, key='recenteqsizek', background_color=colcolor2), sg.Text(recenteqdepth, text_color=fontcolor, font=recenteqdepthsizet, key='recenteqdepthk', background_color=colcolor2),sg.Text('KM', font=recenteqexplaint, text_color=fontcolor, background_color=colcolor2, key='km2k'), sg.Text(recenteqrectime, font=recenteqrectimet, key='recenteqrectimek', text_color=recfontcolor, background_color=colcolor2)]
         ]
 layout = [
-            [sg.Text("0000/00/00 00:00", font=eqtimet, key='timern', text_color=fontcolor, background_color='grey23')],
+            [sg.Text("0000/00/00 00:00", font=eqtimet, key='timern', text_color=fontcolor, background_color='grey23'),sg.Text("00:00:00 갱신", font=eqtimet, key='delayk', text_color=recfontcolor, background_color='grey23')], 
             [sg.Column(col1, element_justification='l', background_color=colcolor1, key='col11k', expand_x='true')],
             [sg.Column(col2, element_justification='l', background_color=colcolor2, key='col21k', expand_x='true')],
             [sg.VPush(background_color='grey23')]
@@ -315,8 +314,8 @@ def parse_mmi(data):
     return mmi_data
 
 def main():
+    errorhappened = False
     while True:
-        Timout = False
         timern = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
         prev_bin_time = ''
         tide = 1000
@@ -324,6 +323,10 @@ def main():
         event, values = window.read(timeout=10)
         window.refresh()
         window['timern'].update(timern)
+        
+        if errorhappened == False:
+            window['delayk'].update(datetime.datetime.now().strftime('%H:%M:%S')+ ' 갱신')
+        
         if event == sg.WIN_CLOSED:
             break
         else:
@@ -336,16 +339,15 @@ def main():
                 print(bin_time)
 
                 url = f"https://www.weather.go.kr/pews/data/{bin_time}"
-
+                
+                errorhappened = False
                 try:
-                    response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}, timeout='1')
-                except requests.ConnectTimeout:
-                    Timeout = True
+                    response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}, timeout=1)
+                except:
+                    errorhappened = True
                     
-                if Timeout != True:
-                    
+                if errorhappened == False:
                     bytes_data = response.content
-
                     # 시간 동기화
                     if datetime.datetime.utcnow() >= next_sync_time:
                         next_sync_time = datetime.datetime.utcnow() + datetime.timedelta(seconds=10.0)
@@ -411,6 +413,7 @@ def main():
                 with open("log.txt", "a") as log_file:
                     log_file.write(str(datetime.datetime.utcnow()) + "\n")
                     log_file.write(str(e) + "\n")
+                errorhappened = True
         while timern == datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'): 
             continue
 
