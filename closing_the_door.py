@@ -25,11 +25,8 @@ recenteqregiont = ('Noto Sans KR Bold', 17)
 recenteqsint = ('Noto Sans KR Bold', 40, 'bold')
 recenteqtimet = ('Noto Sans KR Bold', 12, 'bold')
 
-elementlist = ['eqregion', 'eqtime', 'eqsin', 'col1', 'm1', 'eqsize', 'eqdepth', 'km1', 'eqsec', 'sec1', 'eqrectime', 'col11']
-recentelementlist = ['recenteqregionk', 'recenteqtimek', 'recenteqsink', 'col2k', 'recenteqsizek', 'recenteqdepthk', 'km2k', 'recenteqrectimek', 'col21k']
-
-textlist = ['eqregionk', 'eqtimek', 'eqsink', 'm1k', 'eqsizek', 'eqdepthk', 'km1k', 'eqseck', 'sec1k', 'eqrectimek']
-recenttextlist = ['recenteqregionk', 'recenteqtimek', 'recenteqsink', 'recenteqsizek', 'recenteqdepthk', 'km2k', 'recenteqrectimek']
+elementlist = ['eqsin, eqregion, eqtime, m, eqsize, eqdepth, km, eqsec, cho, eqrectime, colm, col']
+textlist = ['eqsin, eqregion, eqtime, m, eqsize, eqdepth, km, eqsec, cho, eqrectime']
 
 # 작동 관련 변수
 sindolist = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ', 'Ⅶ', 'Ⅷ', 'Ⅸ', 'Ⅹ']
@@ -44,6 +41,7 @@ eqsin = []
 eqsec = []
 eqid = []
 eqrectime = []
+doneparsing = False
 neweqdata = False
 eqexist = False
 rectime = "00:00:00 갱신"
@@ -63,7 +61,7 @@ layout = [
             [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime1', text_color='grey90', background_color='grey30')],
             element_justification='l', background_color='grey30', key='colm1')
         ],
-        [sg.Text('M', font=eqexplaint, text_color='grey90', background_color='grey30', key='m1'), sg.Text('0.0', font=eqdepthsizet, key='eqsize1', text_color='grey90', background_color='grey30'), sg.Text('0', font=eqdepthsizet, key='eqdepth1', text_color='grey90', background_color='grey30'), sg.Text('KM', font=eqexplaint, text_color='grey90', background_color='grey30', key='km1'), sg.Text('0', font=eqdepthsizet, key='eqsec1', text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho1'), sg.Text('00:00:00 수신', font=eqrectimet, key='rectime1', text_color='grey70', background_color='grey30')]
+        [sg.Text('M', font=eqexplaint, text_color='grey90', background_color='grey30', key='m1'), sg.Text('0.0', font=eqdepthsizet, key='eqsize1', text_color='grey90', background_color='grey30'), sg.Text('0', font=eqdepthsizet, key='eqdepth1', text_color='grey90', background_color='grey30'), sg.Text('KM', font=eqexplaint, text_color='grey90', background_color='grey30', key='km1'), sg.Text('0', font=eqdepthsizet, key='eqsec1', text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho1'), sg.Text('00:00:00 수신', font=eqrectimet, key='eqrectime1', text_color='grey70', background_color='grey30')]
         , element_justification='l', background_color='grey30', key='col1', expand_x='true')],
 
     [sg.Column(
@@ -73,11 +71,10 @@ layout = [
             [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(i+2), text_color='grey90', background_color='grey30')],
             element_justification='l', background_color='grey30', key='colm'+str(i+2))
         ],
-        [sg.Text('M', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='m'+str(i+2)), sg.Text('0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30'), sg.Text('0', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30'), sg.Text('KM', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='km'+str(i+2)), sg.Text('0', font=eqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho1' + str(i+2)), sg.Text('00:00:00 수신', font=recenteqrectimet, key='rectime'+str(i+2), text_color='grey70', background_color='grey30')]
+        [sg.Text('M', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='m'+str(i+2)), sg.Text('0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30'), sg.Text('0', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30'), sg.Text('KM', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='km'+str(i+2)), sg.Text('0', font=eqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho' + str(i+2)), sg.Text('00:00:00 수신', font=recenteqrectimet, key='eqrectime'+str(i+2), text_color='grey70', background_color='grey30')]
         , element_justification='l', background_color='grey30', key='col'+str(i+2), expand_x='true') for i in range (5)],
     [sg.VPush(background_color='grey23')]
 ]
-
 
 window = sg.Window('Closing the Door', layout, resizable=True, background_color='grey23')
 
@@ -107,58 +104,35 @@ def geteqregion(phase, url):
                 log_file.write(str(datetime.datetime.utcnow()) + "\n")
                 log_file.write(str(e) + "\n")
 
-def changecolorelement1(color):
-    if color != "grey30":
-        if color in sindolist:
-            if (sindolist.index(color)) < 5:
-                colcolor1 = sindolist.index(color)
+def guiupdate():
+    for i in range(len(eqrectime)):
+        if eqsin[i] in sindolist:
+            colcolor1 = colorlist[sindolist.index(eqsin[i])]
+            if (sindolist.index(eqsin[i])) > 5:
                 fontcolor1 = 'black'
             else:
-                colcolor1 = sindolist.index(color)
                 fontcolor1 = 'white'
-        else: 
-            colcolor1 = 'black'
+        else:
             fontcolor1 = 'white'
-        for i, key in enumerate(textlist1):
-            try:
-                window[key].widget.master.configure(text_color=fontcolor1)
-                window[key].widget.configure(text_color=fontcolor1)
-            except:
-                pass
-    for i, key in enumerate(elementlist1):
-        try:
-            window[key].widget.master.configure(colcolor1)
-            window[key].widget.configure(background=colcolor1)
-        except:
-            pass
-                    
-def changecolorelement2(color):
-    if color != "grey30":
-        if color in sindolist:
-            if (sindolist.index(color)) < 5:
-                colcolor2 = sindolist.index(color)
-                fontcolor2 = 'black'
-            else:
-                colcolor2 = sindolist.index(color)
-                fontcolor2 = 'white'
-        else: 
-            colcolor2 = 'black'
-            fontcolor2 = 'white'
-        for i, key in enumerate(textlist2):
-            try:
-                window[key].widget.master.configure(text_color=fontcolor2)
-                window[key].widget.configure(text_color=fontcolor2)
-            except:
-                pass
-    for i, key in enumerate(elementlist2):
-        try:
-            window[key].widget.master.configure(colcolor2)
-            window[key].widget.configure(background=colcolor2)
-        except:
-            pass
-
-changecolorelement1("grey30")
-changecolorelement2("grey30")   
+            colcolor1 = 'black'
+        for x in range(len(elementlist)-1):
+            window[elementlist[x] + str(i+1)].widget.master.configure(background=colcolor1)
+            window[elementlist[x] + str(i+1)].widget.configure(background=colcolor1)
+        for x in range(len(textlist)-1):
+            window[textlist[x] + str(i+1)].widget.master.configure(text_color=fontcolor1)
+            window[textlist[x] + str(i+1)].widget.configure(text_color=fontcolor1)
+        window['eqsin'+str(i+1)].update(eqsin[i])
+        window['eqregion'+str(i+1)].update(eqregion[i])
+        window['eqtime'+str(i+1)].update(eqtime[i])
+        window['eqsize'+str(i+1)].update(eqsize[i])
+        window['eqdepth'+str(i+1)].update(eqdepth[i])
+        window['eqsec'+str(i+1)].update(eqsec[i])
+        window['eqrectime'+str(i+1)].update(eqrectime[i])
+        
+        
+for i in range(6):
+    window[elementlist[i] + str(i+1)].widget.master.configure(background='grey30')
+    window[elementlist[i] + str(i+1)].widget.configure(background='grey30')
 
 def byte_to_bin_str(val):
     return bin(val)[2:].zfill(8)
@@ -216,8 +190,7 @@ def handle_eqk(body, info_bytes, phase):
             eqtime.pop()
             eqsin.pop()
             eqid.pop()
-            eqrectime.pop()
-            
+            eqrectime.pop()  
 
     print("위도:", orig_lat)
     print("경도:", orig_lon)
@@ -229,8 +202,6 @@ def handle_eqk(body, info_bytes, phase):
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
             
-    
-    
     if eqsec > 0 and eqsec != 0: # 카운트다운
         window['eqsec'].update(eqsec)
         if eqsec < 11:
@@ -271,102 +242,109 @@ def parse_mmi(data):
 
     return mmi_data
 
-def main():
+def handlecomm():
     errorhappened = False
-    while True:
-        prev_bin_time = ''
-        tide = 1000
-        next_sync_time = datetime.datetime.min
+    prev_bin_time = ''
+    tide = 1000
+    next_sync_time = datetime.datetime.min
         
-        if errorhappened == False:
-            rectime = datetime.now().strftime("%H:%M:%S 갱신")
+    if errorhappened == False:
+        rectime = datetime.now().strftime("%H:%M:%S 갱신")
         
-        try:
-            bin_time = (datetime.datetime.utcnow() - datetime.timedelta(milliseconds=tide)).strftime("%Y%m%d%H%M%S")
-            if prev_bin_time == bin_time:
-                continue
-            prev_bin_time = bin_time
+    try:
+        bin_time = (datetime.datetime.utcnow() - datetime.timedelta(milliseconds=tide)).strftime("%Y%m%d%H%M%S")
+        if prev_bin_time == bin_time:
+            return 0
+        prev_bin_time = bin_time
 
-            print(bin_time)
+        print(bin_time)
 
-            url = f"https://www.weather.go.kr/pews/data/{bin_time}"
+        url = f"https://www.weather.go.kr/pews/data/{bin_time}"
                 
-            errorhappened = False
-            try:
-                response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}, timeout=1)
-            except:
-                errorhappened = True
+        errorhappened = False
+        try:
+            response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}, timeout=1)
+        except:
+            errorhappened = True
                     
-            if errorhappened == False:
-                bytes_data = response.content
-                # 시간 동기화
-                if datetime.datetime.utcnow() >= next_sync_time:
-                    next_sync_time = datetime.datetime.utcnow() + datetime.timedelta(seconds=10.0)
+        if errorhappened == False:
+            bytes_data = response.content
+            # 시간 동기화
+            if datetime.datetime.utcnow() >= next_sync_time:
+                next_sync_time = datetime.datetime.utcnow() + datetime.timedelta(seconds=10.0)
 
-                    st_str = response.headers.get("ST")
-                    if st_str and st_str.strip() and st_str.isdigit():
-                        server_time = float(st_str)
-                        tide = int(time.time() * 1000) - server_time * 1000 + 1000
-                        print("동기화:", tide)
+                st_str = response.headers.get("ST")
+                if st_str and st_str.strip() and st_str.isdigit():
+                    server_time = float(st_str)
+                    tide = int(time.time() * 1000) - server_time * 1000 + 1000
+                    print("동기화:", tide)
 
-                if bytes_data and len(bytes_data) > MaxEqkStrLen:
-                    header = ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[:HeadLength]])
-                    body = byte_to_bin_str(bytes_data[0]) + ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[HeadLength:]])
+            if bytes_data and len(bytes_data) > MaxEqkStrLen:
+                header = ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[:HeadLength]])
+                body = byte_to_bin_str(bytes_data[0]) + ''.join([byte_to_bin_str(byte_val) for byte_val in bytes_data[HeadLength:]])
 
-                    global StationUpdate
-                    StationUpdate = StationUpdate or (header[0] == '1')
+                global StationUpdate
+                StationUpdate = StationUpdate or (header[0] == '1')
 
-                    phase = 0
-                    eqexist = False
-                    if header[1] == '0':
-                        phase = 1
-                    elif header[1] == '1' and header[2] == '0':
-                        phase = 2
-                    elif header[2] == '1':
-                        phase = 3
-                    else:
-                        phase = 4
+                phase = 0
+                eqexist = False
+                if header[1] == '0':
+                    phase = 1
+                elif header[1] == '1' and header[2] == '0':
+                    phase = 2
+                elif header[2] == '1':
+                    phase = 3
+                else:
+                    phase = 4
 
-                    if phase > 1:
-                        eqexist = True
+                if phase > 1:
+                    eqexist = True
+                    if not os.path.exists("bin"):
+                        os.makedirs("bin")
+
+                    with open(f"bin/{bin_time}.b", "wb") as file:
+                        file.write(bytes_data)
+
+                    info_bytes = bytes_data[-MaxEqkStrLen:]
+                    handle_eqk(body, info_bytes, phase)
+
+                if StationUpdate:
+                    stn_bytes = requests.get(url + ".s", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}).content
+
+                    if not os.path.exists("bin"):
+                        os.makedirs("bin")
+
+                    with open(f"bin/{bin_time}.s", "wb") as file:
+                        file.write(stn_bytes)
+
+                    stn_body = ''.join([byte_to_bin_str(byte_val) for byte_val in stn_bytes])
+                    handle_stn(stn_body, body)
+                else:
+                    mmi_data = parse_mmi(body)
+
+                    if max(mmi_data) >= 2:
+                        print("관측소 현재 최대, 최소 진도:", max(mmi_data), min(mmi_data))
+                        mmi_data = [v for v in mmi_data if v > 1]
+                        if mmi_data:
+                            print("진도 목록:", ", ".join(map(str, mmi_data)))
                         if not os.path.exists("bin"):
                             os.makedirs("bin")
-
                         with open(f"bin/{bin_time}.b", "wb") as file:
                             file.write(bytes_data)
+    except Exception as e:
+        print(e)
+        with open("log.txt", "a") as log_file:
+            log_file.write(str(datetime.datetime.utcnow()) + "\n")
+            log_file.write(str(e) + "\n")
+        errorhappened = True
+    doneparsing = True
 
-                        info_bytes = bytes_data[-MaxEqkStrLen:]
-                        handle_eqk(body, info_bytes, phase)
-
-                    if StationUpdate:
-                        stn_bytes = requests.get(url + ".s", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}).content
-
-                        if not os.path.exists("bin"):
-                            os.makedirs("bin")
-
-                        with open(f"bin/{bin_time}.s", "wb") as file:
-                            file.write(stn_bytes)
-
-                        stn_body = ''.join([byte_to_bin_str(byte_val) for byte_val in stn_bytes])
-                        handle_stn(stn_body, body)
-                    else:
-                        mmi_data = parse_mmi(body)
-
-                        if max(mmi_data) >= 2:
-                            print("관측소 현재 최대, 최소 진도:", max(mmi_data), min(mmi_data))
-                            mmi_data = [v for v in mmi_data if v > 1]
-                            if mmi_data:
-                                print("진도 목록:", ", ".join(map(str, mmi_data)))
-                            if not os.path.exists("bin"):
-                                os.makedirs("bin")
-                            with open(f"bin/{bin_time}.b", "wb") as file:
-                                file.write(bytes_data)
-        except Exception as e:
-            print(e)
-            with open("log.txt", "a") as log_file:
-                log_file.write(str(datetime.datetime.utcnow()) + "\n")
-                log_file.write(str(e) + "\n")
-            errorhappened = True
+def main():
+    event, values = window.read(timeout=10)
+    while True:
+        if doneparsing == True:
+            threading.Thread(target=handlecomm, args=(), daemon=True).start()
+            doneparsing = False
 
 if __name__ == "__main__":
     main()
