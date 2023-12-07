@@ -1,0 +1,46 @@
+2023-12-02 13:24:35.211052
+Timeout value connect was 1, but it must be an int, float or None.
+2023-12-02 13:24:35.241054
+Timeout value connect was 1, but it must be an int, float or None.
+2023-12-02 13:24:36.016309
+Timeout value connect was 1, but it must be an int, float or None.
+2023-12-02 13:24:37.018608
+Timeout value connect was 1, but it must be an int, float or None.
+2023-12-02 13:24:38.022931
+Timeout value connect was 1, but it must be an int, float or None.
+2023-12-02 13:24:39.026277
+Timeout value connect was 1, but it must be an int, float or None.
+2023-12-02 13:24:51.801303
+local variable 'Timeout' referenced before assignment
+2023-12-02 13:24:52.105966
+local variable 'Timeout' referenced before assignment
+2023-12-02 13:24:53.116745
+local variable 'Timeout' referenced before assignment
+2023-12-02 13:24:54.091837
+local variable 'Timeout' referenced before assignment
+2023-12-02 13:24:55.096318
+local variable 'Timeout' referenced before assignment
+2023-12-02 13:24:56.094861
+local variable 'Timeout' referenced before assignment
+2023-12-02 13:46:00.105265
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 13:52:46.094896
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 13:58:28.513816
+unsupported operand type(s) for //: 'bool' and 'str'
+2023-12-02 13:58:29.114764
+unsupported operand type(s) for //: 'bool' and 'str'
+2023-12-02 13:58:30.074256
+unsupported operand type(s) for //: 'bool' and 'str'
+2023-12-02 14:01:10.081054
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 14:01:13.099035
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 14:01:22.093138
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 14:01:37.075935
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 14:01:38.156663
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-02 14:01:49.066868
+HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
