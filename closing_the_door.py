@@ -25,9 +25,8 @@ recenteqregiont = ('Noto Sans KR Bold', 17)
 recenteqsint = ('Noto Sans KR Bold', 40, 'bold')
 recenteqtimet = ('Noto Sans KR Bold', 12, 'bold')
 
-elementlist = ['eqsin, eqregion, eqtime, m, eqsize, eqdepth, km, eqsec, cho, eqrectime, colm, col']
-textlist = ['eqsin, eqregion, eqtime, m, eqsize, eqdepth, km, eqsec, cho, eqrectime']
-
+elementlist = ['eqsin', 'eqregion', 'eqtime', 'm', 'eqsize', 'eqdepth', 'km', 'eqsec', 'cho', 'eqrectime', 'colm', 'col']
+textlist = ['eqsin', 'eqregion', 'eqtime', 'm', 'eqsize', 'eqdepth', 'km', 'eqsec', 'cho', 'eqrectime']
 # 작동 관련 변수
 sindolist = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ', 'Ⅶ', 'Ⅷ', 'Ⅸ', 'Ⅹ']
 colorlist = ['white', 'a0e6ff', '92d050', 'FFFF00', 'FFC000', 'F00000', 'a32777', '632523', '4C2600', 'black']
@@ -41,7 +40,7 @@ eqsin = []
 eqsec = []
 eqid = []
 eqrectime = []
-doneparsing = False
+doneparsing = True
 neweqdata = False
 eqexist = False
 rectime = "00:00:00 갱신"
@@ -54,29 +53,28 @@ AreaNames = ["서울", "부산", "대구", "인천", "광주", "대전", "울산
 
 layout = [
     [sg.Text("0000/00/00 00:00", font=eqtimet, key='timern', text_color='grey90', background_color='grey23'), sg.Text("00:00:00 갱신", font=eqtimet, key='rectime', text_color='grey70', background_color='grey23')],
-    [sg.Column(
-        [sg.Text('⨉', font=recenteqsint, key='eqsin1', text_color='grey90', background_color='grey30')],
-        [sg.Column(
+    [sg.Column([
+        [sg.Text('⨉', font=recenteqsint, key='eqsin1', text_color='grey90', background_color='grey30'),
+        sg.Column([
             [sg.Text('정보 없음', font=eqregiont, key='eqregion1', text_color='grey90', background_color='grey30')],
-            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime1', text_color='grey90', background_color='grey30')],
-            element_justification='l', background_color='grey30', key='colm1')
-        ],
-        [sg.Text('M', font=eqexplaint, text_color='grey90', background_color='grey30', key='m1'), sg.Text('0.0', font=eqdepthsizet, key='eqsize1', text_color='grey90', background_color='grey30'), sg.Text('0', font=eqdepthsizet, key='eqdepth1', text_color='grey90', background_color='grey30'), sg.Text('KM', font=eqexplaint, text_color='grey90', background_color='grey30', key='km1'), sg.Text('0', font=eqdepthsizet, key='eqsec1', text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho1'), sg.Text('00:00:00 수신', font=eqrectimet, key='eqrectime1', text_color='grey70', background_color='grey30')]
+            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime1', text_color='grey90', background_color='grey30')]], 
+            element_justification='l', background_color='grey30', key='colm1')],
+        [sg.Text('M', font=eqexplaint, text_color='grey90', background_color='grey30', key='m1'), sg.Text('0.0', font=eqdepthsizet, key='eqsize1', text_color='grey90', background_color='grey30'), sg.Text('0', font=eqdepthsizet, key='eqdepth1', text_color='grey90', background_color='grey30'), sg.Text('KM', font=eqexplaint, text_color='grey90', background_color='grey30', key='km1'), sg.Text('0', font=eqdepthsizet, key='eqsec1', text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho1'), sg.Text('00:00:00 수신', font=eqrectimet, key='eqrectime1', text_color='grey70', background_color='grey30')]]
         , element_justification='l', background_color='grey30', key='col1', expand_x='true')],
-
-    [sg.Column(
+    [sg.Column([
         [sg.Text('⨉', font=recenteqsint, key='eqsin'+str(i+2), text_color='grey90', background_color='grey30')],
-        [sg.Column(
+        [sg.Column([
             [sg.Text('정보 없음', font=eqregiont, key='eqregion'+str(i+2), text_color='grey90', background_color='grey30')],
-            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(i+2), text_color='grey90', background_color='grey30')],
+            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(i+2), text_color='grey90', background_color='grey30')]],
             element_justification='l', background_color='grey30', key='colm'+str(i+2))
         ],
-        [sg.Text('M', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='m'+str(i+2)), sg.Text('0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30'), sg.Text('0', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30'), sg.Text('KM', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='km'+str(i+2)), sg.Text('0', font=eqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho' + str(i+2)), sg.Text('00:00:00 수신', font=recenteqrectimet, key='eqrectime'+str(i+2), text_color='grey70', background_color='grey30')]
+        [sg.Text('M', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='m'+str(i+2)), sg.Text('0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30'), sg.Text('0', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30'), sg.Text('KM', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='km'+str(i+2)), sg.Text('0', font=eqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30'), sg.Text('초', font=eqexplaint, text_color='grey90', background_color='grey30', key='cho' + str(i+2)), sg.Text('00:00:00 수신', font=recenteqrectimet, key='eqrectime'+str(i+2), text_color='grey70', background_color='grey30')]]
         , element_justification='l', background_color='grey30', key='col'+str(i+2), expand_x='true') for i in range (5)],
     [sg.VPush(background_color='grey23')]
 ]
 
 window = sg.Window('Closing the Door', layout, resizable=True, background_color='grey23')
+event, values = window.read(timeout=10)
 
 StationUpdate = True
 
@@ -131,8 +129,10 @@ def guiupdate():
         
         
 for i in range(6):
-    window[elementlist[i] + str(i+1)].widget.master.configure(background='grey30')
-    window[elementlist[i] + str(i+1)].widget.configure(background='grey30')
+        for x in range(len(elementlist)):
+            elementname = elementlist[x]+str(i+1)
+            window[elementname].widget.master.configure(background='grey30')
+            window[elementname].widget.configure(background='grey30')
 
 def byte_to_bin_str(val):
     return bin(val)[2:].zfill(8)
@@ -243,13 +243,12 @@ def parse_mmi(data):
     return mmi_data
 
 def handlecomm():
+    global doneparsing
+    global errorhappened
     errorhappened = False
     prev_bin_time = ''
     tide = 1000
     next_sync_time = datetime.datetime.min
-        
-    if errorhappened == False:
-        rectime = datetime.now().strftime("%H:%M:%S 갱신")
         
     try:
         bin_time = (datetime.datetime.utcnow() - datetime.timedelta(milliseconds=tide)).strftime("%Y%m%d%H%M%S")
@@ -266,8 +265,10 @@ def handlecomm():
             response = requests.get(url + ".b", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}, timeout=1)
         except:
             errorhappened = True
+            doneparsing = True
                     
         if errorhappened == False:
+            doneparsing = True
             bytes_data = response.content
             # 시간 동기화
             if datetime.datetime.utcnow() >= next_sync_time:
@@ -331,6 +332,7 @@ def handlecomm():
                             os.makedirs("bin")
                         with open(f"bin/{bin_time}.b", "wb") as file:
                             file.write(bytes_data)
+                    print(doneparsing)
     except Exception as e:
         print(e)
         with open("log.txt", "a") as log_file:
@@ -340,11 +342,20 @@ def handlecomm():
     doneparsing = True
 
 def main():
+    doneparsing = True
     event, values = window.read(timeout=10)
     while True:
-        if doneparsing == True:
-            threading.Thread(target=handlecomm, args=(), daemon=True).start()
-            doneparsing = False
-
+        timenow = datetime.datetime.now().strftime("%H:%M:%S")
+        window.refresh()
+        guiupdate()
+        threading.Thread(target=handlecomm, args=(), daemon=True).start()
+        while doneparsing == False :
+            window.refresh()
+            window['timern'].update(datetime.datetime.now().strftime("%Y/%m/%D %H:%M:%S"))
+        while timenow == datetime.datetime.now().strftime("%H:%M:%S"):
+            window.refresh()
+            window['timern'].update(datetime.datetime.now().strftime("%Y/%m/%D %H:%M:%S"))
+        if errorhappened == False:
+            window['rectime'].update(datetime.datetime.now().strftime("%H:%M:%S 갱신"))
 if __name__ == "__main__":
     main()
