@@ -1,5 +1,6 @@
 ﻿import requests
 import datetime
+import pytz
 import time
 from urllib.parse import unquote
 import PySimpleGUI as sg
@@ -16,24 +17,25 @@ sg.theme('SystemDefault1')
 eqrectimet = ('Noto Sans KR Bold', 12, 'bold')
 eqdepthsizet = ('Noto Sans KR Bold', 20, 'bold')
 eqexplaint = ('Noto Sans KR Bold', 15)
-eqregiont = ('Noto Sans KR Bold', 20)
-eqsint = ('Noto Sans KR Bold', 50, 'bold')
-eqtimet = ('Noto Sans KR Bold', 13, 'bold')
+eqregiont = ('Noto Sans KR SemiBold', 25)
+eqsint = ('Noto Sans KR Bold', 65, 'bold')
+eqtimet = ('Noto Sans KR Medium', 13)
 
 recenteqrectimet = ('Noto Sans KR Bold', 10, 'bold')
-recenteqdepthsizet = ('Noto Sans KR Bold', 14, 'bold')
+recenteqdepthsizet = ('Noto Sans KR SemiBold', 14, 'bold')
 recenteqexplaint = ('Noto Sans KR Bold', 12)
-recenteqregiont = ('Noto Sans KR Bold', 17)
+recenteqregiont = ('Noto Sans KR SemiBold', 17)
 recenteqsint = ('Noto Sans KR Bold', 40, 'bold')
 recenteqtimet = ('Noto Sans KR Bold', 12, 'bold')
 
-elementlist = ['eqsin', 'eqregion', 'eqtime', 'm', 'eqsize', 'eqdepth', 'km', 'eqsec', 'cho', 'eqrectime', 'colm', 'col']
-textlist = ['eqsin', 'eqregion', 'eqtime', 'm', 'eqsize', 'eqdepth', 'km', 'eqsec', 'cho', 'eqrectime']
+elementlist = ['eqsin', 'eqregion', 'eqtime', 'eqsize', 'eqdepth', 'eqsec', 'eqrectime', 'colm', 'col']
+textlist = ['eqsin', 'eqregion', 'eqtime', 'eqsize', 'eqdepth', 'eqsec', 'eqrectime']
 # 작동 관련 변수
-sindolist = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ', 'Ⅶ', 'Ⅷ', 'Ⅸ', 'Ⅹ']
+sindolist = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 colorlist = ['white', 'a0e6ff', '92d050', 'FFFF00', 'FFC000', 'F00000', 'a32777', '632523', '4C2600', 'black']
 
-eqpos = []
+eqlat = []
+eqlon = []
 eqregion = []
 eqdepth = []
 eqsize = []
@@ -57,21 +59,21 @@ AreaNames = ["서울", "부산", "대구", "인천", "광주", "대전", "울산
 layout = [
     [sg.Text("0000/00/00 00:00", font=eqtimet, key='timern', text_color='grey90', background_color='grey23'), sg.Text("00:00:00 갱신", font=eqtimet, key='rectime', text_color='grey70', background_color='grey23')],
     [sg.Column([
-        [sg.Text('⨉', font=eqsint, key='eqsin'+str(1), text_color='grey90', background_color='grey30',pad=(0,0)),
+        [sg.vtop(sg.Text('⨉', font=eqsint, key='eqsin'+str(1), text_color='grey90', background_color='grey30',pad=(0,0))),
         sg.Column([
             [sg.Text('현재 지진 정보가 없습니다.', font=eqregiont, key='eqregion'+str(1), text_color='grey90', background_color='grey30',pad=(0,0))],
-            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(1), text_color='grey90', background_color='grey30')]],
-            element_justification='l', background_color='grey30', key='colm'+str(1))],
-        [sg.Text('M', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='m'+str(1)), sg.Text('0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(1), background_color='grey30'), sg.Text('0', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(1), background_color='grey30'), sg.Text('KM', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='km'+str(1)), sg.Text('0', font=recenteqdepthsizet, key='eqsec' + str(1), text_color='grey90', background_color='grey30'), sg.Text('초', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='cho' + str(1)), sg.Text('00:00:00 수신', font=recenteqrectimet, key='eqrectime'+str(1), text_color='grey70', background_color='grey30')]]
-        , element_justification='l', background_color='grey30', key='col'+str(1), expand_x='true')],
+            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(1), text_color='grey90', background_color='grey30',pad=(0,0)), sg.Text('00:00:00 수신', font=eqtimet, key='eqrectime'+str(1), text_color='grey70', background_color='grey30',pad=(0,0))],
+            [sg.Text('M 0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(1), background_color='grey30',pad=(0,0)), sg.Text('0 KM', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(1), background_color='grey30',pad=(0,0)), sg.Text('0 초', font=recenteqdepthsizet, key='eqsec' + str(1), text_color='grey90', background_color='grey30',pad=(0,0))]],
+            element_justification='l', background_color='grey30', key='colm'+str(1),pad=(0,0))],
+        ]
+        , element_justification='l', background_color='grey30', key='col'+str(1),  vertical_alignment='t', expand_x='true',pad=(0,0))],
     [[sg.Column([
-        [sg.Text('⨉', font=recenteqsint, key='eqsin'+str(i+2), text_color='grey90', background_color='grey30'),
+        [sg.Text('⨉', font=recenteqsint, key='eqsin'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0)),
         sg.Column([
-            [sg.Text('정보 없음', font=recenteqregiont, key='eqregion'+str(i+2), text_color='grey90', background_color='grey30')],
-            [sg.Text('M', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='m'+str(i+2)), sg.Text('0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30'), sg.Text('0', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30'), sg.Text('KM', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='km'+str(i+2)), sg.Text('0', font=recenteqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30'), sg.Text('초', font=recenteqexplaint, text_color='grey90', background_color='grey30', key='cho' + str(i+2))]],
-            element_justification='l', background_color='grey30', key='colm'+str(i+2))],
-        [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(i+2), text_color='grey90', background_color='grey30'), sg.Text('00:00:00 수신', font=eqtimet, key='eqrectime'+str(i+2), text_color='grey70', background_color='grey30')]]
-        , element_justification='l', background_color='grey30', key='col'+str(i+2), expand_x='true'), [sg.Column((), size=(0,3), background_color='grey23')]] for i in range (5)]
+            [sg.Text('현재 지진 정보가 없습니다.', font=recenteqregiont, key='eqregion'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0))],
+            [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0)), sg.Text('00:00:00 수신', font=eqtimet, key='eqrectime'+str(i+2), text_color='grey70', background_color='grey30',pad=(0,0)), sg.Text('M 0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30',pad=(0,0)), sg.Text('0 KM', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30',pad=(0,0)), sg.Text('0 초', font=recenteqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30',pad=(0,0))]],
+            element_justification='l', background_color='grey30', key='colm'+str(i+2))]]
+        , element_justification='l', background_color='grey30', key='col'+str(i+2), expand_x='true',pad=(0,0)), [sg.Column((), size=(0,2), background_color='grey23')]] for i in range (5)]
 ]
 
 window = sg.Window('Closing the Door', layout, resizable=True, background_color='grey23')
@@ -84,10 +86,11 @@ def soundplay(music):
     t.start()
 
 def geteqregion(phase, url):
+    print(phase)
     if phase == 2:
         try:
-            response = requests.get(url + ".le", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}).get
-            return response.json().get("info_ko", "")
+            response = requests.get(url + ".le", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"})
+            return (response.json()).get("info_ko", "")
         except Exception as e:
             print(e)
             with open("log.txt", "a") as log_file:
@@ -95,8 +98,8 @@ def geteqregion(phase, url):
                 log_file.write(str(e) + "\n")
     else:
         try:
-            response = requests.get(url + ".li", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"}).get
-            return response.json().get("info_ko", "")
+            response = requests.get(url + ".li", headers={"user-agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)"})
+            return (response.json()).get("info_ko", "")
         except Exception as e:
             print(e)
             with open("log.txt", "a") as log_file:
@@ -105,46 +108,39 @@ def geteqregion(phase, url):
 
 def guiupdate():
     for i in range(len(eqrectime)):
-        if eqsin[i] in sindolist:
-            colcolor1 = colorlist[sindolist.index(eqsin[i])]
-            if (sindolist.index(eqsin[i])) > 5:
-                fontcolor1 = 'black'
-            else:
-                fontcolor1 = 'white'
+        colcolor1 = colorlist[eqsin[i]-1]
+        if eqsin[i] < 5:
+            fontcolor1 = 'black'
         else:
+            fontcolor1 = 'white'
+        if eqsin[i] > 10:
             fontcolor1 = 'white'
             colcolor1 = 'black'
         for x in range(len(elementlist)-1):
+            window[elementname].ParentRowFrame.config(background=colcolor1)
             window[elementlist[x] + str(i+1)].widget.master.configure(background=colcolor1)
             window[elementlist[x] + str(i+1)].widget.configure(background=colcolor1)
         for x in range(len(textlist)-1):
-            window[textlist[x] + str(i+1)].widget.master.configure(text_color=fontcolor1)
-            window[textlist[x] + str(i+1)].widget.configure(text_color=fontcolor1)
-        if eqsec[i] > 0 and eqsec[i] != 0: # 카운트다운
-            eqsec[i] = eqsec[i] - 1
-            if eqsec[i] < 11:
-                soundplay('countdown')
-        elif eqsec[i] != 0:
-            eqsec[i] = 0
-            soundplay('reach')
+            window[textlist[x] + str(i+1)].update(text_color=fontcolor1)
+
         window['eqsin'+str(i+1)].update(eqsin[i])
         window['eqregion'+str(i+1)].update(eqregion[i])
         window['eqtime'+str(i+1)].update(eqtime[i])
-        window['eqsize'+str(i+1)].update(eqsize[i])
-        window['eqdepth'+str(i+1)].update(eqdepth[i])
-        window['eqsec'+str(i+1)].update(eqsec[i])
-        window['eqrectime'+str(i+1)].update(eqrectime[i])
+        window['eqsize'+str(i+1)].update('M' + str(eqsize[i]))
+        window['eqdepth'+str(i+1)].update(str(eqdepth[i]) + "KM")
+        window['eqrectime'+str(i+1)].update(str(eqrectime[i]) + "수신")
 
 for i in range(6):
         for x in range(len(elementlist)):
             elementname = elementlist[x]+str(i+1)
             window[elementname].ParentRowFrame.config(background='grey30')
             window[elementname].widget.configure(background='grey30')
-            
+
 def byte_to_bin_str(val):
     return bin(val)[2:].zfill(8)
 
 # 지진 핸들러
+# 3 = 일반정보 2 = 신속정보
 
 def handle_eqk(body, info_bytes, phase):
     data = body[-(MaxEqkStrLen * 8 + MaxEqkInfoLen):]
@@ -165,39 +161,49 @@ def handle_eqk(body, info_bytes, phase):
     # 지진 핸들링
 
     if eqk_id in eqid: # 지진이 포함된 경우 (업데이트)
-        if (orig_lat, orig_lon) not in eqpos or eqk_mag not in eqsize or eqk_dep not in eqdepth or eqk_time not in eqtime or eqk_max not in eqsin: # 변경 내용이 있는 경우에만
-            eqregion[eqid.find(eqk_id)] = geteqregion(phase, url2)
-            eqpos[eqid.find(eqk_id)] = (orig_lat, orig_lon)
-            eqdepth[eqid.find(eqk_id)] = eqk_dep
-            eqsize[eqid.find(eqk_id)] = eqk_mag
-            eqtime[eqid.find(eqk_id)] = datetime.datetime.fromtimestamp(eqk_time).strftime('%Y/%m/%d %H:%M:%S')
-            eqsin[eqid.find(eqk_id)] = eqk_max
-            eqid[eqid.find(eqk_id)] = eqk_id
-            eqrectime[eqid.find(eqk_id)] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "업데이트"
-            eqsec[eqid.find(eqk_id)] = "{:.0f}".format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time)
+        if orig_lat not in eqlat or orig_lon not in eqlon or eqk_mag not in eqsize or eqk_dep not in eqdepth or eqk_time not in eqtime or eqk_max not in eqsin: # 변경 내용이 있는 경우에만
+            eqlat[eqid.index(eqk_id)] = orig_lat
+            eqlon[eqid.index(eqk_id)] = orig_lon
+            eqregion[eqid.index(eqk_id)] = geteqregion(phase, url2)
+            eqdepth[eqid.index(eqk_id)] = eqk_dep
+            eqsize[eqid.index(eqk_id)] = eqk_mag
+            eqtime[eqid.index(eqk_id)] = datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S')
+            eqsin[eqid.index(eqk_id)] = eqk_max
+            eqid[eqid.index(eqk_id)] = eqk_id
+            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "업데이트"
+            if eqsec > 0:
+                eqsec = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
+            else:
+                eqsec = 0
 
     else: # 새로운 지진 업데이트
         if phase == 2:
             soundplay('eew')
         else:
             soundplay('earthquakeinfo')
-        eqregion[0] = geteqregion(phase, url2)
-        eqpos[0] = (orig_lat, orig_lon)
-        eqdepth[0] = eqk_dep
-        eqsize[0] = eqk_mag
-        eqtime[0] = datetime.datetime.fromtimestamp(eqk_time).strftime('%Y/%m/%d %H:%M:%S')
-        eqsin[0] = eqk_max
-        eqid[0] = eqk_id
-        eqrectime[0] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "업데이트"
-        eqsec[0] = "{:.0f}".format(haversine(eqpos, curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time)
-        if len(eqpos) == 7:
-            eqpos.pop()
+        eqlat.append(orig_lat)
+        eqlon.append(orig_lon)
+        eqregion.append(geteqregion(phase, url2))
+        eqdepth.append(eqk_dep)
+        eqsize.append(eqk_mag)
+        eqtime.append(datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S'))
+        eqsin.append(eqk_max)
+        eqid.append(eqk_id)
+        eqrectime.append(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "업데이트")
+        if int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")) > 0:
+            eqsec = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
+        else:
+            eqsec = 0
+        if len(eqdepth) == 7:
+            eqlat.pop()
+            eqlon.pop()
             eqdepth.pop()
             eqsize.pop()
             eqtime.pop()
             eqsin.pop()
             eqid.pop()
-            eqrectime.pop()  
+            eqrectime.pop()
+            eqsec.pop()
 
     print("위도:", orig_lat)
     print("경도:", orig_lon)
@@ -269,7 +275,7 @@ def handlecomm():
             doneparsing = True
                     
         if errorhappened == False:
-            rectime = datetime.datetime.now().strftime('%H:%M:%S 갱신')
+            rectime = datetime.datetime.now().strftime('%H:%M:%S') + ' 갱신'
             doneparsing = True
             bytes_data = response.content
             # 시간 동기화
