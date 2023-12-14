@@ -9,6 +9,7 @@ import json
 import playsound
 import os
 import threading
+import traceback
 
 # GUI 관련 변수
 
@@ -109,8 +110,8 @@ def geteqregion(phase, url):
 
 def guiupdate():
     for i in range(len(eqrectime)):
-        colcolor1 = colorlist[eqsin[i]-1]
-        if eqsin[i] < 5:
+        colcolor1 = '#'+colorlist[eqsin[i]-1]
+        if int(eqsin[i]) < 5:
             fontcolor1 = 'black'
         else:
             fontcolor1 = 'white'
@@ -118,18 +119,18 @@ def guiupdate():
             fontcolor1 = 'white'
             colcolor1 = 'black'
         for x in range(len(elementlist)-1):
-            window[elementname].ParentRowFrame.config(background=colcolor1)
+            window[elementlist[x] + str(i+1)].ParentRowFrame.config(background=colcolor1)
             window[elementlist[x] + str(i+1)].widget.master.configure(background=colcolor1)
             window[elementlist[x] + str(i+1)].widget.configure(background=colcolor1)
         for x in range(len(textlist)-1):
             window[textlist[x] + str(i+1)].update(text_color=fontcolor1)
-
+        print(traceback.format_exc())
         window['eqsin'+str(i+1)].update(eqsin[i])
         window['eqregion'+str(i+1)].update(eqregion[i])
         window['eqtime'+str(i+1)].update(eqtime[i])
         window['eqsize'+str(i+1)].update('M' + str(eqsize[i]))
         window['eqdepth'+str(i+1)].update(str(eqdepth[i]) + "KM")
-        window['eqrectime'+str(i+1)].update(str(eqrectime[i]) + "수신")
+        window['eqrectime'+str(i+1)].update(str(eqrectime[i]))
 
 for i in range(6):
         for x in range(len(elementlist)):
@@ -144,6 +145,7 @@ def byte_to_bin_str(val):
 # 3 = 일반정보 2 = 신속정보
 
 def handle_eqk(body, info_bytes, phase):
+    global eqsec
     data = body[-(MaxEqkStrLen * 8 + MaxEqkInfoLen):]
     eqk_str = unquote(info_bytes.decode('utf-8'))
 
@@ -162,7 +164,7 @@ def handle_eqk(body, info_bytes, phase):
     # 지진 핸들링
 
     if eqk_id in eqid: # 지진이 포함된 경우 (업데이트)
-        if orig_lat not in eqlat or orig_lon not in eqlon or eqk_mag not in eqsize or eqk_dep not in eqdepth or eqk_time not in eqtime or eqk_max not in eqsin: # 변경 내용이 있는 경우에만
+        if orig_lat not in eqlat or orig_lon not in eqlon or eqk_mag not in eqsize or eqk_dep not in eqdepth or datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S') not in eqtime or eqk_max not in eqsin: # 변경 내용이 있는 경우에만
             eqlat[eqid.index(eqk_id)] = orig_lat
             eqlon[eqid.index(eqk_id)] = orig_lon
             eqregion[eqid.index(eqk_id)] = geteqregion(phase, url2)
@@ -171,11 +173,11 @@ def handle_eqk(body, info_bytes, phase):
             eqtime[eqid.index(eqk_id)] = datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S')
             eqsin[eqid.index(eqk_id)] = eqk_max
             eqid[eqid.index(eqk_id)] = eqk_id
-            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "업데이트"
-            if eqsec > 0:
-                eqsec = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
+            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신"
+            if eqsec[eqid.index(eqk_id)] > 0:
+                eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
             else:
-                eqsec = 0
+                eqsec[eqid.index(eqk_id)] = 0
 
     else: # 새로운 지진 업데이트
         if phase == 2:
@@ -190,11 +192,11 @@ def handle_eqk(body, info_bytes, phase):
         eqtime.append(datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S'))
         eqsin.append(eqk_max)
         eqid.append(eqk_id)
-        eqrectime.append(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "업데이트")
+        eqrectime.append(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신")
         if int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")) > 0:
-            eqsec = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
+            eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
         else:
-            eqsec = 0
+            eqsec[eqid.index(eqk_id)] = 0
         if len(eqdepth) == 7:
             eqlat.pop()
             eqlon.pop()
@@ -215,6 +217,8 @@ def handle_eqk(body, info_bytes, phase):
     print("설명:", eqk_str)
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
+    print(traceback.format_exc())
+
 
 
 def handle_stn(stn_body, bin_body):
@@ -230,7 +234,7 @@ def handle_stn(stn_body, bin_body):
     mmi_data = parse_mmi(bin_body)
 
     print("관측소 현재 최대, 최소 진도:", max(mmi_data), min(mmi_data))
-
+    print(traceback.format_exc())
     mmi_data = [v for v in mmi_data if v > 1]
     if mmi_data:
         print("진도 목록:", ", ".join(map(str, mmi_data)))

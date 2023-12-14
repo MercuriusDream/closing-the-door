@@ -2262,3 +2262,1673 @@ list assignment index out of range
 list assignment index out of range
 2023-12-10 17:08:09.153816
 list assignment index out of range
+2023-12-22 19:41:27.813305
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:42:18.479625
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:42:19.203496
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:20.182698
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:21.167827
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:22.163828
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:23.177836
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:26.147078
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:27.193077
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:28.164076
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:29.163871
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:42:58.498681
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:42:59.155437
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:00.150705
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:01.204702
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:02.157133
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:03.160433
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:04.159409
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:05.164528
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:06.133528
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:07.137002
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:08.218223
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:09.143469
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:10.149558
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:11.167429
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:12.194998
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:13.164172
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:14.178024
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:15.140520
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:16.213010
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:17.154009
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:18.136642
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:19.148324
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:20.160127
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:21.161201
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:23.164700
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:24.199703
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:24.761613
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:25.195612
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:26.164868
+local variable 'eqsec' referenced before assignment
+2023-12-22 19:43:30.344803
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:31.173280
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:32.145381
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:33.671878
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:34.144237
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:35.147746
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:36.164745
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:37.180753
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:38.161346
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:41.204295
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:42.157293
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:43.152295
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:44.167403
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:45.151092
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:46.142788
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:47.147994
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:48.148558
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:49.355972
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:50.145045
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:51.160585
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:52.154410
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:53.150269
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:54.140052
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:55.140588
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:56.170933
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:57.161246
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:58.136305
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:43:59.154417
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:00.135423
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:01.162939
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:02.213975
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:03.145556
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:04.136288
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:05.161871
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:06.158608
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:07.149614
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:08.159523
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:09.157695
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:10.139025
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:11.135494
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:12.173252
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:13.190865
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:14.148441
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:15.172082
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:16.149352
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:17.158353
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:18.158352
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:19.138359
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:22.171622
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:23.140044
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:24.166035
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:25.162459
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:26.162233
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:27.179236
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:33.142376
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:36.194206
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:37.164679
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:38.162121
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:39.181078
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:40.157346
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:41.150414
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:42.185466
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:43.213345
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:44.174240
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:45.171832
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:46.172812
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:47.192454
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:48.198075
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:49.180489
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:50.188505
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:51.165112
+'>' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:55.370119
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:44:56.184316
+list index out of range
+2023-12-22 19:44:57.200657
+list index out of range
+2023-12-22 19:44:59.162531
+list index out of range
+2023-12-22 19:45:00.209624
+list index out of range
+2023-12-22 19:45:01.238637
+list index out of range
+2023-12-22 19:45:02.189638
+list index out of range
+2023-12-22 19:45:02.387642
+list index out of range
+2023-12-22 19:45:03.417639
+list index out of range
+2023-12-22 19:45:04.174747
+list index out of range
+2023-12-22 19:45:05.166995
+list index out of range
+2023-12-22 19:45:08.174989
+list index out of range
+2023-12-22 19:45:09.180278
+list index out of range
+2023-12-22 19:45:10.164140
+list index out of range
+2023-12-22 19:45:11.212786
+list index out of range
+2023-12-22 19:45:14.167316
+list index out of range
+2023-12-22 19:45:15.205757
+list index out of range
+2023-12-22 19:45:16.144231
+list index out of range
+2023-12-22 19:45:17.174844
+list index out of range
+2023-12-22 19:45:18.183490
+list index out of range
+2023-12-22 19:45:19.176497
+list index out of range
+2023-12-22 19:45:20.172412
+list index out of range
+2023-12-22 19:45:21.165985
+list index out of range
+2023-12-22 19:45:22.178486
+list index out of range
+2023-12-22 19:45:26.172068
+list index out of range
+2023-12-22 19:45:27.197291
+list index out of range
+2023-12-22 19:45:28.187037
+list index out of range
+2023-12-22 19:45:29.179791
+list index out of range
+2023-12-22 19:45:30.222115
+list index out of range
+2023-12-22 19:45:31.166986
+list index out of range
+2023-12-22 19:45:34.689791
+list index out of range
+2023-12-22 19:45:37.181247
+list index out of range
+2023-12-22 19:45:38.872242
+list index out of range
+2023-12-22 19:45:39.175247
+list index out of range
+2023-12-22 19:45:40.239248
+list index out of range
+2023-12-22 19:45:41.187365
+list index out of range
+2023-12-22 19:45:45.180003
+list index out of range
+2023-12-22 19:45:46.157005
+list index out of range
+2023-12-22 19:45:47.162003
+list index out of range
+2023-12-22 19:45:48.148003
+list index out of range
+2023-12-22 19:45:49.171990
+list index out of range
+2023-12-22 19:45:50.189737
+list index out of range
+2023-12-22 19:45:51.174433
+list index out of range
+2023-12-22 19:45:52.181435
+list index out of range
+2023-12-22 19:45:53.146975
+list index out of range
+2023-12-22 19:45:54.210960
+list index out of range
+2023-12-22 19:45:55.164430
+list index out of range
+2023-12-22 19:45:56.174829
+list index out of range
+2023-12-22 19:45:57.656258
+list index out of range
+2023-12-22 19:45:58.196474
+list index out of range
+2023-12-22 19:45:59.175687
+list index out of range
+2023-12-22 19:46:00.172020
+list index out of range
+2023-12-22 19:46:01.223603
+list index out of range
+2023-12-22 19:46:02.170602
+list index out of range
+2023-12-22 19:46:03.158010
+list index out of range
+2023-12-22 19:46:04.680029
+list index out of range
+2023-12-22 19:46:05.162353
+list index out of range
+2023-12-22 19:46:06.382534
+list index out of range
+2023-12-22 19:46:07.160464
+list index out of range
+2023-12-22 19:46:08.687466
+list index out of range
+2023-12-22 19:46:09.653830
+list index out of range
+2023-12-22 19:46:10.675832
+list index out of range
+2023-12-22 19:46:11.161831
+list index out of range
+2023-12-22 19:46:12.202684
+list index out of range
+2023-12-22 19:46:13.142123
+list index out of range
+2023-12-22 19:46:14.164119
+list index out of range
+2023-12-22 19:46:15.168118
+list index out of range
+2023-12-22 19:46:16.136766
+list index out of range
+2023-12-22 19:46:17.135766
+list index out of range
+2023-12-22 19:46:18.133766
+list index out of range
+2023-12-22 19:46:19.131116
+list index out of range
+2023-12-22 19:46:20.167113
+list index out of range
+2023-12-22 19:46:21.167716
+list index out of range
+2023-12-22 19:46:22.135224
+list index out of range
+2023-12-22 19:46:23.152277
+list index out of range
+2023-12-22 19:46:24.180986
+list index out of range
+2023-12-22 19:46:25.129236
+list index out of range
+2023-12-22 19:46:26.130774
+list index out of range
+2023-12-22 19:46:27.137777
+list index out of range
+2023-12-22 19:46:28.134077
+list index out of range
+2023-12-22 19:46:29.131944
+list index out of range
+2023-12-22 19:46:30.130526
+list index out of range
+2023-12-22 19:46:31.130616
+list index out of range
+2023-12-22 19:46:32.161235
+list index out of range
+2023-12-22 19:46:33.134042
+list index out of range
+2023-12-22 19:46:34.152212
+list index out of range
+2023-12-22 19:46:35.165583
+list index out of range
+2023-12-22 19:46:36.640230
+list index out of range
+2023-12-22 19:46:37.133577
+list index out of range
+2023-12-22 19:46:38.152621
+list index out of range
+2023-12-22 19:46:39.139300
+list index out of range
+2023-12-22 19:46:40.141453
+list index out of range
+2023-12-22 19:46:41.129327
+list index out of range
+2023-12-22 19:46:42.168697
+list index out of range
+2023-12-22 19:46:43.136785
+list index out of range
+2023-12-22 19:46:44.216250
+list index out of range
+2023-12-22 19:46:45.142192
+list index out of range
+2023-12-22 19:46:46.132278
+list index out of range
+2023-12-22 19:46:47.148500
+list index out of range
+2023-12-22 19:46:48.160502
+list index out of range
+2023-12-22 19:46:49.451831
+list index out of range
+2023-12-22 19:46:50.200829
+list index out of range
+2023-12-22 19:46:51.151830
+list index out of range
+2023-12-22 19:46:52.140284
+list index out of range
+2023-12-22 19:46:53.124278
+list index out of range
+2023-12-22 19:46:54.156283
+list index out of range
+2023-12-22 19:46:55.126447
+list index out of range
+2023-12-22 19:46:56.152634
+list index out of range
+2023-12-22 19:46:57.125258
+list index out of range
+2023-12-22 19:46:58.142258
+list index out of range
+2023-12-22 19:46:59.150103
+list index out of range
+2023-12-22 19:47:00.139230
+list index out of range
+2023-12-22 19:47:01.162104
+list index out of range
+2023-12-22 19:47:02.153731
+list index out of range
+2023-12-22 19:47:03.133721
+list index out of range
+2023-12-22 19:47:04.134494
+list index out of range
+2023-12-22 19:47:05.154138
+list index out of range
+2023-12-22 19:47:06.156860
+list index out of range
+2023-12-22 19:47:07.131538
+list index out of range
+2023-12-22 19:47:08.149538
+list index out of range
+2023-12-22 19:47:09.146537
+list index out of range
+2023-12-22 19:47:10.145925
+list index out of range
+2023-12-22 19:47:11.172924
+list index out of range
+2023-12-22 19:47:12.154926
+list index out of range
+2023-12-22 19:47:13.150061
+list index out of range
+2023-12-22 19:47:14.147062
+list index out of range
+2023-12-22 19:47:15.159706
+list index out of range
+2023-12-22 19:47:16.190437
+list index out of range
+2023-12-22 19:47:17.175933
+list index out of range
+2023-12-22 19:47:19.171066
+list index out of range
+2023-12-22 19:47:19.228069
+list index out of range
+2023-12-22 19:47:20.200066
+list index out of range
+2023-12-22 19:47:21.192069
+list index out of range
+2023-12-22 19:47:22.199066
+list index out of range
+2023-12-22 19:47:23.196666
+list index out of range
+2023-12-22 19:47:24.171024
+list index out of range
+2023-12-22 19:47:25.170029
+list index out of range
+2023-12-22 19:47:26.163029
+list index out of range
+2023-12-22 19:47:27.194510
+list index out of range
+2023-12-22 19:47:28.685249
+list index out of range
+2023-12-22 19:47:29.183255
+list index out of range
+2023-12-22 19:47:30.173662
+list index out of range
+2023-12-22 19:47:31.179108
+list index out of range
+2023-12-22 19:47:32.161760
+list index out of range
+2023-12-22 19:47:33.167017
+list index out of range
+2023-12-22 19:47:34.177019
+list index out of range
+2023-12-22 19:47:35.180022
+list index out of range
+2023-12-22 19:47:36.167122
+list index out of range
+2023-12-22 19:47:37.177673
+list index out of range
+2023-12-22 19:47:38.161605
+list index out of range
+2023-12-22 19:47:39.178429
+list index out of range
+2023-12-22 19:47:40.170701
+list index out of range
+2023-12-22 19:47:41.151154
+list index out of range
+2023-12-22 19:47:42.156582
+list index out of range
+2023-12-22 19:47:43.163989
+list index out of range
+2023-12-22 19:47:44.176277
+list index out of range
+2023-12-22 19:47:45.154722
+list index out of range
+2023-12-22 19:47:46.183955
+list index out of range
+2023-12-22 19:47:47.183401
+list index out of range
+2023-12-22 19:47:48.235212
+list index out of range
+2023-12-22 19:47:49.179120
+list index out of range
+2023-12-22 19:47:50.173296
+list index out of range
+2023-12-22 19:47:51.165101
+list index out of range
+2023-12-22 19:47:52.169160
+list index out of range
+2023-12-22 19:47:53.184161
+list index out of range
+2023-12-22 19:47:54.163161
+list index out of range
+2023-12-22 19:47:55.206158
+list index out of range
+2023-12-22 19:47:56.178836
+list index out of range
+2023-12-22 19:47:57.183834
+list index out of range
+2023-12-22 19:47:58.177478
+list index out of range
+2023-12-22 19:47:59.160722
+list index out of range
+2023-12-22 19:48:00.170923
+list index out of range
+2023-12-22 19:48:01.196482
+list index out of range
+2023-12-22 19:48:02.177485
+list index out of range
+2023-12-22 19:48:03.164482
+list index out of range
+2023-12-22 19:48:04.191482
+list index out of range
+2023-12-22 19:48:05.164482
+list index out of range
+2023-12-22 19:48:06.177004
+list index out of range
+2023-12-22 19:48:07.169004
+list index out of range
+2023-12-22 19:48:08.237228
+list index out of range
+2023-12-22 19:48:09.157087
+list index out of range
+2023-12-22 19:48:12.148768
+list index out of range
+2023-12-22 19:48:13.182097
+list index out of range
+2023-12-22 19:48:14.171018
+list index out of range
+2023-12-22 19:48:15.178535
+list index out of range
+2023-12-22 19:48:16.194910
+list index out of range
+2023-12-22 19:48:17.165424
+list index out of range
+2023-12-22 19:48:18.152148
+list index out of range
+2023-12-22 19:48:19.175115
+list index out of range
+2023-12-22 19:48:21.162570
+list index out of range
+2023-12-22 19:48:22.190499
+list index out of range
+2023-12-22 19:48:23.190497
+list index out of range
+2023-12-22 19:48:25.192558
+list index out of range
+2023-12-22 19:48:25.259556
+list index out of range
+2023-12-22 19:48:26.194178
+list index out of range
+2023-12-22 19:48:27.173400
+list index out of range
+2023-12-22 19:48:28.185995
+list index out of range
+2023-12-22 19:48:29.717192
+list index out of range
+2023-12-22 19:48:30.201194
+list index out of range
+2023-12-22 19:48:31.161195
+list index out of range
+2023-12-22 19:48:32.688115
+list index out of range
+2023-12-22 19:48:34.163325
+list index out of range
+2023-12-22 19:48:34.191327
+list index out of range
+2023-12-22 19:48:35.187058
+list index out of range
+2023-12-22 19:48:36.196058
+list index out of range
+2023-12-22 19:48:37.204774
+list index out of range
+2023-12-22 19:48:38.167494
+list index out of range
+2023-12-22 19:48:39.678488
+list index out of range
+2023-12-22 19:48:40.192490
+list index out of range
+2023-12-22 19:48:41.172098
+list index out of range
+2023-12-22 19:48:42.181094
+list index out of range
+2023-12-22 19:48:43.186246
+list index out of range
+2023-12-22 19:48:44.181306
+list index out of range
+2023-12-22 19:48:45.195310
+list index out of range
+2023-12-22 19:48:46.185888
+list index out of range
+2023-12-22 19:48:47.162507
+list index out of range
+2023-12-22 19:48:48.135505
+list index out of range
+2023-12-22 19:48:49.151497
+list index out of range
+2023-12-22 19:48:50.162494
+list index out of range
+2023-12-22 19:48:51.185023
+list index out of range
+2023-12-22 19:48:52.184023
+list index out of range
+2023-12-22 19:48:53.154675
+list index out of range
+2023-12-22 19:48:54.142836
+list index out of range
+2023-12-22 19:48:55.159264
+list index out of range
+2023-12-22 19:48:56.154532
+list index out of range
+2023-12-22 19:48:57.176102
+list index out of range
+2023-12-22 19:48:58.140626
+list index out of range
+2023-12-22 19:48:59.156597
+list index out of range
+2023-12-22 19:49:00.173469
+list index out of range
+2023-12-22 19:49:01.142610
+list index out of range
+2023-12-22 19:49:02.188877
+list index out of range
+2023-12-22 19:49:03.157730
+list index out of range
+2023-12-22 19:49:04.152445
+list index out of range
+2023-12-22 19:49:05.167426
+list index out of range
+2023-12-22 19:49:06.152089
+list index out of range
+2023-12-22 19:49:07.180442
+list index out of range
+2023-12-22 19:49:08.145619
+list index out of range
+2023-12-22 19:49:09.143106
+list index out of range
+2023-12-22 19:49:10.159625
+list index out of range
+2023-12-22 19:49:11.150870
+list index out of range
+2023-12-22 19:49:12.132093
+list index out of range
+2023-12-22 19:49:13.146725
+list index out of range
+2023-12-22 19:49:14.136979
+list index out of range
+2023-12-22 19:49:15.162470
+list index out of range
+2023-12-22 19:49:16.162063
+list index out of range
+2023-12-22 19:49:17.176947
+list index out of range
+2023-12-22 19:49:18.145282
+list index out of range
+2023-12-22 19:49:19.135436
+list index out of range
+2023-12-22 19:49:20.188433
+list index out of range
+2023-12-22 19:49:21.165566
+list index out of range
+2023-12-22 19:49:22.164042
+list index out of range
+2023-12-22 19:49:23.143171
+list index out of range
+2023-12-22 19:49:24.146007
+list index out of range
+2023-12-22 19:49:25.140221
+list index out of range
+2023-12-22 19:49:26.172392
+list index out of range
+2023-12-22 19:49:27.130474
+list index out of range
+2023-12-22 19:49:28.132991
+list index out of range
+2023-12-22 19:49:29.161923
+list index out of range
+2023-12-22 19:49:30.155521
+list index out of range
+2023-12-22 19:49:31.171248
+list index out of range
+2023-12-22 19:49:32.172759
+list index out of range
+2023-12-22 19:49:33.150074
+list index out of range
+2023-12-22 19:49:34.143361
+list index out of range
+2023-12-22 19:49:35.157932
+list index out of range
+2023-12-22 19:49:36.154433
+list index out of range
+2023-12-22 19:49:37.147863
+list index out of range
+2023-12-22 19:49:38.165426
+list index out of range
+2023-12-22 19:49:39.158423
+list index out of range
+2023-12-22 19:49:40.134517
+list index out of range
+2023-12-22 19:49:41.132851
+list index out of range
+2023-12-22 19:49:42.147519
+list index out of range
+2023-12-22 19:49:43.631439
+list index out of range
+2023-12-22 19:49:44.149875
+list index out of range
+2023-12-22 19:49:45.185870
+list index out of range
+2023-12-22 19:49:46.158124
+list index out of range
+2023-12-22 19:49:47.159779
+list index out of range
+2023-12-22 19:49:48.172547
+list index out of range
+2023-12-22 19:49:49.202261
+list index out of range
+2023-12-22 19:49:50.170255
+list index out of range
+2023-12-22 19:49:51.138380
+list index out of range
+2023-12-22 19:49:52.155141
+list index out of range
+2023-12-22 19:49:53.143259
+list index out of range
+2023-12-22 19:49:54.170259
+list index out of range
+2023-12-22 19:49:57.175630
+list index out of range
+2023-12-22 19:49:58.152237
+list index out of range
+2023-12-22 19:50:01.983354
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:50:02.140142
+list index out of range
+2023-12-22 19:50:03.170959
+list index out of range
+2023-12-22 19:50:04.158958
+list index out of range
+2023-12-22 19:50:05.161132
+list index out of range
+2023-12-22 19:50:06.169104
+list index out of range
+2023-12-22 19:50:07.152140
+list index out of range
+2023-12-22 19:50:08.151140
+list index out of range
+2023-12-22 19:50:09.164943
+list index out of range
+2023-12-22 19:50:10.188944
+list index out of range
+2023-12-22 19:50:11.153064
+list index out of range
+2023-12-22 19:50:12.156066
+list index out of range
+2023-12-22 19:50:13.134064
+list index out of range
+2023-12-22 19:50:14.196076
+list index out of range
+2023-12-22 19:50:15.167075
+list index out of range
+2023-12-22 19:50:16.174075
+list index out of range
+2023-12-22 19:50:17.176691
+list index out of range
+2023-12-22 19:50:18.138733
+list index out of range
+2023-12-22 19:50:19.155720
+list index out of range
+2023-12-22 19:50:20.151121
+list index out of range
+2023-12-22 19:50:21.134573
+list index out of range
+2023-12-22 19:50:22.167700
+list index out of range
+2023-12-22 19:50:23.165700
+list index out of range
+2023-12-22 19:50:24.163471
+list index out of range
+2023-12-22 19:50:25.176505
+list index out of range
+2023-12-22 19:50:26.144752
+list index out of range
+2023-12-22 19:50:27.129080
+list index out of range
+2023-12-22 19:50:28.161225
+list index out of range
+2023-12-22 19:50:29.165773
+list index out of range
+2023-12-22 19:50:30.180852
+list index out of range
+2023-12-22 19:50:31.158985
+list index out of range
+2023-12-22 19:50:32.154355
+list index out of range
+2023-12-22 19:50:33.169288
+list index out of range
+2023-12-22 19:50:34.171466
+list index out of range
+2023-12-22 19:50:35.161533
+list index out of range
+2023-12-22 19:50:36.167531
+list index out of range
+2023-12-22 19:50:37.133315
+list index out of range
+2023-12-22 19:50:38.173315
+list index out of range
+2023-12-22 19:50:39.176318
+list index out of range
+2023-12-22 19:50:40.162260
+list index out of range
+2023-12-22 19:50:41.127082
+list index out of range
+2023-12-22 19:50:42.157261
+list index out of range
+2023-12-22 19:50:43.131832
+list index out of range
+2023-12-22 19:50:44.149228
+list index out of range
+2023-12-22 19:50:45.151905
+list index out of range
+2023-12-22 19:50:46.183332
+list index out of range
+2023-12-22 19:50:47.146322
+list index out of range
+2023-12-22 19:50:48.151993
+list index out of range
+2023-12-22 19:50:49.184963
+list index out of range
+2023-12-22 19:50:50.144533
+list index out of range
+2023-12-22 19:50:51.160118
+list index out of range
+2023-12-22 19:50:52.181934
+list index out of range
+2023-12-22 19:50:53.149133
+list index out of range
+2023-12-22 19:50:54.135177
+list index out of range
+2023-12-22 19:50:55.154353
+list index out of range
+2023-12-22 19:50:56.164813
+list index out of range
+2023-12-22 19:50:57.153739
+list index out of range
+2023-12-22 19:50:58.130962
+list index out of range
+2023-12-22 19:50:59.159285
+list index out of range
+2023-12-22 19:51:00.212263
+list index out of range
+2023-12-22 19:51:01.131570
+list index out of range
+2023-12-22 19:51:02.147481
+list index out of range
+2023-12-22 19:51:03.178261
+list index out of range
+2023-12-22 19:51:04.164261
+list index out of range
+2023-12-22 19:51:05.147274
+list index out of range
+2023-12-22 19:51:06.138581
+list index out of range
+2023-12-22 19:51:07.134509
+list index out of range
+2023-12-22 19:51:08.134726
+list index out of range
+2023-12-22 19:51:09.137726
+list index out of range
+2023-12-22 19:51:10.156733
+list index out of range
+2023-12-22 19:51:11.149797
+list index out of range
+2023-12-22 19:51:12.125176
+list index out of range
+2023-12-22 19:51:13.143748
+list index out of range
+2023-12-22 19:51:14.137708
+list index out of range
+2023-12-22 19:51:15.135907
+list index out of range
+2023-12-22 19:51:16.143411
+list index out of range
+2023-12-22 19:51:17.157212
+list index out of range
+2023-12-22 19:51:18.142211
+list index out of range
+2023-12-22 19:51:19.165051
+list index out of range
+2023-12-22 19:51:20.153078
+list index out of range
+2023-12-22 19:51:21.231500
+list index out of range
+2023-12-22 19:51:22.168756
+list index out of range
+2023-12-22 19:51:23.183888
+list index out of range
+2023-12-22 19:51:24.146434
+list index out of range
+2023-12-22 19:51:25.186775
+list index out of range
+2023-12-22 19:51:26.163232
+list index out of range
+2023-12-22 19:51:27.691272
+list index out of range
+2023-12-22 19:51:28.161276
+list index out of range
+2023-12-22 19:51:29.180407
+list index out of range
+2023-12-22 19:51:30.178780
+list index out of range
+2023-12-22 19:51:31.182339
+list index out of range
+2023-12-22 19:51:32.175337
+list index out of range
+2023-12-22 19:51:33.179335
+list index out of range
+2023-12-22 19:51:34.174373
+list index out of range
+2023-12-22 19:51:35.149323
+list index out of range
+2023-12-22 19:51:36.197278
+list index out of range
+2023-12-22 19:51:37.183382
+list index out of range
+2023-12-22 19:51:38.179169
+list index out of range
+2023-12-22 19:51:39.177418
+list index out of range
+2023-12-22 19:51:40.160891
+list index out of range
+2023-12-22 19:51:41.165963
+list index out of range
+2023-12-22 19:51:42.156958
+list index out of range
+2023-12-22 19:51:44.146832
+list index out of range
+2023-12-22 19:51:45.183393
+list index out of range
+2023-12-22 19:51:46.159656
+list index out of range
+2023-12-22 19:51:47.164074
+list index out of range
+2023-12-22 19:51:48.155165
+list index out of range
+2023-12-22 19:51:49.193122
+list index out of range
+2023-12-22 19:51:50.161158
+list index out of range
+2023-12-22 19:51:51.183579
+list index out of range
+2023-12-22 19:51:52.178635
+list index out of range
+2023-12-22 19:51:53.192995
+list index out of range
+2023-12-22 19:51:54.188745
+list index out of range
+2023-12-22 19:51:55.244524
+list index out of range
+2023-12-22 19:51:56.202329
+list index out of range
+2023-12-22 19:51:57.192319
+list index out of range
+2023-12-22 19:51:58.182318
+list index out of range
+2023-12-22 19:51:59.195934
+list index out of range
+2023-12-22 19:52:00.181211
+list index out of range
+2023-12-22 19:52:01.186885
+list index out of range
+2023-12-22 19:52:02.307276
+list index out of range
+2023-12-22 19:52:03.179315
+list index out of range
+2023-12-22 19:52:04.172102
+list index out of range
+2023-12-22 19:52:05.174357
+list index out of range
+2023-12-22 19:52:06.194256
+list index out of range
+2023-12-22 19:52:07.695670
+list index out of range
+2023-12-22 19:52:08.179091
+list index out of range
+2023-12-22 19:52:09.182963
+list index out of range
+2023-12-22 19:52:10.175269
+list index out of range
+2023-12-22 19:52:12.208639
+list index out of range
+2023-12-22 19:52:13.165706
+list index out of range
+2023-12-22 19:52:13.413883
+list index out of range
+2023-12-22 19:52:14.194133
+list index out of range
+2023-12-22 19:52:15.145308
+list index out of range
+2023-12-22 19:52:16.199309
+list index out of range
+2023-12-22 19:52:20.457580
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:52:21.164022
+list index out of range
+2023-12-22 19:52:22.661927
+list index out of range
+2023-12-22 19:52:23.171385
+list index out of range
+2023-12-22 19:52:24.179655
+list index out of range
+2023-12-22 19:52:25.188960
+list index out of range
+2023-12-22 19:52:26.198865
+list index out of range
+2023-12-22 19:53:25.513123
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:53:26.211555
+list index out of range
+2023-12-22 19:53:27.168219
+list index out of range
+2023-12-22 19:53:28.202054
+list index out of range
+2023-12-22 19:53:29.665052
+list index out of range
+2023-12-22 19:53:30.171400
+list index out of range
+2023-12-22 19:53:31.154523
+list index out of range
+2023-12-22 19:53:32.152197
+list index out of range
+2023-12-22 19:53:33.164497
+list index out of range
+2023-12-22 19:53:34.723772
+list index out of range
+2023-12-22 19:53:35.166511
+list index out of range
+2023-12-22 19:53:36.195135
+list index out of range
+2023-12-22 19:53:37.176472
+list index out of range
+2023-12-22 19:53:38.178470
+list index out of range
+2023-12-22 19:53:39.175998
+list index out of range
+2023-12-22 19:53:41.153541
+list index out of range
+2023-12-22 19:53:42.163532
+list index out of range
+2023-12-22 19:54:09.888914
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:54:10.151700
+list index out of range
+2023-12-22 19:54:11.167511
+list index out of range
+2023-12-22 19:54:12.164936
+list index out of range
+2023-12-22 19:54:19.069393
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:54:19.185193
+list index out of range
+2023-12-22 19:54:20.161284
+list index out of range
+2023-12-22 19:54:21.170863
+list index out of range
+2023-12-22 19:54:22.176863
+list index out of range
+2023-12-22 19:54:23.158171
+list index out of range
+2023-12-22 19:54:24.168364
+list index out of range
+2023-12-22 19:54:25.673907
+list index out of range
+2023-12-22 19:54:26.163907
+list index out of range
+2023-12-22 19:54:27.146907
+list index out of range
+2023-12-22 19:54:28.158561
+list index out of range
+2023-12-22 19:54:29.185050
+list index out of range
+2023-12-22 19:54:30.179411
+list index out of range
+2023-12-22 19:54:31.225543
+list index out of range
+2023-12-22 19:54:32.168697
+list index out of range
+2023-12-22 19:54:33.165808
+list index out of range
+2023-12-22 19:54:34.158687
+list index out of range
+2023-12-22 19:54:35.154969
+list index out of range
+2023-12-22 19:54:36.206457
+list index out of range
+2023-12-22 19:54:37.155929
+list index out of range
+2023-12-22 19:54:38.187367
+list index out of range
+2023-12-22 19:54:39.167548
+list index out of range
+2023-12-22 19:54:40.170548
+list index out of range
+2023-12-22 19:54:41.147548
+list index out of range
+2023-12-22 19:54:42.176756
+list index out of range
+2023-12-22 19:54:43.162612
+list index out of range
+2023-12-22 19:54:44.171668
+list index out of range
+2023-12-22 19:54:45.169341
+list index out of range
+2023-12-22 19:54:46.184406
+list index out of range
+2023-12-22 19:54:47.191677
+list index out of range
+2023-12-22 19:54:48.179042
+list index out of range
+2023-12-22 19:54:49.178023
+list index out of range
+2023-12-22 19:54:50.193975
+list index out of range
+2023-12-22 19:54:51.188990
+list index out of range
+2023-12-22 19:54:52.185559
+list index out of range
+2023-12-22 19:54:53.167198
+list index out of range
+2023-12-22 19:54:54.164809
+list index out of range
+2023-12-22 19:54:55.173810
+list index out of range
+2023-12-22 19:54:56.157919
+list index out of range
+2023-12-22 19:54:57.171916
+list index out of range
+2023-12-22 19:54:58.175566
+list index out of range
+2023-12-22 19:54:59.174332
+list index out of range
+2023-12-22 19:55:00.148334
+list index out of range
+2023-12-22 19:55:01.148267
+list index out of range
+2023-12-22 19:55:02.178408
+list index out of range
+2023-12-22 19:55:03.208137
+list index out of range
+2023-12-22 19:55:04.174716
+list index out of range
+2023-12-22 19:55:05.175794
+list index out of range
+2023-12-22 19:55:06.184490
+list index out of range
+2023-12-22 19:55:07.156688
+list index out of range
+2023-12-22 19:55:11.346227
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:55:12.163640
+list index out of range
+2023-12-22 19:55:13.175310
+list index out of range
+2023-12-22 19:55:14.182833
+list index out of range
+2023-12-22 19:55:15.266252
+list index out of range
+2023-12-22 19:55:16.160633
+list index out of range
+2023-12-22 19:55:17.172293
+list index out of range
+2023-12-22 19:55:18.237450
+list index out of range
+2023-12-22 19:55:19.163208
+list index out of range
+2023-12-22 19:55:20.670134
+list index out of range
+2023-12-22 19:55:21.178129
+list index out of range
+2023-12-22 19:55:22.176360
+list index out of range
+2023-12-22 19:55:23.156362
+list index out of range
+2023-12-22 19:55:24.164356
+list index out of range
+2023-12-22 19:55:25.188176
+list index out of range
+2023-12-22 19:55:26.155322
+list index out of range
+2023-12-22 19:55:27.169652
+list index out of range
+2023-12-22 19:55:28.207607
+list index out of range
+2023-12-22 19:55:29.171610
+list index out of range
+2023-12-22 19:55:31.665529
+list index out of range
+2023-12-22 19:55:32.181525
+list index out of range
+2023-12-22 19:55:32.297524
+list index out of range
+2023-12-22 19:55:33.160157
+list index out of range
+2023-12-22 19:55:34.153554
+list index out of range
+2023-12-22 19:55:35.176745
+list index out of range
+2023-12-22 19:55:36.175099
+list index out of range
+2023-12-22 19:55:39.163136
+list index out of range
+2023-12-22 19:55:40.173128
+list index out of range
+2023-12-22 19:55:41.173770
+list index out of range
+2023-12-22 19:55:42.208845
+list index out of range
+2023-12-22 19:55:43.168822
+list index out of range
+2023-12-22 19:55:44.152925
+list index out of range
+2023-12-22 19:55:47.178375
+list index out of range
+2023-12-22 19:55:48.186376
+list index out of range
+2023-12-22 19:55:49.162536
+list index out of range
+2023-12-22 19:55:50.164539
+list index out of range
+2023-12-22 19:55:51.179536
+list index out of range
+2023-12-22 19:55:54.152989
+list index out of range
+2023-12-22 19:55:55.163905
+list index out of range
+2023-12-22 19:55:56.143817
+list index out of range
+2023-12-22 19:55:57.149188
+list index out of range
+2023-12-22 19:55:58.154211
+list index out of range
+2023-12-22 19:55:59.157759
+list index out of range
+2023-12-22 19:56:00.152136
+list index out of range
+2023-12-22 19:56:01.146835
+list index out of range
+2023-12-22 19:56:02.184606
+list index out of range
+2023-12-22 19:56:03.147417
+list index out of range
+2023-12-22 19:56:05.161096
+list index out of range
+2023-12-22 19:56:06.184897
+list index out of range
+2023-12-22 19:56:07.182904
+list index out of range
+2023-12-22 19:56:08.157995
+list index out of range
+2023-12-22 19:56:09.132996
+list index out of range
+2023-12-22 19:56:09.155995
+list index out of range
+2023-12-22 19:56:10.182027
+list index out of range
+2023-12-22 19:56:11.169520
+list index out of range
+2023-12-22 19:56:12.160496
+list index out of range
+2023-12-22 19:56:13.178271
+list index out of range
+2023-12-22 19:56:14.156725
+list index out of range
+2023-12-22 19:56:15.199921
+list index out of range
+2023-12-22 19:56:16.194683
+list index out of range
+2023-12-22 19:56:17.159459
+list index out of range
+2023-12-22 19:56:18.176621
+list index out of range
+2023-12-22 19:56:19.161619
+list index out of range
+2023-12-22 19:56:20.223738
+list index out of range
+2023-12-22 19:56:21.175247
+list index out of range
+2023-12-22 19:56:22.166137
+list index out of range
+2023-12-22 19:56:23.177533
+list index out of range
+2023-12-22 19:56:24.208533
+list index out of range
+2023-12-22 19:56:25.196621
+list index out of range
+2023-12-22 19:56:26.160240
+list index out of range
+2023-12-22 19:56:27.200400
+list index out of range
+2023-12-22 19:56:28.170001
+list index out of range
+2023-12-22 19:56:29.199612
+list index out of range
+2023-12-22 19:56:30.166109
+list index out of range
+2023-12-22 19:56:31.660191
+list index out of range
+2023-12-22 19:56:34.182570
+list index out of range
+2023-12-22 19:56:35.174455
+list index out of range
+2023-12-22 19:56:36.159965
+list index out of range
+2023-12-22 19:56:37.337934
+list index out of range
+2023-12-22 19:56:38.172354
+list index out of range
+2023-12-22 19:56:39.151771
+list index out of range
+2023-12-22 19:56:40.182310
+list index out of range
+2023-12-22 19:56:41.166573
+list index out of range
+2023-12-22 19:56:42.183575
+list index out of range
+2023-12-22 19:56:43.178148
+list index out of range
+2023-12-22 19:56:44.213436
+list index out of range
+2023-12-22 19:56:45.188390
+list index out of range
+2023-12-22 19:56:47.163895
+list index out of range
+2023-12-22 19:56:47.170895
+list index out of range
+2023-12-22 19:56:48.162895
+list index out of range
+2023-12-22 19:56:49.171078
+list index out of range
+2023-12-22 19:56:51.194080
+list index out of range
+2023-12-22 19:56:52.161323
+list index out of range
+2023-12-22 19:56:53.190784
+list index out of range
+2023-12-22 19:56:53.190784
+list index out of range
+2023-12-22 19:56:54.193737
+list index out of range
+2023-12-22 19:56:55.189736
+list index out of range
+2023-12-22 19:56:58.169035
+list index out of range
+2023-12-22 19:56:59.182021
+list index out of range
+2023-12-22 19:57:00.142038
+list index out of range
+2023-12-22 19:57:01.231149
+list index out of range
+2023-12-22 19:57:02.250730
+list index out of range
+2023-12-22 19:57:03.175347
+list index out of range
+2023-12-22 19:57:04.171603
+list index out of range
+2023-12-22 19:57:05.266835
+list index out of range
+2023-12-22 19:57:06.191933
+list index out of range
+2023-12-22 19:57:07.172666
+list index out of range
+2023-12-22 19:57:08.190312
+list index out of range
+2023-12-22 19:57:09.200347
+list index out of range
+2023-12-22 19:57:10.189372
+list index out of range
+2023-12-22 19:57:11.188539
+list index out of range
+2023-12-22 19:57:12.180091
+list index out of range
+2023-12-22 19:57:13.150091
+list index out of range
+2023-12-22 19:57:14.175195
+list index out of range
+2023-12-22 19:57:15.144106
+list index out of range
+2023-12-22 19:57:16.168613
+list index out of range
+2023-12-22 19:57:17.168234
+list index out of range
+2023-12-22 19:57:18.167321
+list index out of range
+2023-12-22 19:57:19.143508
+list index out of range
+2023-12-22 19:57:20.148507
+list index out of range
+2023-12-22 19:57:21.166067
+list index out of range
+2023-12-22 19:57:22.153593
+list index out of range
+2023-12-22 19:57:23.161355
+list index out of range
+2023-12-22 19:57:24.161417
+list index out of range
+2023-12-22 19:57:25.207447
+list index out of range
+2023-12-22 19:57:26.182017
+list index out of range
+2023-12-22 19:57:27.146314
+list index out of range
+2023-12-22 19:57:28.215165
+list index out of range
+2023-12-22 19:57:29.151166
+list index out of range
+2023-12-22 19:57:30.178165
+list index out of range
+2023-12-22 19:57:31.164165
+list index out of range
+2023-12-22 19:57:32.143165
+list index out of range
+2023-12-22 19:57:33.147179
+list index out of range
+2023-12-22 19:57:34.143583
+list index out of range
+2023-12-22 19:57:35.150669
+list index out of range
+2023-12-22 19:57:36.157473
+list index out of range
+2023-12-22 19:57:37.153843
+list index out of range
+2023-12-22 19:57:38.142240
+list index out of range
+2023-12-22 19:57:39.136087
+list index out of range
+2023-12-22 19:57:40.179652
+list index out of range
+2023-12-22 19:57:41.182875
+list index out of range
+2023-12-22 19:57:42.165219
+list index out of range
+2023-12-22 19:57:43.168875
+list index out of range
+2023-12-22 19:57:44.184136
+list index out of range
+2023-12-22 19:57:45.189849
+list index out of range
+2023-12-22 19:57:46.188065
+list index out of range
+2023-12-22 19:57:47.146668
+list index out of range
+2023-12-22 19:57:48.163988
+list index out of range
+2023-12-22 19:57:49.191988
+list index out of range
+2023-12-22 19:57:50.162404
+list index out of range
+2023-12-22 19:57:51.150468
+list index out of range
+2023-12-22 19:57:52.149415
+list index out of range
+2023-12-22 19:57:53.156897
+list index out of range
+2023-12-22 19:57:54.197438
+list index out of range
+2023-12-22 19:57:55.166281
+list index out of range
+2023-12-22 19:57:56.183286
+list index out of range
+2023-12-22 19:57:57.137281
+list index out of range
+2023-12-22 19:57:58.357281
+list index out of range
+2023-12-22 19:57:59.180209
+list index out of range
+2023-12-22 19:58:00.146207
+list index out of range
+2023-12-22 19:58:01.173674
+list index out of range
+2023-12-22 19:58:02.143615
+list index out of range
+2023-12-22 19:58:03.154614
+list index out of range
+2023-12-22 19:58:04.152619
+list index out of range
+2023-12-22 19:58:05.183617
+list index out of range
+2023-12-22 19:58:06.185267
+list index out of range
+2023-12-22 19:58:07.214403
+list index out of range
+2023-12-22 19:58:08.156698
+list index out of range
+2023-12-22 19:58:09.136663
+list index out of range
+2023-12-22 19:58:10.195052
+list index out of range
+2023-12-22 19:58:11.177085
+list index out of range
+2023-12-22 19:58:12.137261
+list index out of range
+2023-12-22 19:58:13.154263
+list index out of range
+2023-12-22 19:58:14.158760
+list index out of range
+2023-12-22 19:58:15.151206
+list index out of range
+2023-12-22 19:58:16.147547
+list index out of range
+2023-12-22 19:58:17.185815
+list index out of range
+2023-12-22 19:58:18.155020
+list index out of range
+2023-12-22 19:58:19.171020
+list index out of range
+2023-12-22 19:58:20.150064
+list index out of range
+2023-12-22 19:58:21.181506
+list index out of range
+2023-12-22 19:58:22.158568
+list index out of range
+2023-12-22 19:58:23.161922
+list index out of range
+2023-12-22 19:58:24.186224
+list index out of range
+2023-12-22 19:58:26.191477
+list index out of range
+2023-12-22 19:58:27.192477
+list index out of range
+2023-12-22 19:58:27.578506
+list index out of range
+2023-12-22 19:58:28.157541
+list index out of range
+2023-12-22 19:58:29.185762
+list index out of range
+2023-12-22 19:58:30.161532
+list index out of range
+2023-12-22 19:58:31.185208
+list index out of range
+2023-12-22 19:58:32.171175
+list index out of range
+2023-12-22 19:58:35.983739
+'<' not supported between instances of 'list' and 'int'
+2023-12-22 19:58:36.174498
+list index out of range
+2023-12-22 19:58:37.157494
+list index out of range
+2023-12-22 19:58:38.172140
+list index out of range
+2023-12-22 19:58:39.197141
+list index out of range
+2023-12-22 19:58:40.156862
+list index out of range
+2023-12-22 19:58:41.164000
+list index out of range
+2023-12-22 19:58:42.234016
+list index out of range
+2023-12-22 19:58:43.519314
+list index out of range
+2023-12-22 19:58:44.222869
+list index out of range
+2023-12-22 19:58:45.192346
+list index out of range
+2023-12-22 19:58:46.185351
+list index out of range
+2023-12-22 19:58:47.169791
+list index out of range
+2023-12-22 19:58:48.155789
+list index out of range
+2023-12-22 19:58:49.186223
+list index out of range
+2023-12-22 19:58:51.220627
+list index out of range
+2023-12-22 19:58:52.177627
+list index out of range
+2023-12-22 19:58:53.195626
+list index out of range
+2023-12-22 19:58:54.159819
+list index out of range
+2023-12-22 19:58:55.200185
+list index out of range
+2023-12-22 19:58:55.214185
+list index out of range
+2023-12-22 19:58:56.158371
+list index out of range
+2023-12-22 19:58:57.152137
+list index out of range
+2023-12-22 19:58:58.186207
+list index out of range
+2023-12-22 19:58:59.313969
+list index out of range
+2023-12-22 19:59:00.680386
+list index out of range
+2023-12-22 19:59:05.822770
+list index out of range
+2023-12-22 19:59:06.196770
+list index out of range
+2023-12-22 19:59:07.173362
+list index out of range
+2023-12-22 19:59:08.237361
+list index out of range
+2023-12-22 19:59:09.167697
+list index out of range
+2023-12-22 19:59:10.167587
+list index out of range
+2023-12-22 19:59:11.177659
+list index out of range
+2023-12-22 19:59:12.169388
+list index out of range
