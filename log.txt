@@ -44,3 +44,2221 @@ HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read t
 HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
 2023-12-02 14:01:49.066868
 HTTPSConnectionPool(host='www.weather.go.kr', port=443): Read timed out. (read timeout=1)
+2023-12-10 16:49:13.152024
+'Response' object has no attribute 'get'
+2023-12-10 16:49:13.153024
+list assignment index out of range
+2023-12-10 16:49:14.144480
+'Response' object has no attribute 'get'
+2023-12-10 16:49:14.147025
+list assignment index out of range
+2023-12-10 16:49:15.179411
+'Response' object has no attribute 'get'
+2023-12-10 16:49:15.181411
+list assignment index out of range
+2023-12-10 16:49:16.168163
+'Response' object has no attribute 'get'
+2023-12-10 16:49:16.170166
+list assignment index out of range
+2023-12-10 16:49:17.162373
+'Response' object has no attribute 'get'
+2023-12-10 16:49:17.164371
+list assignment index out of range
+2023-12-10 16:49:18.124526
+'Response' object has no attribute 'get'
+2023-12-10 16:49:18.126536
+list assignment index out of range
+2023-12-10 16:49:19.140644
+'Response' object has no attribute 'get'
+2023-12-10 16:49:19.142648
+list assignment index out of range
+2023-12-10 16:49:20.163087
+'Response' object has no attribute 'get'
+2023-12-10 16:49:20.165420
+list assignment index out of range
+2023-12-10 16:49:21.131363
+'Response' object has no attribute 'get'
+2023-12-10 16:49:21.133364
+list assignment index out of range
+2023-12-10 16:49:22.142358
+'Response' object has no attribute 'get'
+2023-12-10 16:49:22.144359
+list assignment index out of range
+2023-12-10 16:49:23.148422
+'Response' object has no attribute 'get'
+2023-12-10 16:49:23.150420
+list assignment index out of range
+2023-12-10 16:49:24.156286
+'Response' object has no attribute 'get'
+2023-12-10 16:49:24.158286
+list assignment index out of range
+2023-12-10 16:49:25.126336
+'Response' object has no attribute 'get'
+2023-12-10 16:49:25.128339
+list assignment index out of range
+2023-12-10 16:49:26.160869
+'Response' object has no attribute 'get'
+2023-12-10 16:49:26.162869
+list assignment index out of range
+2023-12-10 16:49:27.152784
+'Response' object has no attribute 'get'
+2023-12-10 16:49:27.155297
+list assignment index out of range
+2023-12-10 16:49:30.154802
+'Response' object has no attribute 'get'
+2023-12-10 16:49:30.156803
+list assignment index out of range
+2023-12-10 16:49:31.130410
+'Response' object has no attribute 'get'
+2023-12-10 16:49:31.132411
+list assignment index out of range
+2023-12-10 16:49:32.437004
+'Response' object has no attribute 'get'
+2023-12-10 16:49:32.439008
+list assignment index out of range
+2023-12-10 16:49:33.122852
+'Response' object has no attribute 'get'
+2023-12-10 16:49:33.124893
+list assignment index out of range
+2023-12-10 16:49:34.135102
+'Response' object has no attribute 'get'
+2023-12-10 16:49:34.137098
+list assignment index out of range
+2023-12-10 16:49:35.120105
+'Response' object has no attribute 'get'
+2023-12-10 16:49:35.122105
+list assignment index out of range
+2023-12-10 16:49:36.149340
+'Response' object has no attribute 'get'
+2023-12-10 16:49:36.151339
+list assignment index out of range
+2023-12-10 16:49:37.134027
+'Response' object has no attribute 'get'
+2023-12-10 16:49:37.136054
+list assignment index out of range
+2023-12-10 16:49:38.158807
+'Response' object has no attribute 'get'
+2023-12-10 16:49:38.160805
+list assignment index out of range
+2023-12-10 16:49:39.138436
+'Response' object has no attribute 'get'
+2023-12-10 16:49:39.140437
+list assignment index out of range
+2023-12-10 16:49:40.148051
+'Response' object has no attribute 'get'
+2023-12-10 16:49:40.150053
+list assignment index out of range
+2023-12-10 16:49:41.127605
+'Response' object has no attribute 'get'
+2023-12-10 16:49:41.129607
+list assignment index out of range
+2023-12-10 16:49:42.142910
+'Response' object has no attribute 'get'
+2023-12-10 16:49:42.145226
+list assignment index out of range
+2023-12-10 16:49:43.141923
+'Response' object has no attribute 'get'
+2023-12-10 16:49:43.143922
+list assignment index out of range
+2023-12-10 16:49:44.141501
+'Response' object has no attribute 'get'
+2023-12-10 16:49:44.144068
+list assignment index out of range
+2023-12-10 16:49:45.137705
+'Response' object has no attribute 'get'
+2023-12-10 16:49:45.139707
+list assignment index out of range
+2023-12-10 16:49:46.144435
+'Response' object has no attribute 'get'
+2023-12-10 16:49:46.146444
+list assignment index out of range
+2023-12-10 16:49:47.130408
+'Response' object has no attribute 'get'
+2023-12-10 16:49:47.132410
+list assignment index out of range
+2023-12-10 16:49:48.152535
+'Response' object has no attribute 'get'
+2023-12-10 16:49:48.154881
+list assignment index out of range
+2023-12-10 16:49:49.154571
+'Response' object has no attribute 'get'
+2023-12-10 16:49:49.156568
+list assignment index out of range
+2023-12-10 16:49:50.148407
+'Response' object has no attribute 'get'
+2023-12-10 16:49:50.150409
+list assignment index out of range
+2023-12-10 16:49:51.159678
+'Response' object has no attribute 'get'
+2023-12-10 16:49:51.161677
+list assignment index out of range
+2023-12-10 16:49:52.151677
+'Response' object has no attribute 'get'
+2023-12-10 16:49:52.153678
+list assignment index out of range
+2023-12-10 16:49:53.162391
+'Response' object has no attribute 'get'
+2023-12-10 16:49:53.164750
+list assignment index out of range
+2023-12-10 16:49:54.144458
+'Response' object has no attribute 'get'
+2023-12-10 16:49:54.146462
+list assignment index out of range
+2023-12-10 16:49:55.168463
+'Response' object has no attribute 'get'
+2023-12-10 16:49:55.171460
+list assignment index out of range
+2023-12-10 16:49:56.150789
+'Response' object has no attribute 'get'
+2023-12-10 16:49:56.152789
+list assignment index out of range
+2023-12-10 16:49:57.145623
+'Response' object has no attribute 'get'
+2023-12-10 16:49:57.147624
+list assignment index out of range
+2023-12-10 16:49:58.147626
+'Response' object has no attribute 'get'
+2023-12-10 16:49:58.149629
+list assignment index out of range
+2023-12-10 16:49:59.151946
+'Response' object has no attribute 'get'
+2023-12-10 16:49:59.154463
+list assignment index out of range
+2023-12-10 16:50:00.165183
+'Response' object has no attribute 'get'
+2023-12-10 16:50:00.168201
+list assignment index out of range
+2023-12-10 16:50:01.129518
+'Response' object has no attribute 'get'
+2023-12-10 16:50:01.131522
+list assignment index out of range
+2023-12-10 16:50:02.174731
+'Response' object has no attribute 'get'
+2023-12-10 16:50:02.176732
+list assignment index out of range
+2023-12-10 16:50:03.147514
+'Response' object has no attribute 'get'
+2023-12-10 16:50:03.149513
+list assignment index out of range
+2023-12-10 16:50:04.154265
+'Response' object has no attribute 'get'
+2023-12-10 16:50:04.156266
+list assignment index out of range
+2023-12-10 16:50:05.183471
+'Response' object has no attribute 'get'
+2023-12-10 16:50:05.185496
+list assignment index out of range
+2023-12-10 16:50:06.160749
+'Response' object has no attribute 'get'
+2023-12-10 16:50:06.161750
+list assignment index out of range
+2023-12-10 16:50:07.134739
+'Response' object has no attribute 'get'
+2023-12-10 16:50:07.136740
+list assignment index out of range
+2023-12-10 16:50:08.129549
+'Response' object has no attribute 'get'
+2023-12-10 16:50:08.131550
+list assignment index out of range
+2023-12-10 16:50:09.161631
+'Response' object has no attribute 'get'
+2023-12-10 16:50:09.164147
+list assignment index out of range
+2023-12-10 16:50:10.164281
+'Response' object has no attribute 'get'
+2023-12-10 16:50:10.166283
+list assignment index out of range
+2023-12-10 16:50:11.160339
+'Response' object has no attribute 'get'
+2023-12-10 16:50:11.162340
+list assignment index out of range
+2023-12-10 16:50:12.134423
+'Response' object has no attribute 'get'
+2023-12-10 16:50:12.136421
+list assignment index out of range
+2023-12-10 16:50:13.129394
+'Response' object has no attribute 'get'
+2023-12-10 16:50:13.131395
+list assignment index out of range
+2023-12-10 16:50:14.141361
+'Response' object has no attribute 'get'
+2023-12-10 16:50:14.144476
+list assignment index out of range
+2023-12-10 16:50:15.160981
+'Response' object has no attribute 'get'
+2023-12-10 16:50:15.163493
+list assignment index out of range
+2023-12-10 16:50:16.133908
+'Response' object has no attribute 'get'
+2023-12-10 16:50:16.135918
+list assignment index out of range
+2023-12-10 16:50:17.145247
+'Response' object has no attribute 'get'
+2023-12-10 16:50:17.147247
+list assignment index out of range
+2023-12-10 16:50:18.156989
+'Response' object has no attribute 'get'
+2023-12-10 16:50:18.158995
+list assignment index out of range
+2023-12-10 16:50:19.129709
+'Response' object has no attribute 'get'
+2023-12-10 16:50:19.131708
+list assignment index out of range
+2023-12-10 16:50:20.152881
+'Response' object has no attribute 'get'
+2023-12-10 16:50:20.154889
+list assignment index out of range
+2023-12-10 16:50:21.153006
+'Response' object has no attribute 'get'
+2023-12-10 16:50:21.155152
+list assignment index out of range
+2023-12-10 16:50:22.354364
+'Response' object has no attribute 'get'
+2023-12-10 16:50:22.357362
+list assignment index out of range
+2023-12-10 16:50:23.157196
+'Response' object has no attribute 'get'
+2023-12-10 16:50:23.159199
+list assignment index out of range
+2023-12-10 16:50:24.139739
+'Response' object has no attribute 'get'
+2023-12-10 16:50:24.141738
+list assignment index out of range
+2023-12-10 16:50:25.147157
+'Response' object has no attribute 'get'
+2023-12-10 16:50:25.149158
+list assignment index out of range
+2023-12-10 16:50:26.171486
+'Response' object has no attribute 'get'
+2023-12-10 16:50:26.173000
+list assignment index out of range
+2023-12-10 16:50:27.147461
+'Response' object has no attribute 'get'
+2023-12-10 16:50:27.149463
+list assignment index out of range
+2023-12-10 16:50:28.149835
+'Response' object has no attribute 'get'
+2023-12-10 16:50:28.151835
+list assignment index out of range
+2023-12-10 16:50:30.131264
+'Response' object has no attribute 'get'
+2023-12-10 16:50:30.132775
+list assignment index out of range
+2023-12-10 16:50:30.158952
+'Response' object has no attribute 'get'
+2023-12-10 16:50:30.160950
+list assignment index out of range
+2023-12-10 16:50:31.133522
+'Response' object has no attribute 'get'
+2023-12-10 16:50:31.135537
+list assignment index out of range
+2023-12-10 16:50:32.147937
+'Response' object has no attribute 'get'
+2023-12-10 16:50:32.149940
+list assignment index out of range
+2023-12-10 16:50:33.163455
+'Response' object has no attribute 'get'
+2023-12-10 16:50:33.165474
+list assignment index out of range
+2023-12-10 16:50:34.140248
+'Response' object has no attribute 'get'
+2023-12-10 16:50:34.142756
+list assignment index out of range
+2023-12-10 16:50:35.131764
+'Response' object has no attribute 'get'
+2023-12-10 16:50:35.133272
+list assignment index out of range
+2023-12-10 16:50:36.169848
+'Response' object has no attribute 'get'
+2023-12-10 16:50:36.171852
+list assignment index out of range
+2023-12-10 16:50:37.140945
+'Response' object has no attribute 'get'
+2023-12-10 16:50:37.142950
+list assignment index out of range
+2023-12-10 16:50:38.128856
+'Response' object has no attribute 'get'
+2023-12-10 16:50:38.130857
+list assignment index out of range
+2023-12-10 16:50:39.142805
+'Response' object has no attribute 'get'
+2023-12-10 16:50:39.145092
+list assignment index out of range
+2023-12-10 16:50:40.140959
+'Response' object has no attribute 'get'
+2023-12-10 16:50:40.142958
+list assignment index out of range
+2023-12-10 16:50:41.141868
+'Response' object has no attribute 'get'
+2023-12-10 16:50:41.143922
+list assignment index out of range
+2023-12-10 16:50:42.150870
+'Response' object has no attribute 'get'
+2023-12-10 16:50:42.152873
+list assignment index out of range
+2023-12-10 16:50:43.181082
+'Response' object has no attribute 'get'
+2023-12-10 16:50:43.182590
+list assignment index out of range
+2023-12-10 16:50:44.141849
+'Response' object has no attribute 'get'
+2023-12-10 16:50:44.143930
+list assignment index out of range
+2023-12-10 16:50:45.156350
+'Response' object has no attribute 'get'
+2023-12-10 16:50:45.158350
+list assignment index out of range
+2023-12-10 16:50:46.163124
+'Response' object has no attribute 'get'
+2023-12-10 16:50:46.165131
+list assignment index out of range
+2023-12-10 16:50:47.143590
+'Response' object has no attribute 'get'
+2023-12-10 16:50:47.144593
+list assignment index out of range
+2023-12-10 16:50:48.130001
+'Response' object has no attribute 'get'
+2023-12-10 16:50:48.132509
+list assignment index out of range
+2023-12-10 16:50:49.158169
+'Response' object has no attribute 'get'
+2023-12-10 16:50:49.160172
+list assignment index out of range
+2023-12-10 16:50:50.134637
+'Response' object has no attribute 'get'
+2023-12-10 16:50:50.137640
+list assignment index out of range
+2023-12-10 16:50:51.166073
+'Response' object has no attribute 'get'
+2023-12-10 16:50:51.168075
+list assignment index out of range
+2023-12-10 16:50:52.143563
+'Response' object has no attribute 'get'
+2023-12-10 16:50:52.145566
+list assignment index out of range
+2023-12-10 16:50:53.141498
+'Response' object has no attribute 'get'
+2023-12-10 16:50:53.143703
+list assignment index out of range
+2023-12-10 16:50:54.147597
+'Response' object has no attribute 'get'
+2023-12-10 16:50:54.149596
+list assignment index out of range
+2023-12-10 16:50:55.144254
+'Response' object has no attribute 'get'
+2023-12-10 16:50:55.146253
+list assignment index out of range
+2023-12-10 16:50:56.136188
+'Response' object has no attribute 'get'
+2023-12-10 16:50:56.138193
+list assignment index out of range
+2023-12-10 16:50:57.142678
+'Response' object has no attribute 'get'
+2023-12-10 16:50:57.143969
+list assignment index out of range
+2023-12-10 16:51:13.264085
+'Response' object has no attribute 'get'
+2023-12-10 16:51:13.266083
+list assignment index out of range
+2023-12-10 16:51:14.171978
+'Response' object has no attribute 'get'
+2023-12-10 16:51:14.173985
+list assignment index out of range
+2023-12-10 16:51:15.206189
+'Response' object has no attribute 'get'
+2023-12-10 16:51:15.208186
+list assignment index out of range
+2023-12-10 16:51:16.157387
+'Response' object has no attribute 'get'
+2023-12-10 16:51:16.159388
+list assignment index out of range
+2023-12-10 16:52:26.332305
+'CaseInsensitiveDict' object is not callable
+2023-12-10 16:52:27.564123
+'CaseInsensitiveDict' object is not callable
+2023-12-10 16:52:28.087308
+'CaseInsensitiveDict' object is not callable
+2023-12-10 16:52:29.066077
+'CaseInsensitiveDict' object is not callable
+2023-12-10 16:52:30.086754
+'CaseInsensitiveDict' object is not callable
+2023-12-10 16:52:44.986582
+'Response' object has no attribute 'get'
+2023-12-10 16:52:44.988582
+list assignment index out of range
+2023-12-10 16:52:45.177579
+'Response' object has no attribute 'get'
+2023-12-10 16:52:45.181675
+list assignment index out of range
+2023-12-10 16:52:46.137009
+'Response' object has no attribute 'get'
+2023-12-10 16:52:46.139011
+list assignment index out of range
+2023-12-10 16:52:47.156185
+'Response' object has no attribute 'get'
+2023-12-10 16:52:47.158183
+list assignment index out of range
+2023-12-10 16:52:48.169087
+'Response' object has no attribute 'get'
+2023-12-10 16:52:48.172619
+list assignment index out of range
+2023-12-10 16:52:49.143450
+'Response' object has no attribute 'get'
+2023-12-10 16:52:49.145449
+list assignment index out of range
+2023-12-10 16:52:50.134307
+'Response' object has no attribute 'get'
+2023-12-10 16:52:50.137310
+list assignment index out of range
+2023-12-10 16:52:51.135492
+'Response' object has no attribute 'get'
+2023-12-10 16:52:51.137489
+list assignment index out of range
+2023-12-10 16:52:52.138681
+'Response' object has no attribute 'get'
+2023-12-10 16:52:52.141214
+list assignment index out of range
+2023-12-10 16:52:53.148622
+'Response' object has no attribute 'get'
+2023-12-10 16:52:53.150622
+list assignment index out of range
+2023-12-10 16:52:54.133804
+'Response' object has no attribute 'get'
+2023-12-10 16:52:54.135807
+list assignment index out of range
+2023-12-10 16:52:55.148483
+'Response' object has no attribute 'get'
+2023-12-10 16:52:55.150995
+list assignment index out of range
+2023-12-10 16:52:56.172424
+'Response' object has no attribute 'get'
+2023-12-10 16:52:56.174422
+list assignment index out of range
+2023-12-10 16:52:57.168438
+'Response' object has no attribute 'get'
+2023-12-10 16:52:57.170441
+list assignment index out of range
+2023-12-10 16:52:58.135601
+'Response' object has no attribute 'get'
+2023-12-10 16:52:58.137603
+list assignment index out of range
+2023-12-10 16:52:59.158620
+'Response' object has no attribute 'get'
+2023-12-10 16:52:59.160620
+list assignment index out of range
+2023-12-10 16:53:02.161817
+'Response' object has no attribute 'get'
+2023-12-10 16:53:02.164816
+list assignment index out of range
+2023-12-10 16:53:03.188480
+'Response' object has no attribute 'get'
+2023-12-10 16:53:03.190481
+list assignment index out of range
+2023-12-10 16:53:04.156517
+'Response' object has no attribute 'get'
+2023-12-10 16:53:04.158521
+list assignment index out of range
+2023-12-10 16:53:05.127166
+'Response' object has no attribute 'get'
+2023-12-10 16:53:05.129168
+list assignment index out of range
+2023-12-10 16:53:06.159329
+'Response' object has no attribute 'get'
+2023-12-10 16:53:06.162323
+list assignment index out of range
+2023-12-10 16:53:07.150881
+'Response' object has no attribute 'get'
+2023-12-10 16:53:07.152883
+list assignment index out of range
+2023-12-10 16:53:08.154875
+'Response' object has no attribute 'get'
+2023-12-10 16:53:08.155879
+list assignment index out of range
+2023-12-10 16:53:10.135416
+'Response' object has no attribute 'get'
+2023-12-10 16:53:10.137427
+list assignment index out of range
+2023-12-10 16:53:10.144425
+'Response' object has no attribute 'get'
+2023-12-10 16:53:10.146945
+list assignment index out of range
+2023-12-10 16:53:11.141016
+'Response' object has no attribute 'get'
+2023-12-10 16:53:11.143015
+list assignment index out of range
+2023-12-10 16:53:12.150458
+'Response' object has no attribute 'get'
+2023-12-10 16:53:12.152457
+list assignment index out of range
+2023-12-10 16:53:13.176299
+'Response' object has no attribute 'get'
+2023-12-10 16:53:13.178300
+list assignment index out of range
+2023-12-10 16:53:14.161184
+'Response' object has no attribute 'get'
+2023-12-10 16:53:14.163187
+list assignment index out of range
+2023-12-10 16:53:16.136975
+'Response' object has no attribute 'get'
+2023-12-10 16:53:16.138772
+list assignment index out of range
+2023-12-10 16:53:16.160811
+'Response' object has no attribute 'get'
+2023-12-10 16:53:16.162810
+list assignment index out of range
+2023-12-10 16:53:17.146222
+'Response' object has no attribute 'get'
+2023-12-10 16:53:17.148221
+list assignment index out of range
+2023-12-10 16:53:18.142774
+'Response' object has no attribute 'get'
+2023-12-10 16:53:18.145783
+list assignment index out of range
+2023-12-10 16:53:19.145368
+'Response' object has no attribute 'get'
+2023-12-10 16:53:19.147370
+list assignment index out of range
+2023-12-10 16:53:20.153699
+'Response' object has no attribute 'get'
+2023-12-10 16:53:20.155709
+list assignment index out of range
+2023-12-10 16:53:21.157785
+'Response' object has no attribute 'get'
+2023-12-10 16:53:21.159785
+list assignment index out of range
+2023-12-10 16:53:22.170680
+'Response' object has no attribute 'get'
+2023-12-10 16:53:22.172680
+list assignment index out of range
+2023-12-10 16:53:23.168159
+'Response' object has no attribute 'get'
+2023-12-10 16:53:23.170160
+list assignment index out of range
+2023-12-10 16:53:24.144059
+'Response' object has no attribute 'get'
+2023-12-10 16:53:24.146579
+list assignment index out of range
+2023-12-10 16:53:25.173589
+'Response' object has no attribute 'get'
+2023-12-10 16:53:25.175591
+list assignment index out of range
+2023-12-10 16:53:26.197882
+'Response' object has no attribute 'get'
+2023-12-10 16:53:26.199885
+list assignment index out of range
+2023-12-10 16:53:27.156029
+'Response' object has no attribute 'get'
+2023-12-10 16:53:27.158028
+list assignment index out of range
+2023-12-10 16:53:28.176665
+'Response' object has no attribute 'get'
+2023-12-10 16:53:28.178667
+list assignment index out of range
+2023-12-10 16:53:29.149771
+'Response' object has no attribute 'get'
+2023-12-10 16:53:29.151773
+list assignment index out of range
+2023-12-10 16:53:30.130830
+'Response' object has no attribute 'get'
+2023-12-10 16:53:30.132830
+list assignment index out of range
+2023-12-10 16:53:31.155839
+'Response' object has no attribute 'get'
+2023-12-10 16:53:31.157843
+list assignment index out of range
+2023-12-10 16:53:32.146949
+'Response' object has no attribute 'get'
+2023-12-10 16:53:32.148951
+list assignment index out of range
+2023-12-10 16:53:33.152988
+'Response' object has no attribute 'get'
+2023-12-10 16:53:33.154985
+list assignment index out of range
+2023-12-10 16:53:34.136289
+'Response' object has no attribute 'get'
+2023-12-10 16:53:34.138293
+list assignment index out of range
+2023-12-10 16:53:35.140534
+'Response' object has no attribute 'get'
+2023-12-10 16:53:35.142535
+list assignment index out of range
+2023-12-10 16:53:36.124989
+'Response' object has no attribute 'get'
+2023-12-10 16:53:36.126996
+list assignment index out of range
+2023-12-10 16:53:37.139305
+'Response' object has no attribute 'get'
+2023-12-10 16:53:37.141306
+list assignment index out of range
+2023-12-10 16:53:38.149505
+'Response' object has no attribute 'get'
+2023-12-10 16:53:38.151497
+list assignment index out of range
+2023-12-10 16:53:39.119837
+'Response' object has no attribute 'get'
+2023-12-10 16:53:39.121839
+list assignment index out of range
+2023-12-10 16:53:40.150699
+'Response' object has no attribute 'get'
+2023-12-10 16:53:40.152699
+list assignment index out of range
+2023-12-10 16:53:41.134775
+'Response' object has no attribute 'get'
+2023-12-10 16:53:41.136282
+list assignment index out of range
+2023-12-10 16:53:42.129415
+'Response' object has no attribute 'get'
+2023-12-10 16:53:42.131413
+list assignment index out of range
+2023-12-10 16:53:43.144927
+'Response' object has no attribute 'get'
+2023-12-10 16:53:43.146929
+list assignment index out of range
+2023-12-10 16:53:44.159609
+'Response' object has no attribute 'get'
+2023-12-10 16:53:44.162608
+list assignment index out of range
+2023-12-10 16:53:45.132950
+'Response' object has no attribute 'get'
+2023-12-10 16:53:45.135467
+list assignment index out of range
+2023-12-10 16:53:46.136261
+'Response' object has no attribute 'get'
+2023-12-10 16:53:46.138261
+list assignment index out of range
+2023-12-10 16:53:47.126830
+'Response' object has no attribute 'get'
+2023-12-10 16:53:47.129830
+list assignment index out of range
+2023-12-10 16:53:49.150306
+'Response' object has no attribute 'get'
+2023-12-10 16:53:49.152307
+list assignment index out of range
+2023-12-10 16:53:49.187413
+'Response' object has no attribute 'get'
+2023-12-10 16:53:49.189433
+list assignment index out of range
+2023-12-10 16:53:50.139891
+'Response' object has no attribute 'get'
+2023-12-10 16:53:50.142896
+list assignment index out of range
+2023-12-10 16:53:51.132128
+'Response' object has no attribute 'get'
+2023-12-10 16:53:51.134131
+list assignment index out of range
+2023-12-10 16:53:52.147934
+'Response' object has no attribute 'get'
+2023-12-10 16:53:52.150447
+list assignment index out of range
+2023-12-10 16:53:53.146218
+'Response' object has no attribute 'get'
+2023-12-10 16:53:53.147222
+list assignment index out of range
+2023-12-10 16:53:54.139986
+'Response' object has no attribute 'get'
+2023-12-10 16:53:54.141989
+list assignment index out of range
+2023-12-10 16:53:55.133098
+'Response' object has no attribute 'get'
+2023-12-10 16:53:55.135617
+list assignment index out of range
+2023-12-10 16:53:56.137405
+'Response' object has no attribute 'get'
+2023-12-10 16:53:56.139409
+list assignment index out of range
+2023-12-10 16:53:57.175599
+'Response' object has no attribute 'get'
+2023-12-10 16:53:57.177603
+list assignment index out of range
+2023-12-10 16:53:58.135097
+'Response' object has no attribute 'get'
+2023-12-10 16:53:58.137097
+list assignment index out of range
+2023-12-10 16:53:59.134111
+'Response' object has no attribute 'get'
+2023-12-10 16:53:59.136127
+list assignment index out of range
+2023-12-10 16:54:00.130635
+'Response' object has no attribute 'get'
+2023-12-10 16:54:00.132144
+list assignment index out of range
+2023-12-10 16:54:01.144222
+'Response' object has no attribute 'get'
+2023-12-10 16:54:01.146739
+list assignment index out of range
+2023-12-10 16:54:02.140309
+'Response' object has no attribute 'get'
+2023-12-10 16:54:02.142312
+list assignment index out of range
+2023-12-10 16:54:03.134115
+'Response' object has no attribute 'get'
+2023-12-10 16:54:03.136121
+list assignment index out of range
+2023-12-10 16:54:04.138959
+'Response' object has no attribute 'get'
+2023-12-10 16:54:04.140691
+list assignment index out of range
+2023-12-10 16:54:05.134694
+'Response' object has no attribute 'get'
+2023-12-10 16:54:05.136693
+list assignment index out of range
+2023-12-10 16:54:06.153086
+'Response' object has no attribute 'get'
+2023-12-10 16:54:06.155087
+list assignment index out of range
+2023-12-10 16:54:07.342823
+'Response' object has no attribute 'get'
+2023-12-10 16:54:07.344825
+list assignment index out of range
+2023-12-10 16:54:08.135972
+'Response' object has no attribute 'get'
+2023-12-10 16:54:08.137481
+list assignment index out of range
+2023-12-10 16:54:09.145208
+'Response' object has no attribute 'get'
+2023-12-10 16:54:09.147211
+list assignment index out of range
+2023-12-10 16:54:10.152963
+'Response' object has no attribute 'get'
+2023-12-10 16:54:10.154965
+list assignment index out of range
+2023-12-10 16:54:11.158885
+'Response' object has no attribute 'get'
+2023-12-10 16:54:11.160249
+list assignment index out of range
+2023-12-10 16:54:12.143231
+'Response' object has no attribute 'get'
+2023-12-10 16:54:12.145230
+list assignment index out of range
+2023-12-10 16:54:13.132376
+'Response' object has no attribute 'get'
+2023-12-10 16:54:13.133378
+list assignment index out of range
+2023-12-10 16:54:14.137283
+'Response' object has no attribute 'get'
+2023-12-10 16:54:14.139455
+list assignment index out of range
+2023-12-10 16:54:15.128525
+'Response' object has no attribute 'get'
+2023-12-10 16:54:15.130656
+list assignment index out of range
+2023-12-10 16:54:16.150775
+'Response' object has no attribute 'get'
+2023-12-10 16:54:16.152777
+list assignment index out of range
+2023-12-10 16:54:17.132687
+'Response' object has no attribute 'get'
+2023-12-10 16:54:17.133986
+list assignment index out of range
+2023-12-10 16:54:18.126117
+'Response' object has no attribute 'get'
+2023-12-10 16:54:18.128120
+list assignment index out of range
+2023-12-10 16:54:19.151967
+'Response' object has no attribute 'get'
+2023-12-10 16:54:19.153969
+list assignment index out of range
+2023-12-10 16:54:20.134007
+'Response' object has no attribute 'get'
+2023-12-10 16:54:20.137049
+list assignment index out of range
+2023-12-10 16:54:21.146962
+'Response' object has no attribute 'get'
+2023-12-10 16:54:21.148966
+list assignment index out of range
+2023-12-10 16:54:22.133510
+'Response' object has no attribute 'get'
+2023-12-10 16:54:22.136024
+list assignment index out of range
+2023-12-10 16:54:23.149557
+'Response' object has no attribute 'get'
+2023-12-10 16:54:23.151557
+list assignment index out of range
+2023-12-10 16:54:24.137813
+'Response' object has no attribute 'get'
+2023-12-10 16:54:24.139817
+list assignment index out of range
+2023-12-10 16:54:25.131108
+'Response' object has no attribute 'get'
+2023-12-10 16:54:25.133109
+list assignment index out of range
+2023-12-10 16:54:26.136943
+'Response' object has no attribute 'get'
+2023-12-10 16:54:26.139065
+list assignment index out of range
+2023-12-10 16:55:13.359029
+'Response' object has no attribute 'get'
+2023-12-10 16:55:13.361041
+list assignment index out of range
+2023-12-10 16:55:14.150639
+'Response' object has no attribute 'get'
+2023-12-10 16:55:14.152639
+list assignment index out of range
+2023-12-10 16:55:15.134160
+'Response' object has no attribute 'get'
+2023-12-10 16:55:15.136162
+list assignment index out of range
+2023-12-10 16:55:16.169003
+'Response' object has no attribute 'get'
+2023-12-10 16:55:16.171004
+list assignment index out of range
+2023-12-10 16:55:17.168771
+'Response' object has no attribute 'get'
+2023-12-10 16:55:17.170773
+list assignment index out of range
+2023-12-10 16:55:18.137948
+'Response' object has no attribute 'get'
+2023-12-10 16:55:18.140951
+list assignment index out of range
+2023-12-10 16:55:19.171059
+'Response' object has no attribute 'get'
+2023-12-10 16:55:19.173585
+list assignment index out of range
+2023-12-10 16:55:20.144987
+'Response' object has no attribute 'get'
+2023-12-10 16:55:20.147988
+list assignment index out of range
+2023-12-10 16:55:21.203931
+'Response' object has no attribute 'get'
+2023-12-10 16:55:21.205933
+list assignment index out of range
+2023-12-10 16:55:22.147846
+'Response' object has no attribute 'get'
+2023-12-10 16:55:22.149845
+list assignment index out of range
+2023-12-10 16:55:23.141349
+'Response' object has no attribute 'get'
+2023-12-10 16:55:23.143349
+list assignment index out of range
+2023-12-10 16:55:24.149795
+'Response' object has no attribute 'get'
+2023-12-10 16:55:24.152092
+list assignment index out of range
+2023-12-10 16:55:25.151868
+'Response' object has no attribute 'get'
+2023-12-10 16:55:25.153868
+list assignment index out of range
+2023-12-10 16:55:26.130592
+'Response' object has no attribute 'get'
+2023-12-10 16:55:26.132593
+list assignment index out of range
+2023-12-10 16:55:27.131929
+'Response' object has no attribute 'get'
+2023-12-10 16:55:27.133931
+list assignment index out of range
+2023-12-10 16:55:28.141623
+'Response' object has no attribute 'get'
+2023-12-10 16:55:28.143623
+list assignment index out of range
+2023-12-10 16:55:29.121959
+'Response' object has no attribute 'get'
+2023-12-10 16:55:29.123955
+list assignment index out of range
+2023-12-10 16:55:30.149474
+'Response' object has no attribute 'get'
+2023-12-10 16:55:30.151481
+list assignment index out of range
+2023-12-10 16:55:31.132350
+'Response' object has no attribute 'get'
+2023-12-10 16:55:31.134354
+list assignment index out of range
+2023-12-10 16:55:32.133061
+'Response' object has no attribute 'get'
+2023-12-10 16:55:32.135576
+list assignment index out of range
+2023-12-10 16:55:33.129459
+'Response' object has no attribute 'get'
+2023-12-10 16:55:33.131461
+list assignment index out of range
+2023-12-10 16:55:34.147878
+'Response' object has no attribute 'get'
+2023-12-10 16:55:34.150395
+list assignment index out of range
+2023-12-10 16:55:35.138462
+'Response' object has no attribute 'get'
+2023-12-10 16:55:35.140973
+list assignment index out of range
+2023-12-10 16:55:36.143470
+'Response' object has no attribute 'get'
+2023-12-10 16:55:36.145471
+list assignment index out of range
+2023-12-10 16:55:41.283092
+'Response' object has no attribute 'get'
+2023-12-10 16:55:41.285094
+list assignment index out of range
+2023-12-10 16:55:42.161447
+'Response' object has no attribute 'get'
+2023-12-10 16:55:42.163970
+list assignment index out of range
+2023-12-10 16:55:43.149321
+'Response' object has no attribute 'get'
+2023-12-10 16:55:43.151320
+list assignment index out of range
+2023-12-10 16:55:44.138996
+'Response' object has no attribute 'get'
+2023-12-10 16:55:44.140994
+list assignment index out of range
+2023-12-10 16:55:45.139443
+'Response' object has no attribute 'get'
+2023-12-10 16:55:45.141444
+list assignment index out of range
+2023-12-10 16:55:46.137274
+'Response' object has no attribute 'get'
+2023-12-10 16:55:46.139271
+list assignment index out of range
+2023-12-10 16:55:47.160279
+'Response' object has no attribute 'get'
+2023-12-10 16:55:47.162281
+list assignment index out of range
+2023-12-10 16:55:48.128325
+'Response' object has no attribute 'get'
+2023-12-10 16:55:48.130327
+list assignment index out of range
+2023-12-10 16:55:49.140592
+'Response' object has no attribute 'get'
+2023-12-10 16:55:49.142592
+list assignment index out of range
+2023-12-10 16:55:50.156737
+'Response' object has no attribute 'get'
+2023-12-10 16:55:50.159732
+list assignment index out of range
+2023-12-10 16:55:51.136954
+'Response' object has no attribute 'get'
+2023-12-10 16:55:51.139470
+list assignment index out of range
+2023-12-10 16:55:52.176502
+'Response' object has no attribute 'get'
+2023-12-10 16:55:52.178503
+list assignment index out of range
+2023-12-10 16:55:53.155193
+'Response' object has no attribute 'get'
+2023-12-10 16:55:53.156192
+list assignment index out of range
+2023-12-10 16:55:54.161348
+'Response' object has no attribute 'get'
+2023-12-10 16:55:54.163867
+list assignment index out of range
+2023-12-10 16:55:55.137148
+'Response' object has no attribute 'get'
+2023-12-10 16:55:55.139147
+list assignment index out of range
+2023-12-10 16:55:56.156302
+'Response' object has no attribute 'get'
+2023-12-10 16:55:56.158304
+list assignment index out of range
+2023-12-10 16:55:57.160565
+'Response' object has no attribute 'get'
+2023-12-10 16:55:57.161568
+list assignment index out of range
+2023-12-10 16:55:58.151505
+'Response' object has no attribute 'get'
+2023-12-10 16:55:58.153506
+list assignment index out of range
+2023-12-10 16:55:59.141102
+'Response' object has no attribute 'get'
+2023-12-10 16:55:59.143105
+list assignment index out of range
+2023-12-10 16:56:00.126053
+'Response' object has no attribute 'get'
+2023-12-10 16:56:00.128063
+list assignment index out of range
+2023-12-10 16:56:01.178513
+'Response' object has no attribute 'get'
+2023-12-10 16:56:01.181036
+list assignment index out of range
+2023-12-10 16:56:02.365609
+'Response' object has no attribute 'get'
+2023-12-10 16:56:02.367612
+list assignment index out of range
+2023-12-10 16:56:03.138273
+'Response' object has no attribute 'get'
+2023-12-10 16:56:03.140273
+list assignment index out of range
+2023-12-10 16:56:04.214566
+'Response' object has no attribute 'get'
+2023-12-10 16:56:04.217571
+list assignment index out of range
+2023-12-10 16:56:05.170249
+'Response' object has no attribute 'get'
+2023-12-10 16:56:05.172250
+list assignment index out of range
+2023-12-10 16:56:06.193378
+'Response' object has no attribute 'get'
+2023-12-10 16:56:06.195378
+list assignment index out of range
+2023-12-10 16:56:07.150757
+'Response' object has no attribute 'get'
+2023-12-10 16:56:07.152762
+list assignment index out of range
+2023-12-10 16:56:08.164431
+'Response' object has no attribute 'get'
+2023-12-10 16:56:08.166429
+list assignment index out of range
+2023-12-10 16:56:09.152317
+'Response' object has no attribute 'get'
+2023-12-10 16:56:09.154318
+list assignment index out of range
+2023-12-10 16:56:10.128259
+'Response' object has no attribute 'get'
+2023-12-10 16:56:10.130256
+list assignment index out of range
+2023-12-10 16:56:11.129569
+'Response' object has no attribute 'get'
+2023-12-10 16:56:11.131572
+list assignment index out of range
+2023-12-10 16:56:12.132435
+'Response' object has no attribute 'get'
+2023-12-10 16:56:12.135946
+list assignment index out of range
+2023-12-10 16:56:13.182495
+'Response' object has no attribute 'get'
+2023-12-10 16:56:13.184514
+list assignment index out of range
+2023-12-10 16:56:14.154230
+'Response' object has no attribute 'get'
+2023-12-10 16:56:14.157232
+list assignment index out of range
+2023-12-10 16:56:15.137285
+'Response' object has no attribute 'get'
+2023-12-10 16:56:15.139285
+list assignment index out of range
+2023-12-10 16:56:16.140665
+'Response' object has no attribute 'get'
+2023-12-10 16:56:16.143667
+list assignment index out of range
+2023-12-10 16:56:17.139844
+'Response' object has no attribute 'get'
+2023-12-10 16:56:17.141844
+list assignment index out of range
+2023-12-10 16:56:18.365789
+'Response' object has no attribute 'get'
+2023-12-10 16:56:18.367297
+list assignment index out of range
+2023-12-10 16:56:23.386013
+list assignment index out of range
+2023-12-10 16:56:24.366154
+list assignment index out of range
+2023-12-10 16:56:25.134046
+list assignment index out of range
+2023-12-10 16:56:26.155267
+list assignment index out of range
+2023-12-10 16:56:30.137080
+list assignment index out of range
+2023-12-10 16:56:31.140194
+list assignment index out of range
+2023-12-10 16:56:32.128853
+list assignment index out of range
+2023-12-10 16:56:33.166535
+list assignment index out of range
+2023-12-10 16:56:34.154290
+list assignment index out of range
+2023-12-10 16:56:35.157653
+list assignment index out of range
+2023-12-10 16:56:36.162488
+list assignment index out of range
+2023-12-10 16:56:37.129904
+list assignment index out of range
+2023-12-10 16:56:38.138598
+list assignment index out of range
+2023-12-10 16:56:39.155975
+list assignment index out of range
+2023-12-10 16:56:40.148007
+list assignment index out of range
+2023-12-10 16:56:41.138048
+list assignment index out of range
+2023-12-10 16:56:42.143040
+list assignment index out of range
+2023-12-10 16:56:43.140306
+list assignment index out of range
+2023-12-10 16:56:44.144090
+list assignment index out of range
+2023-12-10 16:56:45.144529
+list assignment index out of range
+2023-12-10 16:56:46.153333
+list assignment index out of range
+2023-12-10 16:56:47.127901
+list assignment index out of range
+2023-12-10 16:56:48.136721
+list assignment index out of range
+2023-12-10 16:56:49.161679
+list assignment index out of range
+2023-12-10 16:56:50.133782
+list assignment index out of range
+2023-12-10 16:56:55.214248
+list assignment index out of range
+2023-12-10 16:56:56.154751
+list assignment index out of range
+2023-12-10 16:56:57.161144
+list assignment index out of range
+2023-12-10 16:56:58.138099
+list assignment index out of range
+2023-12-10 16:56:59.130391
+list assignment index out of range
+2023-12-10 16:57:00.135723
+list assignment index out of range
+2023-12-10 16:57:01.154979
+list assignment index out of range
+2023-12-10 16:57:02.157777
+list assignment index out of range
+2023-12-10 16:57:03.153598
+list assignment index out of range
+2023-12-10 16:57:04.163636
+list assignment index out of range
+2023-12-10 16:57:05.138986
+list assignment index out of range
+2023-12-10 16:57:06.147593
+list assignment index out of range
+2023-12-10 16:57:07.143096
+list assignment index out of range
+2023-12-10 16:57:08.137264
+list assignment index out of range
+2023-12-10 16:57:09.148864
+list assignment index out of range
+2023-12-10 16:57:10.144055
+list assignment index out of range
+2023-12-10 16:57:11.136003
+list assignment index out of range
+2023-12-10 16:57:12.149762
+list assignment index out of range
+2023-12-10 16:57:13.153480
+list assignment index out of range
+2023-12-10 16:57:14.161340
+list assignment index out of range
+2023-12-10 16:57:15.141350
+list assignment index out of range
+2023-12-10 16:57:16.162471
+list assignment index out of range
+2023-12-10 16:57:17.133896
+list assignment index out of range
+2023-12-10 16:57:18.169474
+list assignment index out of range
+2023-12-10 16:57:19.131980
+list assignment index out of range
+2023-12-10 16:57:20.152851
+list assignment index out of range
+2023-12-10 16:57:21.139073
+list assignment index out of range
+2023-12-10 16:57:22.156428
+list assignment index out of range
+2023-12-10 16:57:23.145204
+list assignment index out of range
+2023-12-10 16:57:24.134776
+list assignment index out of range
+2023-12-10 16:57:25.154344
+list assignment index out of range
+2023-12-10 16:57:26.150030
+list assignment index out of range
+2023-12-10 16:57:27.139443
+list assignment index out of range
+2023-12-10 16:57:28.148499
+list assignment index out of range
+2023-12-10 16:57:29.142733
+list assignment index out of range
+2023-12-10 16:57:30.134128
+list assignment index out of range
+2023-12-10 16:57:31.142467
+list assignment index out of range
+2023-12-10 16:57:32.143778
+list assignment index out of range
+2023-12-10 16:57:33.146774
+list assignment index out of range
+2023-12-10 16:57:34.148537
+list assignment index out of range
+2023-12-10 16:57:35.155464
+list assignment index out of range
+2023-12-10 16:57:36.130737
+list assignment index out of range
+2023-12-10 16:57:37.140398
+list assignment index out of range
+2023-12-10 16:57:38.141414
+list assignment index out of range
+2023-12-10 16:57:39.151116
+list assignment index out of range
+2023-12-10 16:57:40.142851
+list assignment index out of range
+2023-12-10 16:57:41.136825
+list assignment index out of range
+2023-12-10 16:57:42.146056
+list assignment index out of range
+2023-12-10 16:57:43.137722
+list assignment index out of range
+2023-12-10 16:57:44.145242
+list assignment index out of range
+2023-12-10 16:57:45.143370
+list assignment index out of range
+2023-12-10 16:57:46.143500
+list assignment index out of range
+2023-12-10 16:57:47.131521
+list assignment index out of range
+2023-12-10 16:57:48.198322
+list assignment index out of range
+2023-12-10 16:57:49.146509
+list assignment index out of range
+2023-12-10 16:57:50.168539
+list assignment index out of range
+2023-12-10 16:57:51.147689
+list assignment index out of range
+2023-12-10 16:57:52.137259
+list assignment index out of range
+2023-12-10 16:57:53.141945
+list assignment index out of range
+2023-12-10 16:57:54.142007
+list assignment index out of range
+2023-12-10 16:57:55.139322
+list assignment index out of range
+2023-12-10 16:57:56.150762
+list assignment index out of range
+2023-12-10 16:57:57.139403
+list assignment index out of range
+2023-12-10 16:57:58.139098
+list assignment index out of range
+2023-12-10 16:57:59.154817
+list assignment index out of range
+2023-12-10 16:58:00.139629
+list assignment index out of range
+2023-12-10 16:58:01.134798
+list assignment index out of range
+2023-12-10 16:58:02.144780
+list assignment index out of range
+2023-12-10 16:58:03.140102
+list assignment index out of range
+2023-12-10 16:58:04.129690
+list assignment index out of range
+2023-12-10 16:58:05.139350
+list assignment index out of range
+2023-12-10 16:58:06.132466
+list assignment index out of range
+2023-12-10 16:58:07.125941
+list assignment index out of range
+2023-12-10 16:58:08.141910
+list assignment index out of range
+2023-12-10 16:58:09.147534
+list assignment index out of range
+2023-12-10 16:58:10.200796
+list assignment index out of range
+2023-12-10 16:58:11.126804
+list assignment index out of range
+2023-12-10 16:58:12.140342
+list assignment index out of range
+2023-12-10 16:58:13.141595
+list assignment index out of range
+2023-12-10 16:58:14.162179
+list assignment index out of range
+2023-12-10 16:58:15.140736
+list assignment index out of range
+2023-12-10 16:58:20.658776
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:21.129979
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:22.144052
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:23.148120
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:24.144111
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:25.159138
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:26.141743
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:27.146072
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:28.152001
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:29.140392
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:30.135679
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:31.125268
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:32.136212
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:33.147670
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:34.199175
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:35.221094
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:36.122601
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:37.139051
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:38.144180
+list.append() takes exactly one argument (2 given)
+2023-12-10 16:58:43.215711
+not enough values to unpack (expected 2, got 0)
+2023-12-10 16:58:43.255851
+not enough values to unpack (expected 2, got 0)
+2023-12-10 16:59:00.584405
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:00:00.993211
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:00:26.148035
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:00:36.107351
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:00:36.152643
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:00:37.214181
+'list' object has no attribute 'find'
+2023-12-10 17:00:38.151183
+'list' object has no attribute 'find'
+2023-12-10 17:00:39.169641
+'list' object has no attribute 'find'
+2023-12-10 17:00:40.148761
+'list' object has no attribute 'find'
+2023-12-10 17:00:41.135285
+'list' object has no attribute 'find'
+2023-12-10 17:00:42.148122
+'list' object has no attribute 'find'
+2023-12-10 17:00:43.182909
+'list' object has no attribute 'find'
+2023-12-10 17:00:44.147850
+'list' object has no attribute 'find'
+2023-12-10 17:00:45.157874
+'list' object has no attribute 'find'
+2023-12-10 17:00:46.154873
+'list' object has no attribute 'find'
+2023-12-10 17:00:47.145615
+'list' object has no attribute 'find'
+2023-12-10 17:00:48.141655
+'list' object has no attribute 'find'
+2023-12-10 17:00:49.138166
+'list' object has no attribute 'find'
+2023-12-10 17:00:50.138778
+'list' object has no attribute 'find'
+2023-12-10 17:00:51.147955
+'list' object has no attribute 'find'
+2023-12-10 17:00:52.146525
+'list' object has no attribute 'find'
+2023-12-10 17:00:53.153524
+'list' object has no attribute 'find'
+2023-12-10 17:00:54.158796
+'list' object has no attribute 'find'
+2023-12-10 17:00:55.156302
+'list' object has no attribute 'find'
+2023-12-10 17:00:56.160626
+'list' object has no attribute 'find'
+2023-12-10 17:00:57.146645
+'list' object has no attribute 'find'
+2023-12-10 17:00:58.150420
+'list' object has no attribute 'find'
+2023-12-10 17:00:59.159065
+'list' object has no attribute 'find'
+2023-12-10 17:01:02.154786
+'list' object has no attribute 'find'
+2023-12-10 17:01:03.140013
+'list' object has no attribute 'find'
+2023-12-10 17:01:04.149170
+'list' object has no attribute 'find'
+2023-12-10 17:01:05.165562
+'list' object has no attribute 'find'
+2023-12-10 17:01:06.155996
+'list' object has no attribute 'find'
+2023-12-10 17:01:07.157636
+'list' object has no attribute 'find'
+2023-12-10 17:01:08.184446
+'list' object has no attribute 'find'
+2023-12-10 17:01:09.160446
+'list' object has no attribute 'find'
+2023-12-10 17:01:11.156568
+'list' object has no attribute 'find'
+2023-12-10 17:01:11.163569
+'list' object has no attribute 'find'
+2023-12-10 17:01:12.170577
+'list' object has no attribute 'find'
+2023-12-10 17:01:13.151127
+'list' object has no attribute 'find'
+2023-12-10 17:01:14.143345
+'list' object has no attribute 'find'
+2023-12-10 17:01:15.143991
+'list' object has no attribute 'find'
+2023-12-10 17:01:16.176241
+'list' object has no attribute 'find'
+2023-12-10 17:01:17.216390
+'list' object has no attribute 'find'
+2023-12-10 17:01:18.143424
+'list' object has no attribute 'find'
+2023-12-10 17:01:22.351655
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:01:23.143836
+'list' object has no attribute 'find'
+2023-12-10 17:01:24.137499
+'list' object has no attribute 'find'
+2023-12-10 17:01:25.140768
+'list' object has no attribute 'find'
+2023-12-10 17:01:26.141338
+'list' object has no attribute 'find'
+2023-12-10 17:01:27.154060
+'list' object has no attribute 'find'
+2023-12-10 17:01:28.139684
+'list' object has no attribute 'find'
+2023-12-10 17:01:29.139681
+'list' object has no attribute 'find'
+2023-12-10 17:01:30.152541
+'list' object has no attribute 'find'
+2023-12-10 17:01:31.144655
+'list' object has no attribute 'find'
+2023-12-10 17:01:32.137377
+'list' object has no attribute 'find'
+2023-12-10 17:01:33.142120
+'list' object has no attribute 'find'
+2023-12-10 17:01:34.148361
+'list' object has no attribute 'find'
+2023-12-10 17:01:35.139960
+'list' object has no attribute 'find'
+2023-12-10 17:01:36.156723
+'list' object has no attribute 'find'
+2023-12-10 17:01:37.132186
+'list' object has no attribute 'find'
+2023-12-10 17:01:38.151972
+'list' object has no attribute 'find'
+2023-12-10 17:01:39.164515
+'list' object has no attribute 'find'
+2023-12-10 17:01:40.169448
+'list' object has no attribute 'find'
+2023-12-10 17:01:41.152465
+'list' object has no attribute 'find'
+2023-12-10 17:01:42.166295
+'list' object has no attribute 'find'
+2023-12-10 17:01:43.151440
+'list' object has no attribute 'find'
+2023-12-10 17:01:44.151953
+'list' object has no attribute 'find'
+2023-12-10 17:01:45.164519
+'list' object has no attribute 'find'
+2023-12-10 17:01:46.148146
+'list' object has no attribute 'find'
+2023-12-10 17:01:47.168760
+'list' object has no attribute 'find'
+2023-12-10 17:01:48.140748
+'list' object has no attribute 'find'
+2023-12-10 17:01:49.177634
+'list' object has no attribute 'find'
+2023-12-10 17:01:50.136542
+'list' object has no attribute 'find'
+2023-12-10 17:01:51.132761
+'list' object has no attribute 'find'
+2023-12-10 17:01:52.132026
+'list' object has no attribute 'find'
+2023-12-10 17:01:53.143542
+'list' object has no attribute 'find'
+2023-12-10 17:01:54.173354
+'list' object has no attribute 'find'
+2023-12-10 17:01:55.149337
+'list' object has no attribute 'find'
+2023-12-10 17:01:56.154946
+'list' object has no attribute 'find'
+2023-12-10 17:01:57.161259
+'list' object has no attribute 'find'
+2023-12-10 17:01:58.138075
+'list' object has no attribute 'find'
+2023-12-10 17:01:59.131362
+'list' object has no attribute 'find'
+2023-12-10 17:02:00.153728
+'list' object has no attribute 'find'
+2023-12-10 17:02:01.177010
+'list' object has no attribute 'find'
+2023-12-10 17:02:02.132187
+'list' object has no attribute 'find'
+2023-12-10 17:02:03.140102
+'list' object has no attribute 'find'
+2023-12-10 17:02:08.198713
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:02:08.223745
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:02:09.159955
+list assignment index out of range
+2023-12-10 17:02:10.162508
+list assignment index out of range
+2023-12-10 17:02:11.160625
+list assignment index out of range
+2023-12-10 17:02:12.147596
+list assignment index out of range
+2023-12-10 17:02:13.167220
+list assignment index out of range
+2023-12-10 17:02:17.943626
+not enough values to unpack (expected 2, got 0)
+2023-12-10 17:02:18.139201
+list assignment index out of range
+2023-12-10 17:02:19.141253
+list assignment index out of range
+2023-12-10 17:02:20.216143
+list assignment index out of range
+2023-12-10 17:02:21.149287
+list assignment index out of range
+2023-12-10 17:02:22.147131
+list assignment index out of range
+2023-12-10 17:02:23.135110
+list assignment index out of range
+2023-12-10 17:02:24.135768
+list assignment index out of range
+2023-12-10 17:02:25.161687
+list assignment index out of range
+2023-12-10 17:02:26.144318
+list assignment index out of range
+2023-12-10 17:02:27.143128
+list assignment index out of range
+2023-12-10 17:02:28.139071
+list assignment index out of range
+2023-12-10 17:02:29.146227
+list assignment index out of range
+2023-12-10 17:02:30.141270
+list assignment index out of range
+2023-12-10 17:02:31.148406
+list assignment index out of range
+2023-12-10 17:02:32.136408
+list assignment index out of range
+2023-12-10 17:02:33.143577
+list assignment index out of range
+2023-12-10 17:02:34.148873
+list assignment index out of range
+2023-12-10 17:02:35.131158
+list assignment index out of range
+2023-12-10 17:02:36.133535
+list assignment index out of range
+2023-12-10 17:02:37.154056
+list assignment index out of range
+2023-12-10 17:02:38.163043
+list assignment index out of range
+2023-12-10 17:02:39.136176
+list assignment index out of range
+2023-12-10 17:02:40.138792
+list assignment index out of range
+2023-12-10 17:02:41.154998
+list assignment index out of range
+2023-12-10 17:02:42.148917
+list assignment index out of range
+2023-12-10 17:02:43.145455
+list assignment index out of range
+2023-12-10 17:02:44.158076
+list assignment index out of range
+2023-12-10 17:02:45.125025
+list assignment index out of range
+2023-12-10 17:02:46.135226
+list assignment index out of range
+2023-12-10 17:02:47.129526
+list assignment index out of range
+2023-12-10 17:02:48.148452
+list assignment index out of range
+2023-12-10 17:02:49.139591
+list assignment index out of range
+2023-12-10 17:02:50.143020
+list assignment index out of range
+2023-12-10 17:02:51.143370
+list assignment index out of range
+2023-12-10 17:02:52.155161
+list assignment index out of range
+2023-12-10 17:02:53.129667
+list assignment index out of range
+2023-12-10 17:02:54.129036
+list assignment index out of range
+2023-12-10 17:02:55.161509
+list assignment index out of range
+2023-12-10 17:02:58.149032
+list assignment index out of range
+2023-12-10 17:02:59.157942
+list assignment index out of range
+2023-12-10 17:03:00.134011
+list assignment index out of range
+2023-12-10 17:03:01.163123
+list assignment index out of range
+2023-12-10 17:03:02.167364
+list assignment index out of range
+2023-12-10 17:03:03.148406
+list assignment index out of range
+2023-12-10 17:03:04.139840
+list assignment index out of range
+2023-12-10 17:03:05.147572
+list assignment index out of range
+2023-12-10 17:03:06.148740
+list assignment index out of range
+2023-12-10 17:03:07.165601
+list assignment index out of range
+2023-12-10 17:03:08.141401
+list assignment index out of range
+2023-12-10 17:03:09.136399
+list assignment index out of range
+2023-12-10 17:03:10.173587
+list assignment index out of range
+2023-12-10 17:03:11.146453
+list assignment index out of range
+2023-12-10 17:03:12.157377
+list assignment index out of range
+2023-12-10 17:03:13.180749
+list assignment index out of range
+2023-12-10 17:03:14.151575
+list assignment index out of range
+2023-12-10 17:03:15.142677
+list assignment index out of range
+2023-12-10 17:03:16.124641
+list assignment index out of range
+2023-12-10 17:03:17.163969
+list assignment index out of range
+2023-12-10 17:03:18.159521
+list assignment index out of range
+2023-12-10 17:03:19.134077
+list assignment index out of range
+2023-12-10 17:03:20.160965
+list assignment index out of range
+2023-12-10 17:03:21.180701
+list assignment index out of range
+2023-12-10 17:03:22.154197
+list assignment index out of range
+2023-12-10 17:03:23.177466
+list assignment index out of range
+2023-12-10 17:03:24.130102
+list assignment index out of range
+2023-12-10 17:03:25.198793
+list assignment index out of range
+2023-12-10 17:03:26.128335
+list assignment index out of range
+2023-12-10 17:03:27.152634
+list assignment index out of range
+2023-12-10 17:03:28.139231
+list assignment index out of range
+2023-12-10 17:03:29.163712
+list assignment index out of range
+2023-12-10 17:03:30.178161
+list assignment index out of range
+2023-12-10 17:03:31.137358
+list assignment index out of range
+2023-12-10 17:03:32.187144
+list assignment index out of range
+2023-12-10 17:03:33.165814
+list assignment index out of range
+2023-12-10 17:03:34.145823
+list assignment index out of range
+2023-12-10 17:03:35.148910
+list assignment index out of range
+2023-12-10 17:03:36.137907
+list assignment index out of range
+2023-12-10 17:03:37.140416
+list assignment index out of range
+2023-12-10 17:03:38.307653
+list assignment index out of range
+2023-12-10 17:03:39.147958
+list assignment index out of range
+2023-12-10 17:03:40.165954
+list assignment index out of range
+2023-12-10 17:03:41.143707
+list assignment index out of range
+2023-12-10 17:03:42.156238
+list assignment index out of range
+2023-12-10 17:03:43.142999
+list assignment index out of range
+2023-12-10 17:03:44.155086
+list assignment index out of range
+2023-12-10 17:03:45.183162
+list assignment index out of range
+2023-12-10 17:03:46.125003
+list assignment index out of range
+2023-12-10 17:03:47.148282
+list assignment index out of range
+2023-12-10 17:03:48.142703
+list assignment index out of range
+2023-12-10 17:03:49.144637
+list assignment index out of range
+2023-12-10 17:03:50.147280
+list assignment index out of range
+2023-12-10 17:03:51.161278
+list assignment index out of range
+2023-12-10 17:03:52.164737
+list assignment index out of range
+2023-12-10 17:03:53.165427
+list assignment index out of range
+2023-12-10 17:03:54.155781
+list assignment index out of range
+2023-12-10 17:03:55.144777
+list assignment index out of range
+2023-12-10 17:03:56.409112
+list assignment index out of range
+2023-12-10 17:03:57.153754
+list assignment index out of range
+2023-12-10 17:03:58.142658
+list assignment index out of range
+2023-12-10 17:03:59.155124
+list assignment index out of range
+2023-12-10 17:04:00.180090
+list assignment index out of range
+2023-12-10 17:04:01.142466
+list assignment index out of range
+2023-12-10 17:04:02.123336
+list assignment index out of range
+2023-12-10 17:04:03.153858
+list assignment index out of range
+2023-12-10 17:04:04.156939
+list assignment index out of range
+2023-12-10 17:04:05.163938
+list assignment index out of range
+2023-12-10 17:04:06.167258
+list assignment index out of range
+2023-12-10 17:04:07.161700
+list assignment index out of range
+2023-12-10 17:04:08.147305
+list assignment index out of range
+2023-12-10 17:04:09.154713
+list assignment index out of range
+2023-12-10 17:04:10.135416
+list assignment index out of range
+2023-12-10 17:04:11.157039
+list assignment index out of range
+2023-12-10 17:04:12.167848
+list assignment index out of range
+2023-12-10 17:04:13.144119
+list assignment index out of range
+2023-12-10 17:04:14.156653
+list assignment index out of range
+2023-12-10 17:04:15.161449
+list assignment index out of range
+2023-12-10 17:04:16.136543
+list assignment index out of range
+2023-12-10 17:04:17.155466
+list assignment index out of range
+2023-12-10 17:04:18.147690
+list assignment index out of range
+2023-12-10 17:04:19.148746
+list assignment index out of range
+2023-12-10 17:04:20.135335
+list assignment index out of range
+2023-12-10 17:04:21.134205
+list assignment index out of range
+2023-12-10 17:04:22.150281
+list assignment index out of range
+2023-12-10 17:04:23.171953
+list assignment index out of range
+2023-12-10 17:04:24.147404
+list assignment index out of range
+2023-12-10 17:04:25.147391
+list assignment index out of range
+2023-12-10 17:04:26.150506
+list assignment index out of range
+2023-12-10 17:04:27.160022
+list assignment index out of range
+2023-12-10 17:04:28.137188
+list assignment index out of range
+2023-12-10 17:04:29.134963
+list assignment index out of range
+2023-12-10 17:04:30.154399
+list assignment index out of range
+2023-12-10 17:04:31.150932
+list assignment index out of range
+2023-12-10 17:04:32.136283
+list assignment index out of range
+2023-12-10 17:04:33.137907
+list assignment index out of range
+2023-12-10 17:04:34.135146
+list assignment index out of range
+2023-12-10 17:04:35.141480
+list assignment index out of range
+2023-12-10 17:04:36.137141
+list assignment index out of range
+2023-12-10 17:04:37.142921
+list assignment index out of range
+2023-12-10 17:04:38.148115
+list assignment index out of range
+2023-12-10 17:04:39.236799
+list assignment index out of range
+2023-12-10 17:04:40.169560
+list assignment index out of range
+2023-12-10 17:04:41.138337
+list assignment index out of range
+2023-12-10 17:04:42.169111
+list assignment index out of range
+2023-12-10 17:04:43.159894
+list assignment index out of range
+2023-12-10 17:04:44.195182
+list assignment index out of range
+2023-12-10 17:04:47.155551
+list assignment index out of range
+2023-12-10 17:04:49.167111
+list assignment index out of range
+2023-12-10 17:04:50.137404
+list assignment index out of range
+2023-12-10 17:04:50.141404
+list assignment index out of range
+2023-12-10 17:04:51.150793
+list assignment index out of range
+2023-12-10 17:04:52.140775
+list assignment index out of range
+2023-12-10 17:04:53.149389
+list assignment index out of range
+2023-12-10 17:04:54.136389
+list assignment index out of range
+2023-12-10 17:04:55.154119
+list assignment index out of range
+2023-12-10 17:04:56.141214
+list assignment index out of range
+2023-12-10 17:04:57.144911
+list assignment index out of range
+2023-12-10 17:04:58.130405
+list assignment index out of range
+2023-12-10 17:04:59.136775
+list assignment index out of range
+2023-12-10 17:05:00.163267
+list assignment index out of range
+2023-12-10 17:05:01.198337
+list assignment index out of range
+2023-12-10 17:05:04.170083
+list assignment index out of range
+2023-12-10 17:05:05.131094
+list assignment index out of range
+2023-12-10 17:05:06.148960
+list assignment index out of range
+2023-12-10 17:05:07.141604
+list assignment index out of range
+2023-12-10 17:05:08.143800
+list assignment index out of range
+2023-12-10 17:05:09.134242
+list assignment index out of range
+2023-12-10 17:05:10.160240
+list assignment index out of range
+2023-12-10 17:05:11.130709
+list assignment index out of range
+2023-12-10 17:05:12.140853
+list assignment index out of range
+2023-12-10 17:05:13.166948
+list assignment index out of range
+2023-12-10 17:05:14.145701
+list assignment index out of range
+2023-12-10 17:05:15.157710
+list assignment index out of range
+2023-12-10 17:05:16.164926
+list assignment index out of range
+2023-12-10 17:05:17.136153
+list assignment index out of range
+2023-12-10 17:05:18.170382
+list assignment index out of range
+2023-12-10 17:05:19.130079
+list assignment index out of range
+2023-12-10 17:05:20.147519
+list assignment index out of range
+2023-12-10 17:05:21.146230
+list assignment index out of range
+2023-12-10 17:05:22.145962
+list assignment index out of range
+2023-12-10 17:05:23.132941
+list assignment index out of range
+2023-12-10 17:05:24.144636
+list assignment index out of range
+2023-12-10 17:05:25.166592
+list assignment index out of range
+2023-12-10 17:05:27.136396
+list assignment index out of range
+2023-12-10 17:05:27.143397
+list assignment index out of range
+2023-12-10 17:05:28.138031
+list assignment index out of range
+2023-12-10 17:05:29.150580
+list assignment index out of range
+2023-12-10 17:05:30.182314
+list assignment index out of range
+2023-12-10 17:05:31.161837
+list assignment index out of range
+2023-12-10 17:05:32.127401
+list assignment index out of range
+2023-12-10 17:05:33.158954
+list assignment index out of range
+2023-12-10 17:05:34.158860
+list assignment index out of range
+2023-12-10 17:05:35.155796
+list assignment index out of range
+2023-12-10 17:05:36.134107
+list assignment index out of range
+2023-12-10 17:05:37.146124
+list assignment index out of range
+2023-12-10 17:05:38.138978
+list assignment index out of range
+2023-12-10 17:05:39.139216
+list assignment index out of range
+2023-12-10 17:05:40.132777
+list assignment index out of range
+2023-12-10 17:05:41.150961
+list assignment index out of range
+2023-12-10 17:05:42.138787
+list assignment index out of range
+2023-12-10 17:05:43.132660
+list assignment index out of range
+2023-12-10 17:05:44.153669
+list assignment index out of range
+2023-12-10 17:05:45.161909
+list assignment index out of range
+2023-12-10 17:05:46.177166
+list assignment index out of range
+2023-12-10 17:05:51.146055
+list assignment index out of range
+2023-12-10 17:05:52.143403
+list assignment index out of range
+2023-12-10 17:05:53.143734
+list assignment index out of range
+2023-12-10 17:05:54.292048
+list assignment index out of range
+2023-12-10 17:05:55.162045
+list assignment index out of range
+2023-12-10 17:05:56.143775
+list assignment index out of range
+2023-12-10 17:05:57.142919
+list assignment index out of range
+2023-12-10 17:05:58.144569
+list assignment index out of range
+2023-12-10 17:05:59.149563
+list assignment index out of range
+2023-12-10 17:06:00.138280
+list assignment index out of range
+2023-12-10 17:06:01.199323
+list assignment index out of range
+2023-12-10 17:06:02.147329
+list assignment index out of range
+2023-12-10 17:06:03.156919
+list assignment index out of range
+2023-12-10 17:06:04.142637
+list assignment index out of range
+2023-12-10 17:06:05.146270
+list assignment index out of range
+2023-12-10 17:06:06.172773
+list assignment index out of range
+2023-12-10 17:06:07.156658
+list assignment index out of range
+2023-12-10 17:06:08.171454
+list assignment index out of range
+2023-12-10 17:06:09.144554
+list assignment index out of range
+2023-12-10 17:06:10.171702
+list assignment index out of range
+2023-12-10 17:06:11.163342
+list assignment index out of range
+2023-12-10 17:06:12.151165
+list assignment index out of range
+2023-12-10 17:06:13.260905
+list assignment index out of range
+2023-12-10 17:06:14.144893
+list assignment index out of range
+2023-12-10 17:06:15.157348
+list assignment index out of range
+2023-12-10 17:06:16.148122
+list assignment index out of range
+2023-12-10 17:06:17.155660
+list assignment index out of range
+2023-12-10 17:06:18.164501
+list assignment index out of range
+2023-12-10 17:06:19.131295
+list assignment index out of range
+2023-12-10 17:06:20.146811
+list assignment index out of range
+2023-12-10 17:06:21.138553
+list assignment index out of range
+2023-12-10 17:06:22.142738
+list assignment index out of range
+2023-12-10 17:06:23.147159
+list assignment index out of range
+2023-12-10 17:06:24.130096
+list assignment index out of range
+2023-12-10 17:06:25.146043
+list assignment index out of range
+2023-12-10 17:06:26.168043
+list assignment index out of range
+2023-12-10 17:06:27.143132
+list assignment index out of range
+2023-12-10 17:06:28.142266
+list assignment index out of range
+2023-12-10 17:06:29.147999
+list assignment index out of range
+2023-12-10 17:06:30.137201
+list assignment index out of range
+2023-12-10 17:06:31.152101
+list assignment index out of range
+2023-12-10 17:06:32.167618
+list assignment index out of range
+2023-12-10 17:06:33.138927
+list assignment index out of range
+2023-12-10 17:06:34.135820
+list assignment index out of range
+2023-12-10 17:06:35.144210
+list assignment index out of range
+2023-12-10 17:06:36.146373
+list assignment index out of range
+2023-12-10 17:06:37.146466
+list assignment index out of range
+2023-12-10 17:06:38.143761
+list assignment index out of range
+2023-12-10 17:06:39.137740
+list assignment index out of range
+2023-12-10 17:06:40.155369
+list assignment index out of range
+2023-12-10 17:06:41.186626
+list assignment index out of range
+2023-12-10 17:06:42.132788
+list assignment index out of range
+2023-12-10 17:06:43.142784
+list assignment index out of range
+2023-12-10 17:06:44.182030
+list assignment index out of range
+2023-12-10 17:06:45.150320
+list assignment index out of range
+2023-12-10 17:06:46.160907
+list assignment index out of range
+2023-12-10 17:06:47.144063
+list assignment index out of range
+2023-12-10 17:06:48.161443
+list assignment index out of range
+2023-12-10 17:06:49.141903
+list assignment index out of range
+2023-12-10 17:06:50.170908
+list assignment index out of range
+2023-12-10 17:06:51.164740
+list assignment index out of range
+2023-12-10 17:06:52.139452
+list assignment index out of range
+2023-12-10 17:06:53.140840
+list assignment index out of range
+2023-12-10 17:06:54.172784
+list assignment index out of range
+2023-12-10 17:06:55.154701
+list assignment index out of range
+2023-12-10 17:06:56.181441
+list assignment index out of range
+2023-12-10 17:06:57.136823
+list assignment index out of range
+2023-12-10 17:06:58.149371
+list assignment index out of range
+2023-12-10 17:06:59.154836
+list assignment index out of range
+2023-12-10 17:07:00.141798
+list assignment index out of range
+2023-12-10 17:07:01.180288
+list assignment index out of range
+2023-12-10 17:07:02.154374
+list assignment index out of range
+2023-12-10 17:07:03.146487
+list assignment index out of range
+2023-12-10 17:07:04.140372
+list assignment index out of range
+2023-12-10 17:07:06.145066
+list assignment index out of range
+2023-12-10 17:07:06.171066
+list assignment index out of range
+2023-12-10 17:07:07.151700
+list assignment index out of range
+2023-12-10 17:07:08.167819
+list assignment index out of range
+2023-12-10 17:07:09.156819
+list assignment index out of range
+2023-12-10 17:07:10.169377
+list assignment index out of range
+2023-12-10 17:07:11.145624
+list assignment index out of range
+2023-12-10 17:07:12.141790
+list assignment index out of range
+2023-12-10 17:07:13.143857
+list assignment index out of range
+2023-12-10 17:07:14.141806
+list assignment index out of range
+2023-12-10 17:07:15.154358
+list assignment index out of range
+2023-12-10 17:07:16.157380
+list assignment index out of range
+2023-12-10 17:07:17.132874
+list assignment index out of range
+2023-12-10 17:07:18.142403
+list assignment index out of range
+2023-12-10 17:07:19.158264
+list assignment index out of range
+2023-12-10 17:07:20.158415
+list assignment index out of range
+2023-12-10 17:07:21.136925
+list assignment index out of range
+2023-12-10 17:07:22.163951
+list assignment index out of range
+2023-12-10 17:07:23.145517
+list assignment index out of range
+2023-12-10 17:07:24.153516
+list assignment index out of range
+2023-12-10 17:07:25.173664
+list assignment index out of range
+2023-12-10 17:07:26.160293
+list assignment index out of range
+2023-12-10 17:07:27.125463
+list assignment index out of range
+2023-12-10 17:07:28.161648
+list assignment index out of range
+2023-12-10 17:07:29.137719
+list assignment index out of range
+2023-12-10 17:07:30.155710
+list assignment index out of range
+2023-12-10 17:07:31.158590
+list assignment index out of range
+2023-12-10 17:07:32.136193
+list assignment index out of range
+2023-12-10 17:07:33.143347
+list assignment index out of range
+2023-12-10 17:07:34.168680
+list assignment index out of range
+2023-12-10 17:07:35.158465
+list assignment index out of range
+2023-12-10 17:07:36.143821
+list assignment index out of range
+2023-12-10 17:07:37.163176
+list assignment index out of range
+2023-12-10 17:07:38.160073
+list assignment index out of range
+2023-12-10 17:07:39.147202
+list assignment index out of range
+2023-12-10 17:07:40.162201
+list assignment index out of range
+2023-12-10 17:07:41.146643
+list assignment index out of range
+2023-12-10 17:07:42.180832
+list assignment index out of range
+2023-12-10 17:07:43.156004
+list assignment index out of range
+2023-12-10 17:07:44.135105
+list assignment index out of range
+2023-12-10 17:07:45.138724
+list assignment index out of range
+2023-12-10 17:07:46.151397
+list assignment index out of range
+2023-12-10 17:07:47.144786
+list assignment index out of range
+2023-12-10 17:07:48.140744
+list assignment index out of range
+2023-12-10 17:07:49.130477
+list assignment index out of range
+2023-12-10 17:07:50.158108
+list assignment index out of range
+2023-12-10 17:07:51.144693
+list assignment index out of range
+2023-12-10 17:07:52.157127
+list assignment index out of range
+2023-12-10 17:07:53.193485
+list assignment index out of range
+2023-12-10 17:07:54.151629
+list assignment index out of range
+2023-12-10 17:07:55.147609
+list assignment index out of range
+2023-12-10 17:07:56.143575
+list assignment index out of range
+2023-12-10 17:07:57.157635
+list assignment index out of range
+2023-12-10 17:07:58.151639
+list assignment index out of range
+2023-12-10 17:07:59.145512
+list assignment index out of range
+2023-12-10 17:08:00.150649
+list assignment index out of range
+2023-12-10 17:08:01.133701
+list assignment index out of range
+2023-12-10 17:08:02.177272
+list assignment index out of range
+2023-12-10 17:08:03.182194
+list assignment index out of range
+2023-12-10 17:08:04.154497
+list assignment index out of range
+2023-12-10 17:08:05.136737
+list assignment index out of range
+2023-12-10 17:08:06.136228
+list assignment index out of range
+2023-12-10 17:08:07.223441
+list assignment index out of range
+2023-12-10 17:08:08.138445
+list assignment index out of range
+2023-12-10 17:08:09.153816
+list assignment index out of range
