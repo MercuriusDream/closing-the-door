@@ -366,6 +366,7 @@ def main():
             window.refresh()
             window['timern'].update(datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S"))
             window['rectime'].update(rectime)
-        
+        if event in (sg.WIN_CLOSED):
+            break
 if __name__ == "__main__":
     main()
