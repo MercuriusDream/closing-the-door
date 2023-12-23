@@ -193,7 +193,7 @@ def handle_eqk(body, info_bytes, phase):
         eqsin.append(eqk_max)
         eqid.append(eqk_id)
         eqrectime.append(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신")
-        if int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")) > 0:
+        if eqsec[eqid.index(eqk_id)] > 0:
             eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
         else:
             eqsec[eqid.index(eqk_id)] = 0
@@ -217,8 +217,6 @@ def handle_eqk(body, info_bytes, phase):
     print("설명:", eqk_str)
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
-    print(traceback.format_exc())
-
 
 
 def handle_stn(stn_body, bin_body):
@@ -360,8 +358,8 @@ def main():
     while True:
         timenow = datetime.datetime.now().strftime("%H:%M:%S")
         window.refresh()
-        guiupdate()
         threading.Thread(target=handlecomm, args=(), daemon=True).start()
+        guiupdate()
         while doneparsing == False:
             window.refresh()
             window['timern'].update(datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S"))
