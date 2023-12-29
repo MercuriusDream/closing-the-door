@@ -46,6 +46,7 @@ eqsin = []
 eqsec = []
 eqid = []
 eqrectime = []
+eqsource = []
 errorhappened = False
 doneparsing = True
 neweqdata = False
@@ -192,8 +193,9 @@ def handle_eqk(body, info_bytes, phase):
         eqtime.append(datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S'))
         eqsin.append(eqk_max)
         eqid.append(eqk_id)
+        eqsource.append('PEWS')
         eqrectime.append(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신")
-        if eqsec[eqid.index(eqk_id)] > 0:
+        if int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")) > 0:
             eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
         else:
             eqsec[eqid.index(eqk_id)] = 0
@@ -207,6 +209,7 @@ def handle_eqk(body, info_bytes, phase):
             eqid.pop()
             eqrectime.pop()
             eqsec.pop()
+            eqsource.pop()
 
     print("위도:", orig_lat)
     print("경도:", orig_lon)
@@ -217,7 +220,6 @@ def handle_eqk(body, info_bytes, phase):
     print("설명:", eqk_str)
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
-
 
 def handle_stn(stn_body, bin_body):
     stn_lat = [30 + int(stn_body[i:i+10], 2) / 100 for i in range(0, len(stn_body), 20)]
@@ -351,6 +353,9 @@ def handlecomm():
             log_file.write(str(e) + "\n")
         errorhappened = True
     doneparsing = True
+
+def kmaeqkparse(): # placeholder
+    print('hello')
 
 def main():
     doneparsing = True
