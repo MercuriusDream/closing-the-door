@@ -9,7 +9,7 @@ import json
 import playsound
 import os
 import threading
-import traceback
+from bs4 import BeautifulSoup
 
 # GUI 관련 변수
 
@@ -34,7 +34,8 @@ elementlist = ['eqsin', 'eqregion', 'eqtime', 'eqsize', 'eqdepth', 'eqsec', 'eqr
 textlist = ['eqsin', 'eqregion', 'eqtime', 'eqsize', 'eqdepth', 'eqsec', 'eqrectime']
 # 작동 관련 변수
 sindolist = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-colorlist = ['white', 'a0e6ff', '92d050', 'FFFF00', 'FFC000', 'F00000', 'a32777', '632523', '4C2600', 'black']
+colorlist = ['ffffff', 'a0e6ff', '92d050', 'FFFF00', 'FFC000', 'F00000', 'a32777', '632523', '4C2600', '000000']
+sindoromaji = ['Ⅰ','Ⅱ','Ⅲ','Ⅳ','Ⅴ','Ⅵ','Ⅶ','Ⅷ','Ⅸ','Ⅹ']
 
 eqlat = []
 eqlon = []
@@ -53,6 +54,7 @@ neweqdata = False
 eqexist = False
 rectime = "00:00:00 갱신"
 
+lastnuridata = 0
 curpos = (35.17, 129.06)
 HeadLength = 4
 MaxEqkStrLen = 60
@@ -71,7 +73,7 @@ layout = [
         ]
         , element_justification='l', background_color='grey30', key='col'+str(1),  vertical_alignment='t', expand_x='true',pad=(0,0))],
     [[sg.Column([
-        [sg.Text('⨉', font=recenteqsint, key='eqsin'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0)),
+        [sg.vtop(sg.Text('⨉', font=recenteqsint, key='eqsin'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0))),
         sg.Column([
             [sg.Text('현재 지진 정보가 없습니다.', font=recenteqregiont, key='eqregion'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0))],
             [sg.Text('0000/00/00 00:00:00', font=eqtimet, key='eqtime'+str(i+2), text_color='grey90', background_color='grey30',pad=(0,0)), sg.Text('00:00:00 수신', font=eqtimet, key='eqrectime'+str(i+2), text_color='grey70', background_color='grey30',pad=(0,0)), sg.Text('M 0.0', font=recenteqdepthsizet, text_color='grey90', key='eqsize'+str(i+2), background_color='grey30',pad=(0,0)), sg.Text('0 KM', text_color='grey90', font=recenteqdepthsizet, key='eqdepth'+str(i+2), background_color='grey30',pad=(0,0)), sg.Text('0 초', font=recenteqdepthsizet, key='eqsec' + str(i+2), text_color='grey90', background_color='grey30',pad=(0,0))]],
@@ -111,22 +113,24 @@ def geteqregion(phase, url):
 
 def guiupdate():
     for i in range(len(eqrectime)):
-        colcolor1 = '#'+colorlist[eqsin[i]-1]
-        if int(eqsin[i]) < 5:
+        if (eqsource[i] == 'PEWS' and int(eqsin[i]) < 5) or (eqsource[i] != 'PEWS' and sindoromaji.index(eqsin[i]) < 5):
+            if eqsource[i] == 'PEWS':
+                colcolor1 = '#'+colorlist[eqsin[i]-1]
+            else:
+                colcolor1 = '#'+colorlist[sindoromaji.index(eqsin[i])]
             fontcolor1 = 'black'
         else:
             fontcolor1 = 'white'
-        if eqsin[i] > 10:
+        if (eqsource[i] == 'PEWS' and int(eqsin[i]) > 10) or (eqsource[i] != 'PEWS' and eqsin[i] not in sindoromaji):
             fontcolor1 = 'white'
             colcolor1 = 'black'
-        for x in range(len(elementlist)-1):
-            window[elementlist[x] + str(i+1)].ParentRowFrame.config(background=colcolor1)
-            window[elementlist[x] + str(i+1)].widget.master.configure(background=colcolor1)
-            window[elementlist[x] + str(i+1)].widget.configure(background=colcolor1)
-        for x in range(len(textlist)-1):
-            window[textlist[x] + str(i+1)].update(text_color=fontcolor1)
-        print(traceback.format_exc())
-        window['eqsin'+str(i+1)].update(eqsin[i])
+        window['eqsin' + str(i+1)].widget.master.configure(background=colcolor1)
+        window['eqsin' + str(i+1)].widget.configure(background=colcolor1)
+        window['eqsin' + str(i+1)].update(text_color=fontcolor1)
+        if isinstance(eqsin[i], int):
+            window['eqsin'+str(i+1)].update(sindoromaji[eqsin[i]])
+        else:
+            window['eqsin'+str(i+1)].update(eqsin[i])
         window['eqregion'+str(i+1)].update(eqregion[i])
         window['eqtime'+str(i+1)].update(eqtime[i])
         window['eqsize'+str(i+1)].update('M' + str(eqsize[i]))
@@ -144,6 +148,58 @@ def byte_to_bin_str(val):
 
 # 지진 핸들러
 # 3 = 일반정보 2 = 신속정보
+
+def kmaeqkparse(first):
+    url = ''
+    if first == True:
+        url = 'https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm=' + datetime.datetime.now().strftime('%Y-%m-%d') + '&startSize=&endSize=&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a'
+    else:
+        url = 'https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm=' + datetime.datetime.now().strftime('%Y-%m-%d') + '&startSize=&endSize=2&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a'
+    response = requests.get(url, timeout=1)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    table = soup.find('table', class_='eqk-search-table')
+    rows = table.find('tbody').find_all('tr')
+    i = 0
+    if first == True:
+        for row in rows[:6]:  # 첫 번째에서 여섯 번째까지의 행만 추출
+            columns = row.find_all('td')
+            eqtime.append(columns[1].text.strip())
+            eqsize.append(columns[2].text.strip())
+            eqdepth.append(columns[3].text.strip())
+            eqsin.append(columns[4].text.strip())
+            eqlat.append(columns[5].text.strip())
+            eqlon.append(columns[6].text.strip())
+            eqregion.append(columns[7].text.strip())
+            eqid.append(columns[0].text.strip())
+            eqsource.append('weathergokr')
+            eqrectime.append(datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
+            lastnuridata = (columns[0].text.strip())
+            print(eqtime[0])
+    elif lastnuridata != columns[0].text.strip():
+        for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
+            soundplay('earthquakeinfo')
+            columns = row.find_all('td')
+            eqtime.append(columns[1].text.strip())
+            eqsize.append(columns[2].text.strip())
+            eqdepth.append(columns[3].text.strip())
+            eqsin.append(columns[4].text.strip())
+            eqlat.append(columns[5].text.strip())
+            eqlon.append(columns[6].text.strip())
+            eqregion.append(columns[7].text.strip())
+            eqid.append(columns[0].text.strip())
+            eqsource.append('weathergokr')
+            eqrectime.append(datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
+            lastnuridata = (columns[0].text.strip())
+            eqlat.pop()
+            eqlon.pop()
+            eqdepth.pop()
+            eqsize.pop()
+            eqtime.pop()
+            eqsin.pop()
+            eqid.pop()
+            eqrectime.pop()
+            eqsec.pop()
+            eqsource.pop()
 
 def handle_eqk(body, info_bytes, phase):
     global eqsec
@@ -174,7 +230,7 @@ def handle_eqk(body, info_bytes, phase):
             eqtime[eqid.index(eqk_id)] = datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S')
             eqsin[eqid.index(eqk_id)] = eqk_max
             eqid[eqid.index(eqk_id)] = eqk_id
-            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신"
+            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신"
             if eqsec[eqid.index(eqk_id)] > 0:
                 eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
             else:
@@ -234,7 +290,6 @@ def handle_stn(stn_body, bin_body):
     mmi_data = parse_mmi(bin_body)
 
     print("관측소 현재 최대, 최소 진도:", max(mmi_data), min(mmi_data))
-    print(traceback.format_exc())
     mmi_data = [v for v in mmi_data if v > 1]
     if mmi_data:
         print("진도 목록:", ", ".join(map(str, mmi_data)))
@@ -354,16 +409,17 @@ def handlecomm():
         errorhappened = True
     doneparsing = True
 
-def kmaeqkparse(): # placeholder
-    print('hello')
-
 def main():
+    kmaeqkparse(True)
+    guiupdate()
     doneparsing = True
     event, values = window.read(timeout=10)
     while True:
         timenow = datetime.datetime.now().strftime("%H:%M:%S")
         window.refresh()
         threading.Thread(target=handlecomm, args=(), daemon=True).start()
+        if datetime.datetime.now().strftime("%S") == '00':
+            threading.Thread(target=kmaeqkparse, args=(False), daemon=True).start()
         guiupdate()
         while doneparsing == False:
             window.refresh()
@@ -375,5 +431,6 @@ def main():
             window['rectime'].update(rectime)
         if event == sg.WIN_CLOSED:
             break
+
 if __name__ == "__main__":
     main()
