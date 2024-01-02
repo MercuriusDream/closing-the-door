@@ -135,7 +135,7 @@ def guiupdate():
         window['eqtime'+str(i+1)].update(eqtime[i])
         window['eqsize'+str(i+1)].update('M ' + str(eqsize[i]))
         window['eqdepth'+str(i+1)].update(str(eqdepth[i]) + " KM")
-        window['eqsec'+str(i+1)].update(str(eqdepth[i]) + " KM")
+        window['eqsec'+str(i+1)].update(str(eqdepth[i]) + " 초")
         window['eqrectime'+str(i+1)].update(str(eqrectime[i]))
 
 for i in range(6):
@@ -175,8 +175,7 @@ def kmaeqkparse(first):
             eqid.append(columns[0].text.strip())
             eqsource.append('weathergokr')
             eqrectime.append(datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
-            lastnuridata = (columns[0].text.strip())
-            print(eqtime[0])
+            lastnuridata = str(int(columns[0].text.strip())+5)
     elif lastnuridata != columns[0].text.strip():
         for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
             soundplay('earthquakeinfo')
@@ -203,7 +202,6 @@ def kmaeqkparse(first):
             eqrectime.pop()
             eqsec.pop()
             eqsource.pop()
-            eqsec.pop()
 
 def handle_eqk(body, info_bytes, phase):
     global eqsec
@@ -234,7 +232,7 @@ def handle_eqk(body, info_bytes, phase):
             eqtime[eqid.index(eqk_id)] = datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S')
             eqsin[eqid.index(eqk_id)] = eqk_max
             eqid[eqid.index(eqk_id)] = eqk_id
-            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신"
+            eqrectime[eqid.index(eqk_id)] = datetime.datetime.now().strftime('%H:%M:%S') + " 수신"
             if eqsec[eqid.index(eqk_id)] > 0:
                 eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
             else:
@@ -254,7 +252,7 @@ def handle_eqk(body, info_bytes, phase):
         eqsin.insert(0, eqk_max)
         eqid.insert(0, eqk_id)
         eqsource.insert(0, 'PEWS')
-        eqrectime.insert(0, datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신")
+        eqrectime.insert(0, datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + " 수신")
         if int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")) > 0:
             eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
         else:
