@@ -133,8 +133,9 @@ def guiupdate():
             window['eqsin'+str(i+1)].update(eqsin[i])
         window['eqregion'+str(i+1)].update(eqregion[i])
         window['eqtime'+str(i+1)].update(eqtime[i])
-        window['eqsize'+str(i+1)].update('M' + str(eqsize[i]))
-        window['eqdepth'+str(i+1)].update(str(eqdepth[i]) + "KM")
+        window['eqsize'+str(i+1)].update('M ' + str(eqsize[i]))
+        window['eqdepth'+str(i+1)].update(str(eqdepth[i]) + " KM")
+        window['eqsec'+str(i+1)].update(str(eqdepth[i]) + " KM")
         window['eqrectime'+str(i+1)].update(str(eqrectime[i]))
 
 for i in range(6):
@@ -163,6 +164,7 @@ def kmaeqkparse(first):
     if first == True:
         for row in rows[:6]:  # 첫 번째에서 여섯 번째까지의 행만 추출
             columns = row.find_all('td')
+            eqsec.append(0)
             eqtime.append(columns[1].text.strip())
             eqsize.append(columns[2].text.strip())
             eqdepth.append(columns[3].text.strip())
@@ -179,16 +181,17 @@ def kmaeqkparse(first):
         for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
             soundplay('earthquakeinfo')
             columns = row.find_all('td')
-            eqtime.append(columns[1].text.strip())
-            eqsize.append(columns[2].text.strip())
-            eqdepth.append(columns[3].text.strip())
-            eqsin.append(columns[4].text.strip())
-            eqlat.append(columns[5].text.strip())
-            eqlon.append(columns[6].text.strip())
-            eqregion.append(columns[7].text.strip())
-            eqid.append(columns[0].text.strip())
-            eqsource.append('weathergokr')
-            eqrectime.append(datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
+            eqsec.insert(0, 0)
+            eqtime.insert(0, columns[1].text.strip())
+            eqsize.insert(0, columns[2].text.strip())
+            eqdepth.insert(0, columns[3].text.strip())
+            eqsin.insert(0, columns[4].text.strip())
+            eqlat.insert(0, columns[5].text.strip())
+            eqlon.insert(0, columns[6].text.strip())
+            eqregion.insert(0, columns[7].text.strip())
+            eqid.insert(0, columns[0].text.strip())
+            eqsource.insert(0, 'weathergokr')
+            eqrectime.insert(0, datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
             lastnuridata = (columns[0].text.strip())
             eqlat.pop()
             eqlon.pop()
@@ -200,6 +203,7 @@ def kmaeqkparse(first):
             eqrectime.pop()
             eqsec.pop()
             eqsource.pop()
+            eqsec.pop()
 
 def handle_eqk(body, info_bytes, phase):
     global eqsec
@@ -241,16 +245,16 @@ def handle_eqk(body, info_bytes, phase):
             soundplay('eew')
         else:
             soundplay('earthquakeinfo')
-        eqlat.append(orig_lat)
-        eqlon.append(orig_lon)
-        eqregion.append(geteqregion(phase, url2))
-        eqdepth.append(eqk_dep)
-        eqsize.append(eqk_mag)
-        eqtime.append(datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S'))
-        eqsin.append(eqk_max)
-        eqid.append(eqk_id)
-        eqsource.append('PEWS')
-        eqrectime.append(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신")
+        eqlat.insert(0, orig_lat)
+        eqlon.insert(0, orig_lon)
+        eqregion.insert(0, geteqregion(phase, url2))
+        eqdepth.insert(0, eqk_dep)
+        eqsize.insert(0, eqk_mag)
+        eqtime.insert(0, datetime.datetime.fromtimestamp(eqk_time + 9 * 3600).strftime('%Y/%m/%d %H:%M:%S'))
+        eqsin.insert(0, eqk_max)
+        eqid.insert(0, eqk_id)
+        eqsource.insert(0, 'PEWS')
+        eqrectime.insert(0, datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + ' ' + "수신")
         if int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f")) > 0:
             eqsec[eqid.index(eqk_id)] = int(format(haversine((eqlat, eqlon), curpos, unit = 'km') / 3.75 - datetime.datetime.now().timestamp() + eqk_time, ".0f"))
         else:
@@ -276,6 +280,13 @@ def handle_eqk(body, info_bytes, phase):
     print("설명:", eqk_str)
     print("최대 진도:", eqk_max)
     print("영향 지역:", ", ".join(eqk_max_area))
+
+def eqsecupdate():
+    for i in range (6):
+        if eqsec[i] > 0:
+            eqsec[i] -= 1
+        elif eqsec[i] < 0:
+            eqsec[i] = 0    
 
 def handle_stn(stn_body, bin_body):
     stn_lat = [30 + int(stn_body[i:i+10], 2) / 100 for i in range(0, len(stn_body), 20)]
@@ -415,6 +426,7 @@ def main():
     doneparsing = True
     event, values = window.read(timeout=10)
     while True:
+        eqsecupdate()
         timenow = datetime.datetime.now().strftime("%H:%M:%S")
         window.refresh()
         threading.Thread(target=handlecomm, args=(), daemon=True).start()
@@ -431,6 +443,7 @@ def main():
             window['rectime'].update(rectime)
         if event == sg.WIN_CLOSED:
             break
+    return 0
 
 if __name__ == "__main__":
     main()
