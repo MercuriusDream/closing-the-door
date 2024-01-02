@@ -124,8 +124,7 @@ def guiupdate():
         if (eqsource[i] == 'PEWS' and int(eqsin[i]) > 10) or (eqsource[i] != 'PEWS' and eqsin[i] not in sindoromaji):
             fontcolor1 = 'white'
             colcolor1 = 'black'
-        window['eqsin' + str(i+1)].widget.master.configure(background=colcolor1)
-        window['eqsin' + str(i+1)].widget.configure(background=colcolor1)
+        window['eqsin' + str(i+1)].update(background_color=colcolor1)
         window['eqsin' + str(i+1)].update(text_color=fontcolor1)
         if isinstance(eqsin[i], int):
             window['eqsin'+str(i+1)].update(sindoromaji[eqsin[i]])
@@ -135,7 +134,7 @@ def guiupdate():
         window['eqtime'+str(i+1)].update(eqtime[i])
         window['eqsize'+str(i+1)].update('M ' + str(eqsize[i]))
         window['eqdepth'+str(i+1)].update(str(eqdepth[i]) + " KM")
-        window['eqsec'+str(i+1)].update(str(eqdepth[i]) + " 초")
+        window['eqsec'+str(i+1)].update(str(eqsec[i]) + " 초")
         window['eqrectime'+str(i+1)].update(str(eqrectime[i]))
 
 for i in range(6):
