@@ -184,7 +184,7 @@ def kmaeqkparse(first):
     else:
         for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
             columns = row.find_all('td')
-            if lastnuridata == columns[0].text.strip() or (eqtime.index(columns[1].text.strip()) == eqsize.index(columns[2].text.strip()) == eqdepth.index(columns[3].text.strip()) == eqsin.index(columns[4].text.strip()) == eqlat.index(columns[5].text.strip()) == eqlon.index(columns[6].text.strip()) == eqregion.index(columns[7].text.strip())) : # 내가 더러워서 못해먹겠네
+            if lastnuridata == columns[0].text.strip() or (columns[1].text.strip() == eqtime[eqsource.index('weathergokr')] and columns[2].text.strip() == eqsize[eqsource.index('weathergokr')] and columns[3].text.strip() == eqdepth[eqsource.index('weathergokr')] and columns[4].text.strip() == eqsin[eqsource.index('weathergokr')] and columns[5].text.strip() == eqlat[eqsource.index('weathergokr')] and columns[6].text.strip() == eqlon[eqsource.index('weathergokr')] and columns[7].text.strip()  == eqregion[eqsource.index('weathergokr')]) : # 내가 더러워서 못해먹겠네
                 lastnuridata = (columns[0].text.strip())
                 break
             else:
