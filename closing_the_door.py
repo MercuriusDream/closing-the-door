@@ -335,9 +335,10 @@ def handlecomm():
     prev_bin_time = ''
     tide = 1000
     next_sync_time = datetime.datetime.min
-    if os.path.isfile('/bin/'+str(lastfilename)+'.b'):
-        os.remove('/bin/'+str(lastfilename)+'.b')
-        print('/bin/'+str(lastfilename)+'.b deleted')
+    print('/bin/'+str(lastfilename)+'.b')
+    if os.path.isfile('bin/'+str(lastfilename)+'.b'):
+        os.remove('bin/'+str(lastfilename)+'.b')
+        print('bin/'+str(lastfilename)+'.b deleted')
     try:
         bin_time = (datetime.datetime.utcnow() - datetime.timedelta(milliseconds=tide)).strftime("%Y%m%d%H%M%S")
         if prev_bin_time == bin_time:
