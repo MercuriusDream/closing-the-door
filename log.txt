@@ -3932,3 +3932,13 @@ list index out of range
 list index out of range
 2023-12-22 19:59:12.169388
 list index out of range
+2024-01-03 05:32:31.418074
+invalid literal for int() with base 2: ''
+2024-01-03 05:32:31.438777
+invalid literal for int() with base 2: ''
+2024-01-03 05:32:32.174626
+invalid literal for int() with base 2: ''
+2024-01-03 05:32:33.651848
+invalid literal for int() with base 2: ''
+2024-01-03 05:32:34.194342
+invalid literal for int() with base 2: ''

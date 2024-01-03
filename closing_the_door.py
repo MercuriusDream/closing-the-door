@@ -53,6 +53,7 @@ doneparsing = True
 neweqdata = False
 eqexist = False
 rectime = "00:00:00 갱신"
+lastfilename = ''
 
 lastnuridata = 0
 curpos = (35.17, 129.06)
@@ -150,12 +151,16 @@ def byte_to_bin_str(val):
 # 3 = 일반정보 2 = 신속정보
 
 def kmaeqkparse(first):
+    global lastnuridata
     url = ''
     if first == True:
         url = 'https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm=' + datetime.datetime.now().strftime('%Y-%m-%d') + '&startSize=&endSize=&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a'
     else:
         url = 'https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm=' + datetime.datetime.now().strftime('%Y-%m-%d') + '&startSize=&endSize=2&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a'
-    response = requests.get(url, timeout=1)
+    try:
+        response = requests.get(url, timeout=1)
+    except:
+        return
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find('table', class_='eqk-search-table')
     rows = table.find('tbody').find_all('tr')
@@ -174,33 +179,38 @@ def kmaeqkparse(first):
             eqid.append(columns[0].text.strip())
             eqsource.append('weathergokr')
             eqrectime.append(datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
-            lastnuridata = str(int(columns[0].text.strip())+5)
-    elif lastnuridata != columns[0].text.strip():
+        url = 'https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm=' + datetime.datetime.now().strftime('%Y-%m-%d') + '&startSize=&endSize=2&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a'
+        lastnuridata = str(int(columns[0].text.strip())+6)
+    else:
         for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
-            soundplay('earthquakeinfo')
             columns = row.find_all('td')
-            eqsec.insert(0, 0)
-            eqtime.insert(0, columns[1].text.strip())
-            eqsize.insert(0, columns[2].text.strip())
-            eqdepth.insert(0, columns[3].text.strip())
-            eqsin.insert(0, columns[4].text.strip())
-            eqlat.insert(0, columns[5].text.strip())
-            eqlon.insert(0, columns[6].text.strip())
-            eqregion.insert(0, columns[7].text.strip())
-            eqid.insert(0, columns[0].text.strip())
-            eqsource.insert(0, 'weathergokr')
-            eqrectime.insert(0, datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
-            lastnuridata = (columns[0].text.strip())
-            eqlat.pop()
-            eqlon.pop()
-            eqdepth.pop()
-            eqsize.pop()
-            eqtime.pop()
-            eqsin.pop()
-            eqid.pop()
-            eqrectime.pop()
-            eqsec.pop()
-            eqsource.pop()
+            if lastnuridata == columns[0].text.strip() or (eqtime.index(columns[1].text.strip()) == eqsize.index(columns[2].text.strip()) == eqdepth.index(columns[3].text.strip()) == eqsin.index(columns[4].text.strip()) == eqlat.index(columns[5].text.strip()) == eqlon.index(columns[6].text.strip()) == eqregion.index(columns[7].text.strip())) : # 내가 더러워서 못해먹겠네
+                lastnuridata = (columns[0].text.strip())
+                break
+            else:
+                soundplay('earthquakeinfo')
+                eqsec.insert(0, 0)
+                eqtime.insert(0, columns[1].text.strip())
+                eqsize.insert(0, columns[2].text.strip())
+                eqdepth.insert(0, columns[3].text.strip())
+                eqsin.insert(0, columns[4].text.strip())
+                eqlat.insert(0, columns[5].text.strip())
+                eqlon.insert(0, columns[6].text.strip())
+                eqregion.insert(0, columns[7].text.strip())
+                eqid.insert(0, columns[0].text.strip())
+                eqsource.insert(0, 'weathergokr')
+                eqrectime.insert(0, datetime.datetime.now().strftime('%H:%M:%S') + ' ' + "수신")
+                lastnuridata = (columns[0].text.strip())
+                eqlat.pop()
+                eqlon.pop()
+                eqdepth.pop()
+                eqsize.pop()
+                eqtime.pop()
+                eqsin.pop()
+                eqid.pop()
+                eqrectime.pop()
+                eqsec.pop()
+                eqsource.pop()
 
 def handle_eqk(body, info_bytes, phase):
     global eqsec
@@ -320,11 +330,14 @@ def handlecomm():
     global doneparsing
     global errorhappened
     global rectime
+    global lastfilename
     errorhappened = False
     prev_bin_time = ''
     tide = 1000
     next_sync_time = datetime.datetime.min
-        
+    if os.path.isfile('/bin/'+str(lastfilename)+'.b'):
+        os.remove('/bin/'+str(lastfilename)+'.b')
+        print('/bin/'+str(lastfilename)+'.b deleted')
     try:
         bin_time = (datetime.datetime.utcnow() - datetime.timedelta(milliseconds=tide)).strftime("%Y%m%d%H%M%S")
         if prev_bin_time == bin_time:
@@ -409,6 +422,7 @@ def handlecomm():
                         with open(f"bin/{bin_time}.b", "wb") as file:
                             file.write(bytes_data)
                     print(doneparsing)
+                    lastfilename = bin_time
     except Exception as e:
         print(e)
         with open("log.txt", "a") as log_file:
@@ -428,7 +442,7 @@ def main():
         window.refresh()
         threading.Thread(target=handlecomm, args=(), daemon=True).start()
         if datetime.datetime.now().strftime("%S") == '00':
-            threading.Thread(target=kmaeqkparse, args=(False), daemon=True).start()
+            threading.Thread(target=kmaeqkparse, args=(False, ), daemon=True).start()
         guiupdate()
         while doneparsing == False:
             window.refresh()
