@@ -76,6 +76,7 @@ eqexist = False
 rectime = "00:00:00 갱신"
 lastfilename = ""
 
+diffnuridata = 0
 listlength = 6
 lastnuridata = 0
 curpos = (35.17, 129.06)
@@ -341,7 +342,7 @@ def geteqregion(phase, url):
 
 
 def guiupdate():
-    for i in range(len(eqrectime)):
+    for i in range(listlength):
         if (eqsource[i] == "PEWS" and int(eqsin[i]) < 5) or (
             eqsource[i] != "PEWS" and sindoromaji.index(eqsin[i]) < 5
         ):
@@ -360,7 +361,7 @@ def guiupdate():
         window["eqsin" + str(i + 1)].update(background_color=colcolor1)
         window["eqsin" + str(i + 1)].update(text_color=fontcolor1)
         if isinstance(eqsin[i], int):
-            window["eqsin" + str(i + 1)].update(sindoromaji[eqsin[i]])
+            window["eqsin" + str(i + 1)].update(sindoromaji[eqsin[i]-1])
         else:
             window["eqsin" + str(i + 1)].update(eqsin[i])
         window["eqregion" + str(i + 1)].update(eqregion[i])
@@ -391,7 +392,13 @@ def byte_to_bin_str(val):
 
 def kmaeqkparse(first):
     global lastnuridata
+    diffnuridata = 0
     url = ""
+    url2 = (
+       "https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm="
+       + datetime.datetime.now().strftime("%Y-%m-%d")
+       + "&startSize=2&endSize=&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=m"
+       )
     if first == True:
         url = (
             "https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm="
@@ -413,6 +420,17 @@ def kmaeqkparse(first):
     rows = table.find("tbody").find_all("tr")
     i = 0
     if first == True:
+        try:
+            response = requests.get(url2, timeout=1)
+        except:
+            return
+        soup = BeautifulSoup(response.text, "html.parser")
+        table2 = soup.find("table", class_="eqk-search-table")
+        row2s = table2.find("tbody").find_all("tr")
+        for row in row2s[:1]:
+            columns = row.find_all("td")
+            diffnuridata = int((columns[0].text.strip()))
+            print(diffnuridata)
         for row in rows[:listlength]:  # 첫 번째에서 여섯 번째까지의 행만 추출
             columns = row.find_all("td")
             eqsec.append(0)
@@ -426,14 +444,9 @@ def kmaeqkparse(first):
             eqid.append(columns[0].text.strip())
             eqsource.append("weathergokr")
             eqrectime.append(datetime.datetime.now().strftime("%H:%M:%S") + " " + "수신")
-        url = (
-            "https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm="
-            + datetime.datetime.now().strftime("%Y-%m-%d")
-            + "&startSize=&endSize=2&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a"
-        )
-        lastnuridata = str(int(columns[0].text.strip()) + listlength - 1)
+        lastnuridata = str(int(columns[0].text.strip()) - diffnuridata + 5)
     else:
-        for row in rows[:listlength]:  # 첫 번째에서 첫 번째까지의 행만 추출
+        for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
             columns = row.find_all("td")
             if lastnuridata == columns[0].text.strip() or (
                 columns[1].text.strip() == eqtime[eqsource.index("weathergokr")]
@@ -442,7 +455,6 @@ def kmaeqkparse(first):
                 and columns[4].text.strip() == eqsin[eqsource.index("weathergokr")]
                 and columns[5].text.strip() == eqlat[eqsource.index("weathergokr")]
                 and columns[6].text.strip() == eqlon[eqsource.index("weathergokr")]
-                and columns[7].text.strip() == eqregion[eqsource.index("weathergokr")]
             ):  # 내가 더러워서 못해먹겠네
                 lastnuridata = columns[0].text.strip()
                 break
@@ -476,6 +488,7 @@ def kmaeqkparse(first):
 
 def handle_eqk(body, info_bytes, phase):
     global eqsec
+    global diffnuridata
     data = body[-(MaxEqkStrLen * 8 + MaxEqkInfoLen) :]
     eqk_str = unquote(info_bytes.decode("utf-8"))
 
@@ -535,6 +548,7 @@ def handle_eqk(body, info_bytes, phase):
                 eqsec[eqid.index(eqk_id)] = 0
 
     else:  # 새로운 지진 업데이트
+        diffnuridata += 1
         if phase == 2:
             soundplay("eew")
         else:
@@ -554,7 +568,7 @@ def handle_eqk(body, info_bytes, phase):
         eqid.insert(0, eqk_id)
         eqsource.insert(0, "PEWS")
         eqrectime.insert(
-            0, datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S") + " 수신"
+            0, datetime.datetime.now().strftime("%H:%M:%S") + " 수신"
         )
         if (
             int(
@@ -781,6 +795,7 @@ def main():
     doneparsing = True
     event, values = window.read(timeout=10)
     while True:
+        print(lastnuridata)
         eqsecupdate()
         timenow = datetime.datetime.now().strftime("%H:%M:%S")
         window.refresh()
