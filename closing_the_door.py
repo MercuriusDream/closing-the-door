@@ -445,6 +445,16 @@ def kmaeqkparse(first):
             eqsource.append("weathergokr")
             eqrectime.append(datetime.datetime.now().strftime("%H:%M:%S") + " " + "수신")
         lastnuridata = str(int(columns[0].text.strip()) - diffnuridata + 5)
+            "https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm="
+            + datetime.datetime.now().strftime("%Y-%m-%d")
+            + "&startSize=&endSize=2&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a"
+        )
+        lastnuridata = str(int(columns[0].text.strip()) + listlength - 1)
+            "https://www.weather.go.kr/w/eqk-vol/search/korea.do?schOption=&xls=0&startTm=2023-12-01&endTm="
+            + datetime.datetime.now().strftime("%Y-%m-%d")
+            + "&startSize=&endSize=2&startLat=&endLat=&startLon=&endLon=&lat=&lon=&dist=&keyword=&dpType=a"
+        )
+        lastnuridata = str(int(columns[0].text.strip()) + listlength - 1)
     else:
         for row in rows[:1]:  # 첫 번째에서 첫 번째까지의 행만 추출
             columns = row.find_all("td")
